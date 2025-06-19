@@ -136,7 +136,7 @@ const ProductDetail: React.FC = () => {
               </a>
               
               <Link 
-                to="/inquiry"
+                to="/contact"
                 className="btn btn-outline w-full md:w-auto py-4 px-2"
               >
                 Request a Quote
