@@ -235,3 +235,7 @@
 .light .text-muted-foreground {
   @apply text-gray-600;
 }
+
+/* Hide scrollbar for elements with .scrollbar-none */
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }

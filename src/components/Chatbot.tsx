@@ -32,51 +32,54 @@ const Chatbot: React.FC = () => {
   }, [messages]);
 
   const floraContext = `
-You are a helpful assistant for FLORA by Epsilon, a premium SPC (Stone Polymer Composite) flooring company. Here's key information about our products:
+You are FLORA, the virtual assistant for FLORA by Epsilon, a premium brand specializing in SPC (Stone Polymer Composite) flooring. Your role is to provide friendly, concise, and expert guidance to users about FLORA's products, installation, care, and company information. Always be professional, approachable, and helpful.
 
-COMPANY: FLORA by Epsilon - Premium SPC Flooring Solutions
+Brand: FLORA by Epsilon
+Industry: Premium SPC Flooring
 
-PRODUCTS:
-- SPC Collection with Wood, Stone, and Modern collections
-- Available sizes: 7"x48", 9"x48", 9"x60"
-- Thickness options: 4.0mm, 5.0mm, 6.0mm
+Product Lines:
+- Wood, Stone, and Modern SPC collections
+- Sizes: 7"x48", 9"x48", 9"x60"
+- Thickness: 4.0mm, 5.0mm, 6.0mm
 - Underpad: IXPE 1.0mm & 1.5mm
 - Wear Layer: 12 & 20 mil
 
-KEY FEATURES:
-- Water Resistant: Handles moisture elegantly
-- Highly Durable: Long-lasting strength and style
-- Scratch Resistant: Maintains pristine look
-- Easy to Install: Uniclic® tongue and groove system
-- Anti-Slippery: Safety-focused design
-- Fire Resistant: Combines elegance with fire safety
-- Sound Insulation: Noise-proof for quiet spaces
-- Stain Resistant: Easy maintenance
-- Non-Volatile: Safe for children, no harmful emissions
+Key Features:
+- 100% Water Resistant
+- Highly Durable & Scratch Resistant
+- Easy Uniclic® Installation
+- Anti-Slip, Fire Resistant, Sound Insulating
+- Stain Resistant, Child-Safe, Non-Volatile
 
-CONSTRUCTION LAYERS:
-1. UV Coating Layer
+Construction Layers:
+1. UV Coating
 2. Wear Layer
 3. Decor Film
-4. SPC Core Sheet (limestone & PVC)
+4. SPC Core (limestone & PVC)
 5. Quick Installation Layer
-6. Underlayment (IXPE)
+6. IXPE Underlayment
 
-INSTALLATION:
+Installation:
 - Patented Uniclic® click-lock system
-- Can be installed over most floor surfaces
-- Suitable for residential and light commercial use
-- Requires 48-hour acclimation at 60°-85°F
-- Humidity should be 30%-55%
+- Installs over most floor surfaces
+- 48-hour acclimation at 60°-85°F
+- Humidity: 30%-55%
+- Suitable for residential & light commercial use
 
-CONTACT:
+Care & Maintenance:
+- Sweep regularly, mop with gentle cleaner
+- Avoid harsh chemicals, wax, abrasives
+- Maintain 60°-85°F, humidity 40%-70%
+- Use furniture pads, clean spills promptly
+
+Contact:
 - Email: info@florabyepsilon.com
-- Phone: +1 (234) 567-890
+- Contact Person: Mr. Vishal Boda
+- Phone: +91 9712712701
 - Address: 123 Design Avenue, New York, NY 10001
-- Hours: Monday-Friday, 9am-6pm EST
+- Hours: Mon-Fri, 9am-6pm EST
 
-Always provide helpful, accurate information about FLORA SPC flooring. Keep responses concise but informative.
-`;
+Always answer as a knowledgeable FLORA assistant. If unsure, recommend contacting a FLORA specialist. Keep responses clear, friendly, and on-brand.`;
 
   const predefinedResponses = {
     greeting: [
@@ -165,25 +168,20 @@ Always provide helpful, accurate information about FLORA SPC flooring. Keep resp
         try {
           console.log('Attempting to call Gemini API...');
           
-          const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              contents: [{
-                parts: [{
-                  text: `${floraContext}\n\nUser question: ${message}\n\nPlease provide a helpful response about FLORA SPC flooring based on the context above. Keep it concise and informative.`
+          const response = await fetch(
+            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                contents: [{
+                  parts: [{
+                    text: `${floraContext}\n\nUser question: ${message}\n\nPlease provide a helpful response about FLORA SPC flooring based on the context above. Keep it concise and informative.`
+                  }]
                 }]
-              }],
-              generationConfig: {
-                temperature: 0.7,
-                topK: 40,
-                topP: 0.95,
-                maxOutputTokens: 200,
-              }
-            })
-          });
+              })
+            }
+          );
 
           console.log('API Response status:', response.status);
           
@@ -284,7 +282,7 @@ Always provide helpful, accurate information about FLORA SPC flooring. Keep resp
       {/* Floating Button */}
       <motion.button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-primary hover:bg-primary-dark text-white rounded-full shadow-lg flex items-center justify-center transition-colors"
+        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-primary hover:bg-primary-dark text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, y: 100 }}
@@ -320,7 +318,7 @@ Always provide helpful, accurate information about FLORA SPC flooring. Keep resp
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 z-40 w-80 h-96 bg-card border border-border rounded-lg shadow-xl overflow-hidden"
+            className="fixed bottom-24 right-6 z-40 w-[20rem] h-[30rem] bg-card/90 border border-border rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md transition-all duration-300"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -336,7 +334,7 @@ Always provide helpful, accurate information about FLORA SPC flooring. Keep resp
             </div>
 
             {/* Messages */}
-            <div className="flex-1 p-4 overflow-y-auto h-64 bg-background">
+            <div className="flex-1 p-4 overflow-y-auto h-[22rem] bg-background/80 scrollbar-none">
               <div className="space-y-4">
                 {messages.map((message) => (
                   <motion.div
@@ -356,10 +354,10 @@ Always provide helpful, accurate information about FLORA SPC flooring. Keep resp
                           <Bot size={12} className="text-muted-foreground" />
                         )}
                       </div>
-                      <div className={`px-3 py-2 rounded-lg ${
+                      <div className={`px-3 py-2 rounded-xl shadow-sm ${
                         message.isUser 
-                          ? 'bg-primary text-white' 
-                          : 'bg-muted text-foreground'
+                          ? 'bg-gradient-to-br from-primary to-primary-dark text-white' 
+                          : 'bg-muted/80 text-foreground'
                       }`}>
                         <p className="text-sm">{message.text}</p>
                       </div>
@@ -377,7 +375,7 @@ Always provide helpful, accurate information about FLORA SPC flooring. Keep resp
                       <div className="w-6 h-6 rounded-full bg-muted mr-2 flex items-center justify-center">
                         <Bot size={12} className="text-muted-foreground" />
                       </div>
-                      <div className="bg-muted px-3 py-2 rounded-lg">
+                      <div className="bg-muted/80 px-3 py-2 rounded-xl">
                         <div className="flex space-x-1">
                           <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
                           <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
@@ -392,7 +390,7 @@ Always provide helpful, accurate information about FLORA SPC flooring. Keep resp
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-border bg-card">
+            <div className="p-4 border-t border-border bg-card/90">
               <form onSubmit={handleSubmit} className="flex space-x-2">
                 <input
                   type="text"
@@ -400,13 +398,13 @@ Always provide helpful, accurate information about FLORA SPC flooring. Keep resp
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask about FLORA flooring..."
-                  className="flex-1 px-3 py-2 text-sm border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background"
+                  className="flex-1 px-3 py-2 text-sm border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background/80"
                   disabled={isTyping}
                 />
                 <motion.button
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
-                  className="px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="px-3 py-2 bg-primary text-white rounded-xl hover:bg-primary-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   whileTap={{ scale: 0.95 }}
                 >
                   <Send size={16} />

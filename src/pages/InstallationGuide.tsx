@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, CheckCircle, AlertTriangle, PenTool as Tool } from 'lucide-react';
+import { CheckCircle, AlertTriangle, PenTool as Tool } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
 import PDFDownloadButton from '../components/PDFDownloadButton';

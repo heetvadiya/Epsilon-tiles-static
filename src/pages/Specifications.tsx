@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
 import PDFDownloadButton from '../components/PDFDownloadButton';
