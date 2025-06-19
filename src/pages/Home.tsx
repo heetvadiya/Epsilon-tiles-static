@@ -160,7 +160,7 @@ const Home: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/about" className="btn btn-outline px-6 py-3">
+                <Link to="/about" className="btn btn-outline px-8 py-3">
                   About Our Journey
                   <ChevronRight size={16} className="ml-1" />
                 </Link>
@@ -349,7 +349,7 @@ const Home: React.FC = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/inquiry" className="btn btn-outline btn-lg text-white border-white hover:bg-white/20 hover:text-white px-8 py-4">
+                <Link to="/contact" className="btn btn-outline btn-lg text-white border-white hover:bg-white/20 hover:text-white px-8 py-4">
                   Request a Quote
                 </Link>
               </motion.div>

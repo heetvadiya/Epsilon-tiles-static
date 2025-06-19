@@ -54,7 +54,7 @@ const WhySPC: React.FC = () => {
               >
                 <Link 
                   to="/collection" 
-                  className="btn btn-primary"
+                  className="btn btn-primary px-8 py-3"
                 >
                   Explore Our Collection
                 </Link>
@@ -323,7 +323,7 @@ const WhySPC: React.FC = () => {
             >
               <a 
                 href="#"
-                className="btn btn-primary inline-flex items-center"
+                className="btn btn-primary inline-flex items-center px-8 py-3"
               >
                 <ArrowDownToLine size={18} className="mr-2" />
                 Download Full Specifications
@@ -390,7 +390,7 @@ const WhySPC: React.FC = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/collection" className="btn btn-primary btn-lg">
+                <Link to="/collection" className="btn btn-primary btn-lg px-8 py-4">
                   View Collections
                 </Link>
               </motion.div>
@@ -398,7 +398,7 @@ const WhySPC: React.FC = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/contact" className="btn btn-outline btn-lg">
+                <Link to="/contact" className="btn btn-outline btn-lg px-8 py-4">
                   Contact a Specialist
                 </Link>
               </motion.div>

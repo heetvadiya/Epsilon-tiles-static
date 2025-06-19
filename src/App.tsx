@@ -8,6 +8,7 @@ import Chatbot from './components/Chatbot';
 
 // Pages
 import Home from './pages/Home';
+import About from './pages/About';
 import Collection from './pages/Collection';
 import ProductDetail from './pages/ProductDetail';
 import WhySPC from './pages/WhySPC';
@@ -26,6 +27,7 @@ function App() {
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
               <Route path="/collection" element={<Collection />} />
               <Route path="/collection/:id" element={<ProductDetail />} />
               <Route path="/why-spc" element={<WhySPC />} />

@@ -107,6 +107,11 @@ const Header: React.FC = () => {
     }
   };
 
+  // Choose logo based on theme
+  const logoSrc = theme === 'dark' 
+    ? "/Flora_by_epsilon_Logo__2_-removebg-preview.png" 
+    : "/Flora by epsilon Logo (1).png";
+
   return (
     <motion.header
       className="fixed top-0 left-0 right-0 z-40 py-4"
@@ -121,7 +126,7 @@ const Header: React.FC = () => {
         >
           <Link to="/" className="flex items-center">
             <img 
-              src="/Flora by epsilon Logo (1).png" 
+              src={logoSrc}
               alt="FLORA by Epsilon" 
               className="h-10 w-auto"
             />
@@ -193,7 +198,7 @@ const Header: React.FC = () => {
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link to="/inquiry" className="btn btn-primary btn-sm ml-4">
+            <Link to="/contact" className="btn btn-primary btn-sm ml-4 px-6 py-2">
               Inquire
             </Link>
           </motion.div>
@@ -260,8 +265,8 @@ const Header: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link 
-                  to="/inquiry" 
-                  className="btn btn-primary btn-sm self-start mt-2"
+                  to="/contact" 
+                  className="btn btn-primary btn-sm self-start mt-2 px-6 py-2"
                 >
                   Inquire
                 </Link>

@@ -49,11 +49,11 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-medium mb-1">Email Us</h3>
                   <p className="text-muted-foreground">
-                    <a href="mailto:info@florabyepsilon.com" className="hover:text-primary transition-colors">
-                      info@florabyepsilon.com
+                    <a href="mailto:info@epsilontile.com" className="hover:text-primary transition-colors">
+                      info@epsilontile.com
                     </a><br />
-                    <a href="mailto:sales@florabyepsilon.com" className="hover:text-primary transition-colors">
-                      sales@florabyepsilon.com
+                    <a href="mailto:sales@epsilontile.com" className="hover:text-primary transition-colors">
+                      sales@epsilontile.com
                     </a>
                   </p>
                 </div>
@@ -66,10 +66,10 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-medium mb-1">Call Us</h3>
                   <p className="text-muted-foreground">
-                    <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                      +1 (234) 567-890
+                    <a href="tel:+919712712701" className="hover:text-primary transition-colors">
+                      +91 9712712701
                     </a><br />
-                    <span className="text-sm">Monday - Friday: 9am - 6pm EST</span>
+                    <span className="text-sm">Monday - Friday: 9am - 6pm IST</span>
                   </p>
                 </div>
               </div>
@@ -159,7 +159,7 @@ const Contact: React.FC = () => {
                   ></textarea>
                 </div>
                 
-                <Button type="submit" variant="primary">
+                <Button type="submit" variant="primary" className="px-8 py-3">
                   Send Message
                 </Button>
               </form>

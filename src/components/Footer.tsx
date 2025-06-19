@@ -10,17 +10,25 @@ import {
   Twitter,
   ChevronRight
 } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 const Footer: React.FC = () => {
+  const { theme } = useTheme();
+
+  // Choose logo based on theme
+  const logoSrc = theme === 'dark' 
+    ? "/Flora_by_epsilon_Logo__2_-removebg-preview.png" 
+    : "/Flora by epsilon Logo (1).png";
+
   return (
     <footer className="bg-muted text-muted-foreground pt-16 pb-8 border-t border-border">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand Col */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center">
               <img 
-                src="/Flora by epsilon Logo (1).png" 
+                src={logoSrc}
                 alt="FLORA by Epsilon" 
                 className="h-10 w-auto"
               />
@@ -88,26 +96,6 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-foreground">Subscribe</h4>
-            <p className="mb-4">Subscribe to our newsletter for the latest product updates and offers.</p>
-            <form className="space-y-2">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="input w-full" 
-                required 
-              />
-              <button 
-                type="submit" 
-                className="btn btn-primary w-full px-4 py-2"
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
 

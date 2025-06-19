@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Package, Truck, Download } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
 
@@ -147,20 +148,21 @@ const Packing: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                className="btn btn-primary"
+                className="btn btn-primary px-8 py-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Download size={20} className="mr-2" />
                 Download Packing Guide
               </motion.button>
-              <motion.button
-                className="btn btn-outline"
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Contact for Custom Packaging
-              </motion.button>
+                <Link to="/contact" className="btn btn-outline px-8 py-3">
+                  Contact for Custom Packaging
+                </Link>
+              </motion.div>
             </div>
           </div>
         </AnimatedSection>
