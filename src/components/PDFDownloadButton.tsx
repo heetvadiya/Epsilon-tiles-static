@@ -162,7 +162,7 @@ const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({ pdfUrl, label = '
                   type="submit"
                   variant="primary"
                   size="md"
-                  className="w-full mt-2"
+                  className="w-full mt-2 px-8 py-3"
                   isLoading={loading}
                   disabled={loading}
                 >
