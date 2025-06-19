@@ -125,19 +125,19 @@ const ProductDetail: React.FC = () => {
               </ul>
             </div>
             
-            <div className="mb-8">
+            <div className="mb-8 space-x-4">
               <a 
                 href={product.viewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary w-full md:w-auto mb-4"
+                className="btn btn-primary w-full md:w-auto mb-4 py-4 px-2"
               >
                 View 360° Interactive Display
               </a>
               
               <Link 
                 to="/inquiry"
-                className="btn btn-outline w-full md:w-auto"
+                className="btn btn-outline w-full md:w-auto py-4 px-2"
               >
                 Request a Quote
               </Link>
