@@ -219,37 +219,93 @@ const Packing: React.FC = () => {
               <thead>
                 <tr className="bg-primary/10">
                   <th className="text-left py-4 px-4 font-semibold">Size (mm)</th>
-                  <th className="text-left py-4 px-4 font-semibold">Thickness (mm)</th>
-                  <th className="text-center py-4 px-4 font-semibold">PCS/Box</th>
+                  <th className="text-left py-4 px-4 font-semibold">Core + Lxpe</th>
+                  <th className="text-center py-4 px-4 font-semibold border-l-2 border-primary/20">PCS/Box</th>
                   <th className="text-center py-4 px-4 font-semibold">SQM/Box</th>
-                  <th className="text-center py-4 px-4 font-semibold">Boxes/Pallet</th>
+                  <th className="text-center py-4 px-4 font-semibold border-l-2 border-primary/20">Boxes/Pallet</th>
                   <th className="text-center py-4 px-4 font-semibold">SQM/Pallet</th>
-                  <th className="text-center py-4 px-4 font-semibold">Pallets/Container</th>
+                  <th className="text-center py-4 px-4 font-semibold">Weight/Pallet</th>
+                  <th className="text-center py-4 px-4 font-semibold border-l-2 border-primary/20">Pallets/Container</th>
                   <th className="text-center py-4 px-4 font-semibold">Total Boxes</th>
                   <th className="text-center py-4 px-4 font-semibold">Total SQM</th>
-                  <th className="text-center py-4 px-4 font-semibold">Weight/Pallet</th>
                   <th className="text-center py-4 px-4 font-semibold">Weight/Container</th>
                 </tr>
               </thead>
               <tbody>
-                {packingData.map((row, index) => (
+                {/* 181 × 1220 mm Group */}
+                {packingData.slice(0, 6).map((row, index) => (
                   <motion.tr 
                     key={index}
-                    className="border-b border-border hover:bg-muted/50 transition-colors"
+                    className={`border-b border-border hover:bg-muted/50 transition-colors ${
+                      index === 0 || index === 3 || index === 1 || index === 2 || index === 4 || index === 5 ? 'bg-green-50/50 border-t-2 border-t-green-200' : 
+                      index === 5 ? 'border-b-2 border-b-green-200' : ''
+                    }`}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
                     <td className="py-4 px-4 font-medium">{row.size}</td>
                     <td className="py-4 px-4">{row.thickness}</td>
-                    <td className="py-4 px-4 text-center">{row.pcsPerBox}</td>
+                    <td className="py-4 px-4 text-center border-l-2 border-primary/10">{row.pcsPerBox}</td>
                     <td className="py-4 px-4 text-center">{row.sqmPerBox}</td>
-                    <td className="py-4 px-4 text-center">{row.boxesPerPallet}</td>
+                    <td className="py-4 px-4 text-center border-l-2 border-primary/10">{row.boxesPerPallet}</td>
                     <td className="py-4 px-4 text-center">{row.sqmPerPallet}</td>
-                    <td className="py-4 px-4 text-center">{row.palletsPerContainer}</td>
+                    <td className="py-4 px-4 text-center">{row.weightPerPallet}</td>
+                    <td className="py-4 px-4 text-center border-l-2 border-primary/10">{row.palletsPerContainer}</td>
                     <td className="py-4 px-4 text-center font-medium text-primary">{row.totalBoxes}</td>
                     <td className="py-4 px-4 text-center font-medium text-primary">{row.totalSqm}</td>
+                    <td className="py-4 px-4 text-center font-medium">{row.weightPerContainer}</td>
+                  </motion.tr>
+                ))}
+                
+                {/* 230 × 1220 mm Group */}
+                {packingData.slice(6, 9).map((row, index) => (
+                  <motion.tr 
+                    key={index + 6}
+                    className={`border-b border-border hover:bg-muted/50 transition-colors ${
+                      index === 0 || index === 1 || index === 2 ? 'bg-orange-50/50 border-t-2 border-t-orange-200' : 
+                      index === 2 ? 'border-b-2 border-b-orange-200' : ''
+                    }`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: (index + 6) * 0.1 }}
+                  >
+                    <td className="py-4 px-4 font-medium">{row.size}</td>
+                    <td className="py-4 px-4">{row.thickness}</td>
+                    <td className="py-4 px-4 text-center border-l-2 border-primary/10">{row.pcsPerBox}</td>
+                    <td className="py-4 px-4 text-center">{row.sqmPerBox}</td>
+                    <td className="py-4 px-4 text-center border-l-2 border-primary/10">{row.boxesPerPallet}</td>
+                    <td className="py-4 px-4 text-center">{row.sqmPerPallet}</td>
                     <td className="py-4 px-4 text-center">{row.weightPerPallet}</td>
+                    <td className="py-4 px-4 text-center border-l-2 border-primary/10">{row.palletsPerContainer}</td>
+                    <td className="py-4 px-4 text-center font-medium text-primary">{row.totalBoxes}</td>
+                    <td className="py-4 px-4 text-center font-medium text-primary">{row.totalSqm}</td>
+                    <td className="py-4 px-4 text-center font-medium">{row.weightPerContainer}</td>
+                  </motion.tr>
+                ))}
+                
+                {/* 230 × 1524 mm Group */}
+                {packingData.slice(9, 12).map((row, index) => (
+                  <motion.tr 
+                    key={index + 9}
+                    className={`border-b border-border hover:bg-muted/50 transition-colors ${
+                      index === 0 || index === 1 || index === 2 ? 'bg-blue-50/50 border-t-2 border-t-blue-200' : 
+                      index === 2 ? 'border-b-2 border-b-blue-200' : ''
+                    }`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: (index + 9) * 0.1 }}
+                  >
+                    <td className="py-4 px-4 font-medium">{row.size}</td>
+                    <td className="py-4 px-4">{row.thickness}</td>
+                    <td className="py-4 px-4 text-center border-l-2 border-primary/10">{row.pcsPerBox}</td>
+                    <td className="py-4 px-4 text-center">{row.sqmPerBox}</td>
+                    <td className="py-4 px-4 text-center border-l-2 border-primary/10">{row.boxesPerPallet}</td>
+                    <td className="py-4 px-4 text-center">{row.sqmPerPallet}</td>
+                    <td className="py-4 px-4 text-center">{row.weightPerPallet}</td>
+                    <td className="py-4 px-4 text-center border-l-2 border-primary/10">{row.palletsPerContainer}</td>
+                    <td className="py-4 px-4 text-center font-medium text-primary">{row.totalBoxes}</td>
+                    <td className="py-4 px-4 text-center font-medium text-primary">{row.totalSqm}</td>
                     <td className="py-4 px-4 text-center font-medium">{row.weightPerContainer}</td>
                   </motion.tr>
                 ))}
@@ -273,7 +329,7 @@ const Packing: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/contact" className="btn btn-outline px-8 py-3">
+                <Link to="/contact" className="btn btn-outline px-8 py-4">
                   Contact for Custom Packaging
                 </Link>
               </motion.div>
