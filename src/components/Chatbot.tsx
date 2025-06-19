@@ -158,6 +158,7 @@ Always provide helpful, accurate information about FLORA SPC flooring. Keep resp
     try {
       // Get API key from environment variables
       const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      console.log('Gemini API Key:', apiKey);
       let botResponse = '';
 
       if (apiKey && apiKey !== 'your_gemini_api_key_here') {

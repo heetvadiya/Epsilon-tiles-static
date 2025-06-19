@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
 import { features } from '../data/features';
+import PDFDownloadButton from '../components/PDFDownloadButton';
 
 const WhySPC: React.FC = () => {
   const layerData = [
@@ -317,18 +318,10 @@ const WhySPC: React.FC = () => {
               FLORA SPC flooring meets or exceeds all industry standards for performance and safety. Download our comprehensive technical documentation for detailed specifications.
             </p>
             
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <a 
-                href="#"
-                className="btn btn-primary inline-flex items-center px-8 py-3"
-              >
-                <ArrowDownToLine size={18} className="mr-2" />
-                Download Full Specifications
-              </a>
-            </motion.div>
+            <PDFDownloadButton
+              pdfUrl="/pdfs/specifications.pdf"
+              label="Download Full Specifications"
+            />
           </AnimatedSection>
         </div>
       </section>

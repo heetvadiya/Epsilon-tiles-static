@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Download, CheckCircle, AlertTriangle, PenTool as Tool } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
+import PDFDownloadButton from '../components/PDFDownloadButton';
 
 const InstallationGuide: React.FC = () => {
   const tools = [
@@ -214,14 +215,10 @@ const InstallationGuide: React.FC = () => {
             <p className="text-muted-foreground mb-6">
               Get the complete installation manual with detailed diagrams, troubleshooting tips, and warranty information.
             </p>
-            <motion.button
-              className="btn btn-primary btn-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download size={20} className="mr-2" />
-              Download PDF Guide
-            </motion.button>
+            <PDFDownloadButton
+              pdfUrl="/pdfs/installation-guide.pdf"
+              label="Download PDF Guide"
+            />
           </div>
         </AnimatedSection>
       </section>

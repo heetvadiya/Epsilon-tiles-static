@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Download, CheckCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
+import PDFDownloadButton from '../components/PDFDownloadButton';
 
 const Specifications: React.FC = () => {
   const specifications = [
@@ -124,14 +125,10 @@ const Specifications: React.FC = () => {
             <p className="text-muted-foreground mb-6">
               Get the complete technical documentation including detailed test results, installation guidelines, and warranty information.
             </p>
-            <motion.button
-              className="btn btn-primary btn-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download size={20} className="mr-2" />
-              Download PDF Specifications
-            </motion.button>
+            <PDFDownloadButton
+              pdfUrl="/pdfs/specifications.pdf"
+              label="Download PDF Specifications"
+            />
           </div>
         </AnimatedSection>
       </section>

@@ -4,6 +4,7 @@ import { Package, Truck, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
+import PDFDownloadButton from '../components/PDFDownloadButton';
 
 const Packing: React.FC = () => {
   const packingData = [
@@ -147,14 +148,10 @@ const Packing: React.FC = () => {
               We can accommodate special packaging requirements for large projects or specific shipping needs.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                className="btn btn-primary px-8 py-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Download size={20} className="mr-2" />
-                Download Packing Guide
-              </motion.button>
+              <PDFDownloadButton
+                pdfUrl="/pdfs/packing-guide.pdf"
+                label="Download Packing Guide"
+              />
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
