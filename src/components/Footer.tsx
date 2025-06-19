@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
 
   // Choose logo based on theme
   const logoSrc = theme === 'dark' 
-    ? "/Flora_by_epsilon_Logo__2_-removebg-preview.png" 
-    : "/Flora by epsilon Logo (1).png";
+    ? "/light-logo.png" 
+    : "/dark-logo.png";
 
   return (
     <footer className="bg-muted text-muted-foreground pt-16 pb-8 border-t border-border">
