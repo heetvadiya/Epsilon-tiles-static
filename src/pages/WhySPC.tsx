@@ -318,10 +318,12 @@ const WhySPC: React.FC = () => {
               FLORA SPC flooring meets or exceeds all industry standards for performance and safety. Download our comprehensive technical documentation for detailed specifications.
             </p>
             
-            <PDFDownloadButton
-              pdfUrl="/pdfs/specifications.pdf"
-              label="Download Full Specifications"
-            />
+            <div className="flex justify-center">
+              <PDFDownloadButton
+                pdfUrl="/pdfs/specifications.pdf"
+                label="Download Full Specifications"
+              />
+            </div>
           </AnimatedSection>
         </div>
       </section>

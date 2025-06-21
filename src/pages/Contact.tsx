@@ -51,9 +51,6 @@ const Contact: React.FC = () => {
                   <p className="text-muted-foreground">
                     <a href="mailto:info@epsilontile.com" className="hover:text-primary transition-colors">
                       info@epsilontile.com
-                    </a><br />
-                    <a href="mailto:sales@epsilontile.com" className="hover:text-primary transition-colors">
-                      sales@epsilontile.com
                     </a>
                   </p>
                 </div>
@@ -159,7 +156,7 @@ const Contact: React.FC = () => {
                   ></textarea>
                 </div>
                 
-                <Button type="submit" variant="primary" className="px-8 py-3">
+                <Button type="submit" variant="primary" className="w-full px-8 py-3">
                   Send Message
                 </Button>
               </form>
