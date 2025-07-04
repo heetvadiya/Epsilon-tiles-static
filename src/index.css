@@ -204,7 +204,7 @@
   
   /* Mobile navigation improvements */
   .mobile-nav {
-    @apply pt-safe-top;
+    /* Removed pt-safe-top as it's not a valid Tailwind class */
   }
 }
 
