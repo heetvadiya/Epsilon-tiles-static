@@ -119,16 +119,18 @@ const Header: React.FC = () => {
       animate={isScrolled ? 'scrolled' : 'transparent'}
     >
       <div className="container flex items-center justify-between">
+        {/* Logo */}
         <motion.div
           variants={logoVariants}
           initial="initial"
           whileHover="hover"
+          className="flex-shrink-0"
         >
           <Link to="/" className="flex items-center">
             <img 
               src={logoSrc}
               alt="FLORA by Epsilon" 
-              className="h-10 w-auto"
+              className="h-8 md:h-10 w-auto"
             />
           </Link>
         </motion.div>
@@ -206,7 +208,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Toggle */}
         <motion.button
-          className="md:hidden flex items-center text-foreground"
+          className="md:hidden flex items-center text-foreground z-50"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           whileTap={{ scale: 0.95 }}

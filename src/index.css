@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -57,12 +57,12 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     @apply font-medium tracking-tight;
   }
 
@@ -171,6 +171,62 @@
 
   .nav-link.active::after {
     @apply w-full;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+  /* Ensure proper spacing for mobile header elements */
+  .container {
+    @apply px-3;
+  }
+  
+  /* Mobile header adjustments */
+  header .container {
+    @apply relative;
+  }
+  
+  /* Ensure mobile menu button has proper spacing */
+  header button[aria-label*="menu"] {
+    @apply ml-auto;
+  }
+  
+  /* Theme toggle positioning for mobile */
+  button[aria-label*="Switch to"] {
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  /* Prevent header elements from overlapping */
+  header {
+    @apply min-h-[4rem];
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav {
+    @apply pt-safe-top;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    @apply px-6;
+  }
+  
+  /* Theme toggle positioning for tablet */
+  button[aria-label*="Switch to"] {
+    top: 1rem;
+    right: 1.5rem;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1024px) {
+  /* Theme toggle positioning for desktop */
+  button[aria-label*="Switch to"] {
+    top: 1rem;
+    right: 1.5rem;
   }
 }
 

@@ -9,7 +9,7 @@ const ThemeToggle: React.FC = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="fixed top-4 right-6 z-50 flex items-center justify-center w-10 h-10 rounded-full bg-card shadow-md border border-border"
+      className="fixed top-4 right-4 md:right-6 z-50 flex items-center justify-center w-10 h-10 rounded-full bg-card shadow-md border border-border"
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
