@@ -169,10 +169,16 @@ const Contact: React.FC = () => {
       <section className="py-12">
         <div className="container">
           <div className="bg-muted rounded-lg overflow-hidden h-[400px]">
-            {/* Replace with actual map */}
-            <div className="w-full h-full flex items-center justify-center bg-muted-foreground/10">
-              <p className="text-muted-foreground">Map integration would be displayed here</p>
-            </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919.5564380780849!2d70.8246783167412!3d22.794097395388377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39598db930b83f67%3A0x6b37f7cd00695d6b!2sEPSILON%20TILE%20LLP!5e0!3m2!1sen!2sin!4v1751635349752!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="EPSILON TILE LLP Location"
+            />
           </div>
         </div>
       </section>
