@@ -6,49 +6,57 @@
 
 @layer base {
   :root {
-    --color-primary: 203 218 94;
-    --color-primary-light: 223 238 134;
-    --color-primary-dark: 183 198 54;
+    /* Primary: Khaki/Muted Green */
+    --color-primary: 224 215 199;
+    --color-primary-light: 234 225 209;
+    --color-primary-dark: 214 205 189;
     
-    --color-secondary: 139 69 19;
-    --color-secondary-light: 175 118 69;
-    --color-secondary-dark: 115 55 15;
+    /* Secondary: Puce/Brown */
+    --color-secondary: 86 69 62;
+    --color-secondary-light: 106 89 82;
+    --color-secondary-dark: 66 49 42;
     
-    --color-accent: 61 119 88;
+    /* Accent: Yellow */
+    --color-accent: 241 226 173;
     
-    --color-background: 245 245 240;
-    --color-foreground: 51 51 51;
+    /* Light theme backgrounds */
+    --color-background: 250 248 245;
+    --color-foreground: 45 35 30;
     
     --color-card: 255 255 255;
-    --color-card-foreground: 51 51 51;
+    --color-card-foreground: 45 35 30;
     
-    --color-muted: 229 229 229;
-    --color-muted-foreground: 115 115 115;
+    --color-muted: 240 235 230;
+    --color-muted-foreground: 120 110 105;
     
-    --color-border: 229 229 229;
+    --color-border: 230 225 220;
   }
 
   .dark {
-    --color-primary: 203 218 94;
-    --color-primary-light: 223 238 134;
-    --color-primary-dark: 183 198 54;
+    /* Primary: Khaki/Muted Green (adjusted for dark theme) */
+    --color-primary: 224 215 199;
+    --color-primary-light: 234 225 209;
+    --color-primary-dark: 204 195 179;
     
-    --color-secondary: 175 118 69;
-    --color-secondary-light: 200 150 100;
-    --color-secondary-dark: 139 69 19;
+    /* Secondary: Puce/Brown (lighter for dark theme) */
+    --color-secondary: 126 109 102;
+    --color-secondary-light: 146 129 122;
+    --color-secondary-dark: 86 69 62;
     
-    --color-accent: 80 145 110;
+    /* Accent: Yellow (muted for dark theme) */
+    --color-accent: 221 206 153;
     
-    --color-background: 25 25 25;
-    --color-foreground: 245 245 240;
+    /* Dark theme backgrounds */
+    --color-background: 33 28 25;
+    --color-foreground: 245 240 235;
     
-    --color-card: 40 40 40;
-    --color-card-foreground: 245 245 240;
+    --color-card: 45 40 37;
+    --color-card-foreground: 245 240 235;
     
-    --color-muted: 51 51 51;
-    --color-muted-foreground: 160 160 160;
+    --color-muted: 55 50 47;
+    --color-muted-foreground: 180 170 165;
     
-    --color-border: 51 51 51;
+    --color-border: 65 60 57;
   }
   
   html {
@@ -105,7 +113,7 @@
   }
 
   .btn-primary {
-    @apply btn bg-primary text-white hover:bg-primary-dark;
+    @apply btn bg-primary text-secondary hover:bg-primary-dark;
   }
 
   .btn-secondary {
@@ -113,7 +121,7 @@
   }
 
   .btn-outline {
-    @apply btn border border-primary text-primary hover:bg-primary hover:text-white;
+    @apply btn border border-primary text-primary hover:bg-primary hover:text-secondary;
   }
 
   .btn-ghost {
@@ -153,7 +161,7 @@
   }
   
   .feature-icon {
-    @apply w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4;
+    @apply w-12 h-12 flex items-center justify-center rounded-full bg-primary/20 text-secondary mb-4;
   }
 
   .nav-link {
