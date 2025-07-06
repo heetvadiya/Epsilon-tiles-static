@@ -5,10 +5,19 @@ export interface Product {
   description: string;
   image: string;
   images: string[];
-  size: string;
-  thickness: string;
-  wearLayer: string;
-  underpad: string;
+  sizes: string[];
+  thickness: {
+    core: string;
+    options: string[];
+  };
+  underpad: {
+    type: string;
+    thickness: string;
+  };
+  wearLayer: {
+    thickness: string;
+    options: string[];
+  };
   features: string[];
   viewUrl: string;
   related: string[];
@@ -26,10 +35,19 @@ export const products: Product[] = [
       'https://images.pexels.com/photos/6048018/pexels-photo-6048018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       'https://images.pexels.com/photos/6048018/pexels-photo-6048018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ],
-    size: '1220 × 180 mm',
-    thickness: '5.5 mm',
-    wearLayer: '0.5 mm',
-    underpad: '1.5 mm IXPE',
+    sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
+    thickness: {
+      core: '4.0 / 5.0 / 6.0 mm',
+      options: ['4.0 mm', '5.0 mm', '6.0 mm']
+    },
+    underpad: {
+      type: 'IXPE',
+      thickness: '1.0 & 1.5 mm'
+    },
+    wearLayer: {
+      thickness: '12 & 20 mil',
+      options: ['12 mil', '20 mil']
+    },
     features: [
       'Water Resistant',
       'Highly Durable',
@@ -50,10 +68,19 @@ export const products: Product[] = [
       'https://images.pexels.com/photos/5997993/pexels-photo-5997993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       'https://images.pexels.com/photos/5997994/pexels-photo-5997994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ],
-    size: '1220 × 180 mm',
-    thickness: '5.5 mm',
-    wearLayer: '0.5 mm',
-    underpad: '1.5 mm IXPE',
+    sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
+    thickness: {
+      core: '4.0 / 5.0 / 6.0 mm',
+      options: ['4.0 mm', '5.0 mm', '6.0 mm']
+    },
+    underpad: {
+      type: 'IXPE',
+      thickness: '1.0 & 1.5 mm'
+    },
+    wearLayer: {
+      thickness: '12 & 20 mil',
+      options: ['12 mil', '20 mil']
+    },
     features: [
       'Water Resistant',
       'Highly Durable',
@@ -74,10 +101,19 @@ export const products: Product[] = [
       'https://images.pexels.com/photos/6647037/pexels-photo-6647037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       'https://images.pexels.com/photos/6647037/pexels-photo-6647037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ],
-    size: '1220 × 180 mm',
-    thickness: '5.5 mm',
-    wearLayer: '0.5 mm',
-    underpad: '1.5 mm IXPE',
+    sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
+    thickness: {
+      core: '4.0 / 5.0 / 6.0 mm',
+      options: ['4.0 mm', '5.0 mm', '6.0 mm']
+    },
+    underpad: {
+      type: 'IXPE',
+      thickness: '1.0 & 1.5 mm'
+    },
+    wearLayer: {
+      thickness: '12 & 20 mil',
+      options: ['12 mil', '20 mil']
+    },
     features: [
       'Water Resistant',
       'Highly Durable',
@@ -98,10 +134,19 @@ export const products: Product[] = [
       'https://images.pexels.com/photos/4992478/pexels-photo-4992478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       'https://images.pexels.com/photos/4992478/pexels-photo-4992478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ],
-    size: '1220 × 180 mm',
-    thickness: '5.5 mm',
-    wearLayer: '0.5 mm',
-    underpad: '1.5 mm IXPE',
+    sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
+    thickness: {
+      core: '4.0 / 5.0 / 6.0 mm',
+      options: ['4.0 mm', '5.0 mm', '6.0 mm']
+    },
+    underpad: {
+      type: 'IXPE',
+      thickness: '1.0 & 1.5 mm'
+    },
+    wearLayer: {
+      thickness: '12 & 20 mil',
+      options: ['12 mil', '20 mil']
+    },
     features: [
       'Water Resistant',
       'Highly Durable',
@@ -122,10 +167,19 @@ export const products: Product[] = [
       'https://images.pexels.com/photos/7061071/pexels-photo-7061071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       'https://images.pexels.com/photos/7061071/pexels-photo-7061071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ],
-    size: '600 × 600 mm',
-    thickness: '5.5 mm',
-    wearLayer: '0.5 mm',
-    underpad: '1.5 mm IXPE',
+    sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
+    thickness: {
+      core: '4.0 / 5.0 / 6.0 mm',
+      options: ['4.0 mm', '5.0 mm', '6.0 mm']
+    },
+    underpad: {
+      type: 'IXPE',
+      thickness: '1.0 & 1.5 mm'
+    },
+    wearLayer: {
+      thickness: '12 & 20 mil',
+      options: ['12 mil', '20 mil']
+    },
     features: [
       'Water Resistant',
       'Highly Durable',
@@ -146,10 +200,19 @@ export const products: Product[] = [
       'https://images.pexels.com/photos/5998521/pexels-photo-5998521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       'https://images.pexels.com/photos/5998522/pexels-photo-5998522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ],
-    size: '600 × 600 mm',
-    thickness: '5.5 mm',
-    wearLayer: '0.5 mm',
-    underpad: '1.5 mm IXPE',
+    sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
+    thickness: {
+      core: '4.0 / 5.0 / 6.0 mm',
+      options: ['4.0 mm', '5.0 mm', '6.0 mm']
+    },
+    underpad: {
+      type: 'IXPE',
+      thickness: '1.0 & 1.5 mm'
+    },
+    wearLayer: {
+      thickness: '12 & 20 mil',
+      options: ['12 mil', '20 mil']
+    },
     features: [
       'Water Resistant',
       'Highly Durable',
@@ -170,10 +233,19 @@ export const products: Product[] = [
       'https://images.pexels.com/photos/6510968/pexels-photo-6510968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       'https://images.pexels.com/photos/6510968/pexels-photo-6510968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ],
-    size: '600 × 600 mm',
-    thickness: '5.5 mm',
-    wearLayer: '0.5 mm',
-    underpad: '1.5 mm IXPE',
+    sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
+    thickness: {
+      core: '4.0 / 5.0 / 6.0 mm',
+      options: ['4.0 mm', '5.0 mm', '6.0 mm']
+    },
+    underpad: {
+      type: 'IXPE',
+      thickness: '1.0 & 1.5 mm'
+    },
+    wearLayer: {
+      thickness: '12 & 20 mil',
+      options: ['12 mil', '20 mil']
+    },
     features: [
       'Water Resistant',
       'Highly Durable',
@@ -194,10 +266,19 @@ export const products: Product[] = [
       'https://images.pexels.com/photos/5998531/pexels-photo-5998531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       'https://images.pexels.com/photos/5998532/pexels-photo-5998532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ],
-    size: '600 × 900 mm',
-    thickness: '5.5 mm',
-    wearLayer: '0.5 mm',
-    underpad: '1.5 mm IXPE',
+    sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
+    thickness: {
+      core: '4.0 / 5.0 / 6.0 mm',
+      options: ['4.0 mm', '5.0 mm', '6.0 mm']
+    },
+    underpad: {
+      type: 'IXPE',
+      thickness: '1.0 & 1.5 mm'
+    },
+    wearLayer: {
+      thickness: '12 & 20 mil',
+      options: ['12 mil', '20 mil']
+    },
     features: [
       'Water Resistant',
       'Highly Durable',

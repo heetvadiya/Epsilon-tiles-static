@@ -4,6 +4,7 @@ import { Layers, Shield, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
+import BenefitFlipCard from '../components/BenefitFlipCard';
 import { features } from '../data/features';
 import PDFDownloadButton from '../components/PDFDownloadButton';
 
@@ -174,7 +175,7 @@ const WhySPC: React.FC = () => {
         </div>
       </section>
       
-      {/* Benefits & Features with Staggered Grid Animation */}
+      {/* Benefits & Features with Enhanced Flip Cards */}
       <section className="section container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <AnimatedSection direction="scale">
@@ -186,7 +187,7 @@ const WhySPC: React.FC = () => {
         </div>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -202,46 +203,12 @@ const WhySPC: React.FC = () => {
           }}
         >
           {features.map((feature, index) => (
-            <motion.div
+            <BenefitFlipCard
               key={feature.title}
-              className="card p-6"
-              variants={{
-                hidden: { 
-                  opacity: 0, 
-                  y: 60,
-                  rotateX: -15,
-                  scale: 0.8
-                },
-                visible: { 
-                  opacity: 1, 
-                  y: 0,
-                  rotateX: 0,
-                  scale: 1,
-                  transition: {
-                    duration: 0.6,
-                    ease: [0.25, 0.46, 0.45, 0.94]
-                  }
-                }
-              }}
-              whileHover={{ 
-                y: -10,
-                rotateX: 5,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}
-              style={{ perspective: 1000 }}
-            >
-              <motion.div 
-                className="feature-icon"
-                initial={{ scale: 0, rotate: -180 }}
-                whileInView={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-              >
-                <feature.icon size={24} />
-              </motion.div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </motion.div>
+              feature={feature}
+              index={index}
+              backgroundImage={feature.backgroundImage}
+            />
           ))}
         </motion.div>
       </section>

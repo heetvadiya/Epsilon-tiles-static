@@ -96,20 +96,20 @@ const ProductDetail: React.FC = () => {
             
             <div className="grid grid-cols-2 gap-x-6 gap-y-4 mb-8 bg-card rounded-lg p-6 border border-border">
               <div>
-                <h3 className="font-medium text-sm text-muted-foreground">Size</h3>
-                <p>{product.size}</p>
+                <h3 className="font-medium text-sm text-muted-foreground">Sizes Available</h3>
+                <p>{product.sizes.join(' / ')}</p>
               </div>
               <div>
-                <h3 className="font-medium text-sm text-muted-foreground">Thickness</h3>
-                <p>{product.thickness}</p>
+                <h3 className="font-medium text-sm text-muted-foreground">Thickness (Core)</h3>
+                <p>{product.thickness.core}</p>
+              </div>
+              <div>
+                <h3 className="font-medium text-sm text-muted-foreground">Underpad ({product.underpad.type})</h3>
+                <p>{product.underpad.thickness}</p>
               </div>
               <div>
                 <h3 className="font-medium text-sm text-muted-foreground">Wear Layer</h3>
-                <p>{product.wearLayer}</p>
-              </div>
-              <div>
-                <h3 className="font-medium text-sm text-muted-foreground">Underpad</h3>
-                <p>{product.underpad}</p>
+                <p>{product.wearLayer.thickness}</p>
               </div>
             </div>
             

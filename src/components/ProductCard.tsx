@@ -9,26 +9,30 @@ interface ProductCardProps {
     name: string;
     image: string;
     category: string;
-    thickness: string;
-    size: string;
-    wearLayer: string;
+    sizes: string[];
+    thickness: {
+      core: string;
+      options: string[];
+    };
+    underpad: {
+      type: string;
+      thickness: string;
+    };
+    wearLayer: {
+      thickness: string;
+      options: string[];
+    };
   };
   index?: number;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
   const cardVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50,
-      rotateX: -15,
-      scale: 0.9
-    },
+    hidden: { opacity: 0, y: 50, rotateY: -15 },
     visible: { 
       opacity: 1, 
-      y: 0,
-      rotateX: 0,
-      scale: 1,
+      y: 0, 
+      rotateY: 0,
       transition: {
         duration: 0.6,
         delay: index * 0.1,
@@ -38,95 +42,86 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
   };
 
   const imageVariants = {
-    rest: { scale: 1, rotateZ: 0 },
-    hover: { 
-      scale: 1.1, 
-      rotateZ: 1,
+    hidden: { scale: 1.2, opacity: 0 },
+    visible: { 
+      scale: 1, 
+      opacity: 1,
       transition: {
-        duration: 0.4,
-        ease: [0.25, 0.46, 0.45, 0.94]
-      }
-    }
-  };
-
-  const overlayVariants = {
-    rest: { opacity: 0, scale: 0.8 },
-    hover: { 
-      opacity: 1, 
-      scale: 1,
-      transition: {
-        duration: 0.3,
-        ease: 'easeOut'
+        duration: 0.8,
+        delay: index * 0.1 + 0.2,
+        ease: "easeOut"
       }
     }
   };
 
   const contentVariants = {
-    rest: { y: 0 },
-    hover: { 
-      y: -5,
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
       transition: {
-        duration: 0.3,
-        ease: 'easeOut'
+        duration: 0.4,
+        delay: index * 0.1 + 0.3
       }
     }
   };
 
   return (
     <motion.div 
-      className="card overflow-hidden group cursor-pointer"
+      className="card card-hover group cursor-pointer relative overflow-hidden"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
-      whileHover="hover"
-      initial="rest"
+      whileHover={{ 
+        y: -10,
+        rotateX: 5,
+        transition: { duration: 0.3 }
+      }}
       style={{ perspective: 1000 }}
     >
-      <div className="relative overflow-hidden">
+      {/* Image Container */}
+      <div className="relative overflow-hidden aspect-[4/3] bg-muted">
         <motion.img 
           src={product.image} 
           alt={product.name}
-          className="w-full h-64 object-cover"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           variants={imageVariants}
         />
         
-        {/* Animated overlay */}
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        
+        {/* Category badge */}
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-center justify-center"
-          variants={overlayVariants}
+          className="absolute top-3 left-3 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
         >
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            whileHover={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 0.4, ease: 'easeOut' }}
-          >
-            <Link 
-              to={`/collection/${product.id}`}
-              className="btn btn-primary btn-sm backdrop-blur-sm"
-            >
-              <Eye size={16} className="mr-1" />
-              360° View
-            </Link>
-          </motion.div>
+          {product.category}
         </motion.div>
 
-        {/* Floating category badge */}
-        <motion.div
-          className="absolute top-4 left-4"
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+        {/* Hover overlay with view details */}
+        <motion.div 
+          className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }}
         >
-          <span className="bg-primary/90 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
-            {product.category}
-          </span>
+          <motion.div
+            className="text-white text-center"
+            initial={{ y: 20, opacity: 0 }}
+            whileHover={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.1 }}
+          >
+            <Eye size={32} className="mx-auto mb-2" />
+            <p className="text-sm font-medium">View Details</p>
+          </motion.div>
         </motion.div>
       </div>
       
       <motion.div className="p-4" variants={contentVariants}>
         <motion.h3 
-          className="text-xl font-semibold mb-2"
+          className="text-xl font-semibold mb-3"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
@@ -135,14 +130,34 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
         </motion.h3>
         
         <motion.div 
-          className="space-y-1 text-sm text-muted-foreground mb-4"
+          className="space-y-2 text-sm text-muted-foreground mb-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: index * 0.1 + 0.5 }}
         >
-          <p>Size: {product.size}</p>
-          <p>Thickness: {product.thickness}</p>
-          <p>Wear Layer: {product.wearLayer}</p>
+          {/* Size */}
+          <div className="flex justify-between">
+            <span className="font-medium">SIZE:</span>
+            <span className="text-right">{product.sizes.join(' / ')}</span>
+          </div>
+          
+          {/* Thickness */}
+          <div className="flex justify-between">
+            <span className="font-medium">THICKNESS (CORE):</span>
+            <span className="text-right">{product.thickness.core}</span>
+          </div>
+          
+          {/* Underpad */}
+          <div className="flex justify-between">
+            <span className="font-medium">UNDERPAD ({product.underpad.type}):</span>
+            <span className="text-right">{product.underpad.thickness}</span>
+          </div>
+          
+          {/* Wear Layer */}
+          <div className="flex justify-between">
+            <span className="font-medium">WEAR LAYER:</span>
+            <span className="text-right">{product.wearLayer.thickness}</span>
+          </div>
         </motion.div>
         
         <motion.div

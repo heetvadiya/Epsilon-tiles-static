@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronRight, Sparkles } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
-import FeatureCard from '../components/FeatureCard';
+import BenefitFlipCard from '../components/BenefitFlipCard';
 import { features } from '../data/features';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
@@ -212,7 +212,7 @@ const Home: React.FC = () => {
           </AnimatedSection>
           
           <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -228,12 +228,11 @@ const Home: React.FC = () => {
             }}
           >
             {features.slice(0, 8).map((feature, index) => (
-              <FeatureCard
+              <BenefitFlipCard
                 key={feature.title}
-                icon={<feature.icon size={24} />}
-                title={feature.title}
-                description={feature.description}
+                feature={feature}
                 index={index}
+                backgroundImage={feature.backgroundImage}
               />
             ))}
           </motion.div>

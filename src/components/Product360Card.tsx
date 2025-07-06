@@ -141,14 +141,34 @@ const Product360Card: React.FC<Product360CardProps> = ({ product, index = 0 }) =
         </motion.h3>
         
         <motion.div 
-          className="space-y-1 text-sm text-muted-foreground mb-4"
+          className="space-y-2 text-sm text-muted-foreground mb-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: index * 0.1 + 0.5 }}
         >
-          <p>Size: {product.size}</p>
-          <p>Thickness: {product.thickness}</p>
-          <p>Wear Layer: {product.wearLayer}</p>
+          {/* Size */}
+          <div className="flex justify-between">
+            <span className="font-medium">SIZE:</span>
+            <span className="text-right">{product.sizes.join(' / ')}</span>
+          </div>
+          
+          {/* Thickness */}
+          <div className="flex justify-between">
+            <span className="font-medium">THICKNESS (CORE):</span>
+            <span className="text-right">{product.thickness.core}</span>
+          </div>
+          
+          {/* Underpad */}
+          <div className="flex justify-between">
+            <span className="font-medium">UNDERPAD ({product.underpad.type}):</span>
+            <span className="text-right">{product.underpad.thickness}</span>
+          </div>
+          
+          {/* Wear Layer */}
+          <div className="flex justify-between">
+            <span className="font-medium">WEAR LAYER:</span>
+            <span className="text-right">{product.wearLayer.thickness}</span>
+          </div>
         </motion.div>
         
         <motion.div

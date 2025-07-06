@@ -233,6 +233,19 @@
   .product-feature-icon {
     @apply text-primary;
   }
+
+  /* 3D Flip Card Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
 }
 
 /* Mobile-specific adjustments */
