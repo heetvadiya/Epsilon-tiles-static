@@ -17,13 +17,13 @@ const WhySPC: React.FC = () => {
   ];
 
   const comparisonData = [
-    { feature: 'Water Resistance', spc: 'Excellent', laminate: 'Poor', hardwood: 'Poor', ceramic: 'Excellent' },
-    { feature: 'Durability', spc: 'Excellent', laminate: 'Good', hardwood: 'Good', ceramic: 'Excellent' },
-    { feature: 'Comfort Underfoot', spc: 'Very Good', laminate: 'Fair', hardwood: 'Good', ceramic: 'Poor' },
-    { feature: 'Installation Ease', spc: 'Excellent', laminate: 'Good', hardwood: 'Poor', ceramic: 'Poor' },
-    { feature: 'Maintenance', spc: 'Minimal', laminate: 'Moderate', hardwood: 'High', ceramic: 'Moderate' },
-    { feature: 'Acoustic Properties', spc: 'Very Good', laminate: 'Poor', hardwood: 'Fair', ceramic: 'Poor' },
-    { feature: 'Radiant Heat Compatible', spc: 'Yes', laminate: 'Limited', hardwood: 'Limited', ceramic: 'Yes' },
+    { feature: 'Water Resistance', spc: 'Excellent', laminate: 'Poor', hardwood: 'Poor' },
+    { feature: 'Durability', spc: 'Excellent', laminate: 'Good', hardwood: 'Good' },
+    { feature: 'Comfort Underfoot', spc: 'Very Good', laminate: 'Fair', hardwood: 'Good' },
+    { feature: 'Installation Ease', spc: 'Excellent', laminate: 'Good', hardwood: 'Poor' },
+    { feature: 'Maintenance', spc: 'Minimal', laminate: 'Moderate', hardwood: 'High' },
+    { feature: 'Acoustic Properties', spc: 'Very Good', laminate: 'Poor', hardwood: 'Fair' },
+    { feature: 'Radiant Heat Compatible', spc: 'Yes', laminate: 'Limited', hardwood: 'Limited' },
   ];
 
   return (
@@ -269,7 +269,6 @@ const WhySPC: React.FC = () => {
                   <th className="p-4 text-center">FLORA SPC</th>
                   <th className="p-4 text-center">Laminate</th>
                   <th className="p-4 text-center">Hardwood</th>
-                  <th className="p-4 text-center">Ceramic Tile</th>
                 </tr>
               </thead>
               <tbody>
@@ -286,7 +285,6 @@ const WhySPC: React.FC = () => {
                     <td className="p-4 text-center font-semibold text-primary">{row.spc}</td>
                     <td className="p-4 text-center">{row.laminate}</td>
                     <td className="p-4 text-center">{row.hardwood}</td>
-                    <td className="p-4 text-center">{row.ceramic}</td>
                   </motion.tr>
                 ))}
               </tbody>
