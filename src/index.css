@@ -246,6 +246,10 @@
   .backface-hidden {
     backface-visibility: hidden;
   }
+
+  .rotateY-180 {
+    transform: rotateY(180deg);
+  }
 }
 
 /* Mobile-specific adjustments */

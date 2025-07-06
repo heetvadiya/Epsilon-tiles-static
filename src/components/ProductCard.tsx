@@ -1,13 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Eye, ArrowRight } from 'lucide-react';
+import { Eye, ArrowRight, Info } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 interface ProductCardProps {
   product: {
     id: string;
     name: string;
     image: string;
+    images: string[];
     category: string;
     sizes: string[];
     thickness: {
@@ -22,161 +23,235 @@ interface ProductCardProps {
       thickness: string;
       options: string[];
     };
+    features: string[];
+    viewUrl: string;
   };
   index?: number;
+  onShowcase?: (product: any) => void;
+  showQuickActions?: boolean;
+  layout?: 'grid' | 'masonry';
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ 
+  product, 
+  index = 0, 
+  onShowcase,
+  showQuickActions = true,
+  layout = 'grid'
+}) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const { theme } = useTheme();
+
+  const handleCardClick = () => {
+    if (!isFlipped) {
+      onShowcase?.(product);
+    }
+  };
+
+  const handleFlipToggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsFlipped(!isFlipped);
+  };
+
+  const handleExploreClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    onShowcase?.(product);
+  };
+
+  // Animation variants
   const cardVariants = {
-    hidden: { opacity: 0, y: 50, rotateY: -15 },
+    hidden: { 
+      opacity: 0, 
+      y: 30,
+      scale: 0.95
+    },
     visible: { 
       opacity: 1, 
-      y: 0, 
-      rotateY: 0,
-      transition: {
-        duration: 0.6,
-        delay: index * 0.1,
-        ease: [0.25, 0.46, 0.45, 0.94]
-      }
-    }
-  };
-
-  const imageVariants = {
-    hidden: { scale: 1.2, opacity: 0 },
-    visible: { 
-      scale: 1, 
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        delay: index * 0.1 + 0.2,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const contentVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
         duration: 0.4,
-        delay: index * 0.1 + 0.3
+        ease: "easeOut",
+        delay: index * 0.08
       }
     }
   };
 
+  const aspectRatio = layout === 'masonry' ? 'aspect-[4/5]' : 'aspect-[4/3]';
+
+  if (!isFlipped) {
+    // Front Side - Simple card with image and name
+    return (
+      <motion.div 
+        className={`relative cursor-pointer ${aspectRatio} group`}
+        variants={cardVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        onClick={handleCardClick}
+        whileHover={{ y: -5, scale: 1.02 }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className={`w-full h-full rounded-2xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-500 ${
+          theme === 'dark' ? 'bg-gray-800' : 'bg-white'
+        }`}>
+          {/* Image */}
+          <div className="relative h-4/5 overflow-hidden">
+            <img 
+              src={product.image} 
+              alt={product.name}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              onError={(e) => {
+                // Fallback image if the original fails to load
+                e.currentTarget.src = 'https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+              }}
+            />
+            
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            
+            {/* Category Badge */}
+            <div className="absolute top-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm">
+              {product.category}
+            </div>
+
+            {/* Flip Button */}
+            <button
+              onClick={handleFlipToggle}
+              className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors"
+            >
+              <Info size={16} />
+            </button>
+
+            {/* View Product Button - shown on hover */}
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <button
+                onClick={handleCardClick}
+                className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+              >
+                <Eye size={16} className="mr-2 inline" />
+                View Details
+              </button>
+            </div>
+          </div>
+
+          {/* Product Name */}
+          <div className="h-1/5 flex items-center justify-center p-4">
+            <h3 className={`text-lg font-bold text-center ${
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>
+              {product.name}
+            </h3>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // Back Side - Details
   return (
     <motion.div 
-      className="card card-hover group cursor-pointer relative overflow-hidden"
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
-      whileHover={{ 
-        y: -10,
-        rotateX: 5,
-        transition: { duration: 0.3 }
-      }}
+      className={`relative cursor-pointer ${aspectRatio}`}
+      initial={{ rotateY: 180 }}
+      animate={{ rotateY: 0 }}
+      transition={{ duration: 0.6 }}
       style={{ perspective: 1000 }}
     >
-      {/* Image Container */}
-      <div className="relative overflow-hidden aspect-[4/3] bg-muted">
-        <motion.img 
-          src={product.image} 
-          alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          variants={imageVariants}
-        />
-        
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
-        {/* Category badge */}
-        <motion.div 
-          className="absolute top-3 left-3 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
-        >
-          {product.category}
-        </motion.div>
+      <div className={`w-full h-full rounded-2xl overflow-hidden shadow-lg ${
+        theme === 'dark' ? 'bg-gray-800' : 'bg-white'
+      }`}>
+        <div className="p-6 h-full flex flex-col justify-between">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-4">
+            <h3 className={`text-lg font-bold ${
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>
+              {product.name}
+            </h3>
+            <button
+              onClick={handleFlipToggle}
+              className={`p-2 rounded-full transition-colors ${
+                theme === 'dark' 
+                  ? 'bg-gray-700 text-white hover:bg-gray-600' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              <ArrowRight size={16} className="rotate-180" />
+            </button>
+          </div>
 
-        {/* Hover overlay with view details */}
-        <motion.div 
-          className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 1 }}
-        >
-          <motion.div
-            className="text-white text-center"
-            initial={{ y: 20, opacity: 0 }}
-            whileHover={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.1 }}
-          >
-            <Eye size={32} className="mx-auto mb-2" />
-            <p className="text-sm font-medium">View Details</p>
-          </motion.div>
-        </motion.div>
+          {/* Features */}
+          <div className="flex-1 space-y-4">
+            <div className="flex flex-wrap gap-2">
+              {product.features.slice(0, 3).map((feature, idx) => (
+                <span 
+                  key={idx}
+                  className={`px-2 py-1 rounded-full text-xs font-medium ${
+                    theme === 'dark' 
+                      ? 'bg-gray-700 text-gray-300' 
+                      : 'bg-gray-100 text-gray-700'
+                  }`}
+                >
+                  {feature}
+                </span>
+              ))}
+            </div>
+
+            {/* Specifications */}
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              {[
+                { label: 'Size', value: product.sizes[0] },
+                { label: 'Core', value: product.thickness.core },
+                { label: 'Underpad', value: product.underpad.thickness },
+                { label: 'Wear Layer', value: product.wearLayer.thickness }
+              ].map((spec, idx) => (
+                <div
+                  key={spec.label}
+                  className={`p-3 rounded-lg ${
+                    theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'
+                  }`}
+                >
+                  <div className={`font-medium mb-1 ${
+                    theme === 'dark' ? 'text-white' : 'text-gray-900'
+                  }`}>
+                    {spec.label}
+                  </div>
+                  <div className={`text-xs ${
+                    theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
+                    {spec.value}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="space-y-3 mt-6">
+            <button
+              onClick={handleExploreClick}
+              className="w-full bg-primary text-white py-3 px-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center"
+            >
+              <Eye size={16} className="mr-2" />
+              Explore Product
+            </button>
+            
+            <a
+              href={product.viewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center ${
+                theme === 'dark' 
+                  ? 'bg-gray-700 text-white hover:bg-gray-600' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              <ArrowRight size={16} className="mr-2" />
+              View 360°
+            </a>
+          </div>
+        </div>
       </div>
-      
-      <motion.div className="p-4" variants={contentVariants}>
-        <motion.h3 
-          className="text-xl font-semibold mb-3"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
-        >
-          {product.name}
-        </motion.h3>
-        
-        <motion.div 
-          className="space-y-2 text-sm text-muted-foreground mb-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: index * 0.1 + 0.5 }}
-        >
-          {/* Size */}
-          <div className="flex justify-between">
-            <span className="font-medium">SIZE:</span>
-            <span className="text-right">{product.sizes.join(' / ')}</span>
-          </div>
-          
-          {/* Thickness */}
-          <div className="flex justify-between">
-            <span className="font-medium">THICKNESS (CORE):</span>
-            <span className="text-right">{product.thickness.core}</span>
-          </div>
-          
-          {/* Underpad */}
-          <div className="flex justify-between">
-            <span className="font-medium">UNDERPAD ({product.underpad.type}):</span>
-            <span className="text-right">{product.underpad.thickness}</span>
-          </div>
-          
-          {/* Wear Layer */}
-          <div className="flex justify-between">
-            <span className="font-medium">WEAR LAYER:</span>
-            <span className="text-right">{product.wearLayer.thickness}</span>
-          </div>
-        </motion.div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.1 + 0.6 }}
-        >
-          <Link 
-            to={`/collection/${product.id}`}
-            className="inline-flex items-center link group"
-          >
-            View Details
-            <ArrowRight 
-              size={16} 
-              className="ml-1 transition-transform group-hover:translate-x-1" 
-            />
-          </Link>
-        </motion.div>
-      </motion.div>
     </motion.div>
   );
 };

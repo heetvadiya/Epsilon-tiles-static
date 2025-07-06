@@ -30,6 +30,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/collection" element={<Collection />} />
               <Route path="/collection/:id" element={<ProductDetail />} />
+              <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="/why-spc" element={<WhySPC />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/specifications" element={<Specifications />} />

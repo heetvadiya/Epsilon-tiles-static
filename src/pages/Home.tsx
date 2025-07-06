@@ -4,14 +4,10 @@ import { motion } from 'framer-motion';
 import { ChevronRight, Sparkles } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import BenefitFlipCard from '../components/BenefitFlipCard';
+import ProductSection from '../components/ProductSection';
 import { features } from '../data/features';
-import { products } from '../data/products';
-import ProductCard from '../components/ProductCard';
 
 const Home: React.FC = () => {
-  // Take first 4 products for the featured section
-  const featuredProducts = products.slice(0, 4);
-
   const heroVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -239,63 +235,45 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="section container">
-        <AnimatedSection className="text-center max-w-3xl mx-auto mb-12" direction="up">
-          <motion.h2 
-            className="mb-4"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            Featured Collections
-          </motion.h2>
-          <motion.p 
-            className="text-muted-foreground"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Discover our most popular SPC flooring options, crafted to elevate any interior with the perfect balance of beauty and performance.
-          </motion.p>
-        </AnimatedSection>
-        
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.2
-              }
-            }
-          }}
-        >
-          {featuredProducts.map((product, index) => (
-            <ProductCard key={product.id} product={product} index={index} />
-          ))}
-        </motion.div>
-        
-        <motion.div 
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
+      {/* Premium Product Showcase */}
+      <ProductSection
+        title="Featured Premium Collections"
+        subtitle="Experience our most exclusive SPC flooring options, each crafted to elevate your space with sophisticated design and superior performance."
+        showFilters={false}
+        maxProducts={4}
+        layout="grid"
+        className="bg-white"
+      />
+
+      {/* View Collection CTA */}
+      <section className="py-16 bg-muted">
+        <div className="container">
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="text-center max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <Link to="/collection" className="btn btn-primary px-8 py-3">
-              View All Collections
-            </Link>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Explore Our Complete Collection
+            </h3>
+            <p className="text-muted-foreground mb-8">
+              Discover over 30+ premium SPC flooring options with advanced filtering, detailed specifications, and immersive 360° views.
+            </p>
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link 
+                to="/collection" 
+                className="btn btn-primary btn-lg px-8 py-4 inline-flex items-center"
+              >
+                View Entire Collection
+                <ChevronRight size={20} className="ml-2" />
+              </Link>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </section>
 
       {/* CTA Section */}
