@@ -108,7 +108,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             />
             
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent" />
             
             {/* Category Badge */}
             <div className="absolute top-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm">
@@ -118,16 +118,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
             {/* Flip Button */}
             <button
               onClick={handleFlipToggle}
-              className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors"
+              className="absolute top-3 right-3 bg-gray-900/70 backdrop-blur-sm text-white p-2 rounded-full hover:bg-gray-900/90 transition-colors"
             >
               <Info size={16} />
             </button>
 
             {/* View Product Button - shown on hover */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div className="absolute inset-0 bg-white/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <button
                 onClick={handleCardClick}
-                className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg"
+                style={{ 
+                  textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+                  filter: 'brightness(1.0)'
+                }}
               >
                 <Eye size={16} className="mr-2 inline" />
                 View Details

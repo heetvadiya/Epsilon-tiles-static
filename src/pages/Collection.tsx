@@ -60,7 +60,7 @@ const Collection: React.FC = () => {
 
       {/* Call to Action Section */}
       <motion.section 
-        className={`relative py-16 text-white overflow-hidden`}
+        className={`relative py-16 text-gray-900 overflow-hidden`}
         variants={sectionVariants}
       >
         <motion.div 
@@ -72,24 +72,34 @@ const Collection: React.FC = () => {
           whileInView={{ scale: 1 }}
           transition={{ duration: 1.5 }}
         >
-          <div className="absolute inset-0 bg-black/60"></div>
+          {/* Light overlay with gradient for better readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/80 to-white/90"></div>
+          <div className="absolute inset-0 bg-white/60"></div>
         </motion.div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-6"
+              className="text-3xl md:text-4xl font-bold mb-6 text-gray-900"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              style={{ 
+                textShadow: '2px 2px 8px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.5)',
+                filter: 'brightness(0.9)'
+              }}
             >
               Ready to Transform Your Space?
             </motion.h2>
             <motion.p 
-              className="text-lg mb-8"
+              className="text-lg mb-8 text-gray-800"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              style={{ 
+                textShadow: '1px 1px 6px rgba(255,255,255,0.8), 0 0 15px rgba(255,255,255,0.5)',
+                filter: 'brightness(0.85)'
+              }}
             >
               Connect with our flooring experts for personalized recommendations and professional installation services.
             </motion.p>
@@ -109,7 +119,7 @@ const Collection: React.FC = () => {
               </motion.a>
               <motion.a
                 href="/contact"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+                className="border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-900/10 hover:text-gray-900 transition-colors"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

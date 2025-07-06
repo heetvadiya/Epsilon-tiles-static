@@ -274,7 +274,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 text-white overflow-hidden">
+      <section className="relative py-24 text-gray-900 overflow-hidden">
         <motion.div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
@@ -284,24 +284,34 @@ const Home: React.FC = () => {
           whileInView={{ scale: 1 }}
           transition={{ duration: 1.5 }}
         >
-          <div className="absolute inset-0 bg-black/60"></div>
+          {/* Light overlay with gradient for better readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/80 to-white/90"></div>
+          <div className="absolute inset-0 bg-white/60"></div>
         </motion.div>
         
         <div className="container relative z-10">
           <AnimatedSection className="max-w-3xl mx-auto text-center" direction="scale">
             <motion.h2 
-              className="mb-6"
+              className="mb-6 text-gray-900"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              style={{ 
+                textShadow: '2px 2px 8px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.5)',
+                filter: 'brightness(0.9)'
+              }}
             >
               Transform Your Space
             </motion.h2>
             <motion.p 
-              className="text-lg mb-8"
+              className="text-lg mb-8 text-gray-800"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              style={{ 
+                textShadow: '1px 1px 6px rgba(255,255,255,0.8), 0 0 15px rgba(255,255,255,0.5)',
+                filter: 'brightness(0.85)'
+              }}
             >
               Ready to elevate your interior with FLORA's premium SPC flooring? Connect with our design consultants for personalized recommendations.
             </motion.p>
@@ -323,7 +333,7 @@ const Home: React.FC = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/contact" className="btn btn-outline btn-lg text-white border-white hover:bg-white/20 hover:text-white px-8 py-4">
+                <Link to="/contact" className="btn btn-outline btn-lg text-gray-900 border-gray-900 hover:bg-gray-900/10 hover:text-gray-900 px-8 py-4">
                   Request a Quote
                 </Link>
               </motion.div>
