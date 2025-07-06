@@ -1,14 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, AlertTriangle, PenTool as Tool } from 'lucide-react';
+import { CheckCircle, AlertTriangle, Wrench } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
 import PDFDownloadButton from '../components/PDFDownloadButton';
 
 const InstallationGuide: React.FC = () => {
   const tools = [
-    'Carpenter square', 'Utility knife', 'Tape measure', 'Pencil', 
-    'Long straight edge', 'Chalk line', 'Safety glasses', 'Tapping block', 'Pull bar'
+    'Carpenter square',
+    'Utility knife',
+    'Tape measure',
+    'Long straight edge',
+    'Chalk line',
+    'Safety glasses',
+    'Tapping block',
+    'Pull bar'
   ];
 
   const requirements = [
@@ -98,23 +104,37 @@ const InstallationGuide: React.FC = () => {
           </div>
         </AnimatedSection>
 
-        {/* Tools Required */}
+        {/* Tools Required - New Modern Grid */}
         <AnimatedSection direction="up" className="mb-12">
           <div className="card p-6">
-            <div className="flex items-center mb-4">
-              <Tool className="text-primary mr-3" size={24} />
+            <div className="flex items-center mb-6">
+              <Wrench className="text-primary mr-3" size={24} />
               <h3 className="text-xl font-semibold">Tools Required</h3>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {tools.map((tool, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-muted/50 rounded-lg p-3 text-center text-sm"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  className={`bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden shadow-md border border-border/30
+                  ${1 == 1
+                    ? 'hover:from-primary/10 hover:to-primary/5' 
+                    : 'hover:from-secondary/10 hover:to-secondary/5'
+                  }`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  whileHover={{ 
+                    y: -5, 
+                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                    transition: { duration: 0.2 }
+                  }}
                 >
-                  {tool}
+                  <div className="p-5 flex relative">
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary/40 rounded-r-full"></div>
+                    <div className="pl-3">
+                      <h4 className="font-semibold text-foreground">{tool}</h4>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
