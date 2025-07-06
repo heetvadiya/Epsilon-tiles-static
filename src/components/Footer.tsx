@@ -8,9 +8,11 @@ import {
   Instagram, 
   Linkedin, 
   Twitter,
-  ChevronRight
+  ChevronRight,
+  Download
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import PDFDownloadButton from './PDFDownloadButton';
 
 const Footer: React.FC = () => {
   const { theme } = useTheme();
@@ -23,7 +25,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-muted text-muted-foreground pt-16 pb-8 border-t border-border">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Col */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center">
@@ -96,6 +98,20 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* PDF Download Section */}
+          <div>
+            <div className="flex items-center mb-4">
+              <h4 className="text-lg font-semibold text-foreground">Catalog</h4>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">
+              Download our comprehensive catalog with all collections and specifications.
+            </p>
+            <PDFDownloadButton
+              pdfUrl="/pdfs/flora-complete-catalog.pdf"
+              label="Download Catalog"
+            />
           </div>
         </div>
 
