@@ -48,7 +48,7 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-screen max-h-[800px] flex items-center text-white overflow-hidden">
+      <section className="relative h-screen max-h-[800px] flex items-center overflow-hidden">
         {/* Animated Background */}
         <motion.div 
           className="absolute inset-0 bg-cover bg-center"
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
           transition={{ duration: 2, ease: 'easeOut' }}
         >
           <motion.div 
-            className="absolute inset-0 bg-black/50"
+            className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
@@ -87,19 +87,19 @@ const Home: React.FC = () => {
               variants={heroItemVariants}
               className="flex items-center mb-4"
             >
-              <Sparkles className="mr-2 text-primary" size={24} />
-              <span className="text-primary font-medium">Premium SPC Flooring</span>
+              <Sparkles className="mr-2 text-accent-primary" size={24} />
+              <span className="text-accent-primary font-medium text-lg">Premium SPC Flooring</span>
             </motion.div>
             
             <motion.h1 
-              className="mb-6"
+              className="mb-6 text-white font-bold"
               variants={heroItemVariants}
             >
               Timeless Luxury in Every Step – FLORA by Epsilon
             </motion.h1>
             
             <motion.p 
-              className="text-lg md:text-xl mb-8 max-w-2xl"
+              className="text-lg md:text-xl mb-8 max-w-2xl text-neutral-100 leading-relaxed"
               variants={heroItemVariants}
             >
               Premium SPC flooring crafted with exquisite detail for those who demand the finest in durability, aesthetics, and environmental consciousness.
@@ -115,7 +115,7 @@ const Home: React.FC = () => {
               >
                 <Link 
                   to="/collection" 
-                  className="btn btn-primary btn-lg px-8 py-4"
+                  className="btn btn-primary btn-lg px-8 py-4 shadow-lg"
                 >
                   Explore Collection
                 </Link>
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
               >
                 <Link 
                   to="/why-spc" 
-                  className="btn btn-outline btn-lg text-white border-white hover:bg-white/20 hover:text-white px-8 py-4"
+                  className="btn btn-outline btn-lg text-white border-2 border-white hover:bg-white hover:text-neutral-900 px-8 py-4 shadow-lg"
                 >
                   Learn About SPC
                 </Link>
@@ -258,18 +258,15 @@ const Home: React.FC = () => {
               Explore Our Complete Collection
             </h3>
             <p className="text-muted-foreground mb-8">
-              Discover over 30+ premium SPC flooring options with advanced filtering, detailed specifications, and immersive 360° views.
+              From classic wood textures to modern stone patterns, discover flooring solutions that reflect your unique style and meet your specific needs.
             </p>
             <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link 
-                to="/collection" 
-                className="btn btn-primary btn-lg px-8 py-4 inline-flex items-center"
-              >
-                View Entire Collection
-                <ChevronRight size={20} className="ml-2" />
+              <Link to="/collection" className="btn btn-primary btn-lg">
+                View Full Collection
+                <ChevronRight size={16} className="ml-1" />
               </Link>
             </motion.div>
           </motion.div>

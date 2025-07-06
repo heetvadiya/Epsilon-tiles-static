@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
+import { MessageCircle, X, Send, Sparkles, User } from 'lucide-react';
 
 interface Message {
   id: string;
@@ -199,25 +199,12 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
               botResponse = botResponse.substring(0, 297) + '...';
             }
             
-            console.log('Bot response from API:', botResponse);
+            console.log('Bot response:', botResponse);
           } else {
-            const errorText = await response.text();
-            console.error('Gemini API error response:', response.status, errorText);
-            
-            // Check for specific error types
-            if (response.status === 403) {
-              console.error('API Key might be invalid or lacking permissions');
-            } else if (response.status === 429) {
-              console.error('Rate limit exceeded');
-            }
+            console.error('API request failed:', response.status, response.statusText);
           }
-        } catch (apiError) {
-          console.error('Gemini API network error:', apiError);
-          
-          // Check if it's a CORS error
-          if (apiError instanceof TypeError && apiError.message.includes('fetch')) {
-            console.error('This might be a CORS error. Consider using a backend proxy.');
-          }
+        } catch (error) {
+          console.error('Error calling Gemini API:', error);
         }
       } else {
         console.log('No API key found, using predefined responses');
@@ -282,7 +269,7 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
       {/* Floating Button */}
       <motion.button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-primary hover:bg-primary-dark text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300"
+        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-br from-primary to-primary-hover hover:from-primary-hover hover:to-primary-700 text-primary-foreground rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, y: 100 }}
@@ -307,8 +294,14 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
+              className="relative"
             >
               <MessageCircle size={24} />
+              <motion.div
+                className="absolute -top-1 -right-1 w-3 h-3 bg-accent-primary rounded-full"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
             </motion.div>
           )}
         </AnimatePresence>
@@ -318,23 +311,28 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 z-40 w-[20rem] h-[30rem] bg-card/90 border border-border rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md transition-all duration-300"
+            className="fixed bottom-24 right-6 z-40 w-[22rem] h-[32rem] bg-card/95 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
           >
             {/* Header */}
-            <div className="bg-primary text-white p-4 flex items-center justify-between">
+            <div className="bg-gradient-to-r from-primary to-primary-hover text-primary-foreground p-4 flex items-center justify-between">
               <div className="flex items-center">
-                <Bot size={20} className="mr-2" />
-                <span className="font-medium">FLORA Assistant</span>
+                <h3 className="font-semibold text-base">FLORA Assistant</h3>
               </div>
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <motion.button
+                onClick={toggleChat}
+                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
+                whileTap={{ scale: 0.95 }}
+              >
+                <X size={16} />
+              </motion.button>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 p-4 overflow-y-auto h-[22rem] bg-background/80 scrollbar-none">
+            <div className="flex-1 p-4 overflow-y-auto h-[22rem] bg-gradient-to-b from-background/50 to-background-secondary/50 scrollbar-none">
               <div className="space-y-4">
                 {messages.map((message) => (
                   <motion.div
@@ -344,22 +342,18 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className={`flex items-start max-w-[80%] ${message.isUser ? 'flex-row-reverse' : 'flex-row'}`}>
-                      <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 ${
-                        message.isUser ? 'bg-primary ml-2' : 'bg-muted mr-2'
-                      }`}>
-                        {message.isUser ? (
-                          <User size={12} className="text-white" />
-                        ) : (
-                          <Bot size={12} className="text-muted-foreground" />
-                        )}
-                      </div>
-                      <div className={`px-3 py-2 rounded-xl shadow-sm ${
+                    <div className={`max-w-[85%]`}>
+                      <div className={`px-4 py-3 rounded-2xl shadow-sm ${
                         message.isUser 
-                          ? 'bg-gradient-to-br from-primary to-primary-dark text-white' 
-                          : 'bg-muted/80 text-foreground'
+                          ? 'bg-gradient-to-br from-primary to-primary-hover text-primary-foreground rounded-br-md' 
+                          : 'bg-card/80 text-card-foreground rounded-bl-md'
                       }`}>
-                        <p className="text-sm">{message.text}</p>
+                        <p className="text-sm leading-relaxed">{message.text}</p>
+                        <p className={`text-xs mt-1 ${
+                          message.isUser ? 'text-primary-foreground/70' : 'text-muted-foreground'
+                        }`}>
+                          {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -371,15 +365,12 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                   >
-                    <div className="flex items-start">
-                      <div className="w-6 h-6 rounded-full bg-muted mr-2 flex items-center justify-center">
-                        <Bot size={12} className="text-muted-foreground" />
-                      </div>
-                      <div className="bg-muted/80 px-3 py-2 rounded-xl">
+                    <div className="max-w-[85%]">
+                      <div className="bg-card/80 px-4 py-3 rounded-2xl rounded-bl-md">
                         <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-2 h-2 bg-accent-primary rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-accent-primary rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="w-2 h-2 bg-accent-primary rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                         </div>
                       </div>
                     </div>
@@ -390,22 +381,25 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-border bg-card/90">
-              <form onSubmit={handleSubmit} className="flex space-x-2">
-                <input
-                  type="text"
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  placeholder="Ask about FLORA flooring..."
-                  className="flex-1 px-3 py-2 text-sm border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background/80"
-                  disabled={isTyping}
-                />
+            <div className="p-4 bg-card/80 backdrop-blur-sm">
+              <form onSubmit={handleSubmit} className="flex space-x-3">
+                <div className="flex-1 relative">
+                  <input
+                    type="text"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    placeholder="Ask about FLORA flooring..."
+                    className="w-full px-4 py-3 text-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/30 bg-background/80 backdrop-blur-sm transition-all duration-200"
+                    disabled={isTyping}
+                  />
+                </div>
                 <motion.button
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
-                  className="px-3 py-2 bg-primary text-white rounded-xl hover:bg-primary-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="px-4 py-3 bg-gradient-to-r from-primary to-primary-hover text-primary-foreground rounded-xl hover:from-primary-hover hover:to-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
                   whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 }}
                 >
                   <Send size={16} />
                 </motion.button>

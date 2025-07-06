@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Users, Award } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import Button from '../components/Button';
 
@@ -14,78 +14,116 @@ const Contact: React.FC = () => {
       />
       
       <section className="section container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
-            <p className="text-muted-foreground mb-8">
-              Have questions about our SPC flooring products or need personalized recommendations? Our team of experts is here to help you find the perfect flooring solution for your space.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <MapPin className="text-primary" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-1">Visit Us</h3>
-                  <p className="text-muted-foreground mb-4">
-                    <strong>Corporate Office:</strong><br />
-                    410, Golden Market,<br />
-                    Ravvapor road, Morbi-363641<br />
-                    (GUJ.) INDIA
-                  </p>
-                  <p className="text-muted-foreground">
-                    <strong>Factory:</strong><br />
-                    Sr. No. 847/1 & 847/1/1,<br />
-                    At Ghuntu, Lakhadipur road,<br />
-                    8-A National Highway,<br />
-                    Morbi-363642 (GUJ.) INDIA
-                  </p>
-                </div>
-              </div>
+            <div className="bg-card p-8 rounded-lg shadow-sm border border-border h-full">
+              <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
+              <p className="text-muted-foreground mb-8">
+                Have questions about our SPC flooring products or need personalized recommendations? Our team of experts is here to help you find the perfect flooring solution for your space.
+              </p>
               
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <Mail className="text-primary" size={24} />
-                </div>
+              <div className="space-y-8">
+                {/* Offices - Side by Side */}
                 <div>
-                  <h3 className="text-lg font-medium mb-1">Email Us</h3>
-                  <p className="text-muted-foreground">
-                    <a href="mailto:info@epsilontile.com" className="hover:text-primary transition-colors">
-                      info@epsilontile.com
-                    </a><br />
-                    <a href="mailto:export@epsilontile.com" className="hover:text-primary transition-colors">
-                      export@epsilontile.com
-                    </a>
-                  </p>
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                      <MapPin className="text-primary" size={24} />
+                    </div>
+                    <h3 className="text-lg font-medium">Visit Us</h3>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ml-16">
+                    <div>
+                      <p className="text-sm font-medium text-primary mb-2">Corporate Office</p>
+                      <p className="text-muted-foreground text-sm">
+                        410, Golden Market,<br />
+                        Ravvapor road, Morbi-363641<br />
+                        (GUJ.) INDIA
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-primary mb-2">Factory</p>
+                      <p className="text-muted-foreground text-sm">
+                        Sr. No. 847/1 & 847/1/1,<br />
+                        At Ghuntu, Lakhadipur road,<br />
+                        8-A National Highway,<br />
+                        Morbi-363642 (GUJ.) INDIA
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <Phone className="text-primary" size={24} />
+                
+                {/* Email and Phone - Side by Side */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                      <Mail className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium mb-2">Email Us</h3>
+                      <div className="space-y-1">
+                        <p className="text-muted-foreground text-sm">
+                          <a href="mailto:info@epsilontile.com" className="hover:text-primary transition-colors">
+                            info@epsilontile.com
+                          </a>
+                        </p>
+                        <p className="text-muted-foreground text-sm">
+                          <a href="mailto:export@epsilontile.com" className="hover:text-primary transition-colors">
+                            export@epsilontile.com
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                      <Phone className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium mb-2">Call Us</h3>
+                      <div className="space-y-2">
+                        <div>
+                          <p className="text-sm font-medium text-primary mb-1">Phone:</p>
+                          <p className="text-muted-foreground text-sm">
+                            <a href="tel:+919712712701" className="hover:text-primary transition-colors">
+                              +91 9712712701
+                            </a> / 
+                            <a href="tel:+919712712702" className="hover:text-primary transition-colors">
+                              02
+                            </a>
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-primary mb-1">Customer Care:</p>
+                          <p className="text-muted-foreground text-sm">
+                            <a href="tel:+912822356097" className="hover:text-primary transition-colors">
+                              +91 2822356097
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-1">Call Us</h3>
-                  <p className="text-muted-foreground">
-                    <strong>Phone:</strong><br />
-                    <a href="tel:+919712712701" className="hover:text-primary transition-colors">
-                      +91 9712712701
-                    </a> / 
-                    <a href="tel:+919712712702" className="hover:text-primary transition-colors">
-                      02
-                    </a><br />
-                    <strong>Customer Care:</strong><br />
-                    <a href="tel:+912822356097" className="hover:text-primary transition-colors">
-                      +91 2822356097
-                    </a><br />
-                    <span className="text-sm">Monday - Friday: 9am - 6pm IST</span>
-                  </p>
+
+                {/* Business Hours */}
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Clock className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium mb-2">Business Hours</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Monday - Friday: 9am - 6pm IST<br />
+                      Saturday: 9am - 1pm IST<br />
+                      Sunday: Closed
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,7 +135,7 @@ const Contact: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-card p-8 rounded-lg shadow-sm border border-border">
+            <div className="bg-card p-8 rounded-lg shadow-sm border border-border h-full">
               <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
               
               <form className="space-y-4">
@@ -154,12 +192,19 @@ const Contact: React.FC = () => {
                   <label htmlFor="subject" className="block text-sm font-medium mb-1">
                     Subject
                   </label>
-                  <input
-                    type="text"
+                  <select
                     id="subject"
                     className="input w-full"
                     required
-                  />
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="product-inquiry">Product Inquiry</option>
+                    <option value="quotation">Request Quotation</option>
+                    <option value="installation">Installation Support</option>
+                    <option value="warranty">Warranty Claim</option>
+                    <option value="partnership">Partnership Opportunity</option>
+                    <option value="other">Other</option>
+                  </select>
                 </div>
                 
                 <div>
@@ -168,16 +213,48 @@ const Contact: React.FC = () => {
                   </label>
                   <textarea
                     id="message"
-                    rows={5}
+                    rows={6}
                     className="input w-full"
+                    placeholder="Tell us about your flooring needs, room size, or any specific requirements..."
                     required
                   ></textarea>
+                </div>
+                
+                <div className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2"
+                  />
+                  <label htmlFor="newsletter" className="text-sm text-muted-foreground">
+                    Subscribe to our newsletter for updates and special offers
+                  </label>
                 </div>
                 
                 <Button type="submit" variant="primary" className="w-full px-8 py-3">
                   Send Message
                 </Button>
               </form>
+
+              {/* Additional Info - Moved from left side */}
+              <div className="mt-8 pt-6 border-t border-border">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <Users className="text-primary" size={20} />
+                    </div>
+                    <p className="text-sm font-medium">Expert Team</p>
+                    <p className="text-xs text-muted-foreground">Professional Support</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <Award className="text-primary" size={20} />
+                    </div>
+                    <p className="text-sm font-medium">Quality Assured</p>
+                    <p className="text-xs text-muted-foreground">Premium Products</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
