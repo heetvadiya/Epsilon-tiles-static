@@ -6,57 +6,101 @@
 
 @layer base {
   :root {
-    /* Primary: Khaki/Muted Green */
-    --color-primary: 224 215 199;
-    --color-primary-light: 234 225 209;
-    --color-primary-dark: 214 205 189;
+    /* 
+    ===========================================
+    COLOR PALETTE - MAIN PLACE TO CHANGE COLORS
+    ===========================================
+    Change these base colors to update the entire website's color scheme
+    */
+
+    /* Primary palette (main brand color) */
+    --color-primary-base: 184 115 51; /* Khaki/Muted Green */
+    --color-primary-light-offset: 10 10 10;
+    --color-primary-dark-offset: -10 -10 -10;
     
-    /* Secondary: Puce/Brown */
-    --color-secondary: 86 69 62;
-    --color-secondary-light: 106 89 82;
-    --color-secondary-dark: 66 49 42;
+    /* Secondary palette (accent/contrasting color) */
+    --color-secondary-base: 86 69 62; /* Puce/Brown */
+    --color-secondary-light-offset: 20 20 20;
+    --color-secondary-dark-offset: -20 -20 -20;
     
-    /* Accent: Yellow */
-    --color-accent: 241 226 173;
+    /* Accent palette (highlight color) */
+    --color-accent-base: 241 226 173; /* Yellow */
+    --color-accent-light-offset: 10 10 10;
+    --color-accent-dark-offset: -20 -20 -20;
     
-    /* Light theme backgrounds */
-    --color-background: 250 248 245;
-    --color-foreground: 45 35 30;
+    /* Background colors */
+    --color-bg-light: 250 248 245;
+    --color-bg-dark: 33 28 25;
     
-    --color-card: 255 255 255;
-    --color-card-foreground: 45 35 30;
+    /* Text colors */
+    --color-text-light: 45 35 30;
+    --color-text-dark: 245 240 235;
     
-    --color-muted: 240 235 230;
-    --color-muted-foreground: 120 110 105;
+    /* UI element colors */
+    --color-card-light: 255 255 255;
+    --color-card-dark: 45 40 37;
     
-    --color-border: 230 225 220;
+    --color-muted-light: 240 235 230;
+    --color-muted-dark: 55 50 47;
+    
+    --color-muted-text-light: 120 110 105;
+    --color-muted-text-dark: 180 170 165;
+    
+    --color-border-light: 230 225 220;
+    --color-border-dark: 65 60 57;
+
+    /*
+    ===========================================
+    DERIVED COLORS - DO NOT EDIT DIRECTLY
+    ===========================================
+    These are automatically calculated from the base colors above
+    */
+    
+    /* Light theme colors (default) */
+    --color-primary: var(--color-primary-base);
+    --color-primary-light: calc(var(--color-primary-base) + var(--color-primary-light-offset));
+    --color-primary-dark: calc(var(--color-primary-base) + var(--color-primary-dark-offset));
+    
+    --color-secondary: var(--color-secondary-base);
+    --color-secondary-light: calc(var(--color-secondary-base) + var(--color-secondary-light-offset));
+    --color-secondary-dark: calc(var(--color-secondary-base) + var(--color-secondary-dark-offset));
+    
+    --color-accent: var(--color-accent-base);
+    
+    --color-background: var(--color-bg-light);
+    --color-foreground: var(--color-text-light);
+    
+    --color-card: var(--color-card-light);
+    --color-card-foreground: var(--color-text-light);
+    
+    --color-muted: var(--color-muted-light);
+    --color-muted-foreground: var(--color-muted-text-light);
+    
+    --color-border: var(--color-border-light);
   }
 
+  /* Dark mode variables - automatically applied when .dark class is present */
   .dark {
-    /* Primary: Khaki/Muted Green (adjusted for dark theme) */
-    --color-primary: 224 215 199;
-    --color-primary-light: 234 225 209;
-    --color-primary-dark: 204 195 179;
+    --color-primary: var(--color-primary-base);
+    --color-primary-light: calc(var(--color-primary-base) + var(--color-primary-light-offset));
+    --color-primary-dark: calc(var(--color-primary-base) + var(--color-primary-dark-offset));
     
-    /* Secondary: Puce/Brown (lighter for dark theme) */
-    --color-secondary: 126 109 102;
-    --color-secondary-light: 146 129 122;
-    --color-secondary-dark: 86 69 62;
+    --color-secondary: calc(var(--color-secondary-base) + var(--color-secondary-light-offset));
+    --color-secondary-light: calc(var(--color-secondary-base) + var(--color-secondary-light-offset) + var(--color-secondary-light-offset));
+    --color-secondary-dark: var(--color-secondary-base);
     
-    /* Accent: Yellow (muted for dark theme) */
-    --color-accent: 221 206 153;
+    --color-accent: calc(var(--color-accent-base) + var(--color-accent-light-offset));
     
-    /* Dark theme backgrounds */
-    --color-background: 33 28 25;
-    --color-foreground: 245 240 235;
+    --color-background: var(--color-bg-dark);
+    --color-foreground: var(--color-text-dark);
     
-    --color-card: 45 40 37;
-    --color-card-foreground: 245 240 235;
+    --color-card: var(--color-card-dark);
+    --color-card-foreground: var(--color-text-dark);
     
-    --color-muted: 55 50 47;
-    --color-muted-foreground: 180 170 165;
+    --color-muted: var(--color-muted-dark);
+    --color-muted-foreground: var(--color-muted-text-dark);
     
-    --color-border: 65 60 57;
+    --color-border: var(--color-border-dark);
   }
   
   html {
@@ -180,6 +224,15 @@
   .nav-link.active::after {
     @apply w-full;
   }
+  
+  /* Product detail specific styles */
+  .product-image-selected {
+    @apply ring-2 ring-primary;
+  }
+  
+  .product-feature-icon {
+    @apply text-primary;
+  }
 }
 
 /* Mobile-specific adjustments */
@@ -238,6 +291,7 @@
   }
 }
 
+/* Animation utilities */
 .animate-fade-in {
   opacity: 0;
   animation: fadeIn 0.8s ease-in-out forwards;

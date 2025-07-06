@@ -73,7 +73,7 @@ const ProductDetail: React.FC = () => {
                   onClick={() => setSelectedImage(image)}
                   className={`w-24 h-24 rounded-md overflow-hidden flex-shrink-0 transition-all ${
                     selectedImage === image 
-                      ? 'ring-2 ring-primary' 
+                      ? 'product-image-selected' 
                       : 'opacity-70 hover:opacity-100'
                   }`}
                 >
@@ -94,7 +94,7 @@ const ProductDetail: React.FC = () => {
             
             <p className="text-muted-foreground mb-6">{product.description}</p>
             
-            <div className="grid grid-cols-2 gap-x-6 gap-y-4 mb-8">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-4 mb-8 bg-card rounded-lg p-6 border border-border">
               <div>
                 <h3 className="font-medium text-sm text-muted-foreground">Size</h3>
                 <p>{product.size}</p>
@@ -118,7 +118,7 @@ const ProductDetail: React.FC = () => {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4">
                 {product.features.map((feature, index) => (
                   <li key={index} className="flex items-center">
-                    <CheckCircle size={16} className="text-primary mr-2 flex-shrink-0" />
+                    <CheckCircle size={16} className="product-feature-icon mr-2 flex-shrink-0" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -143,7 +143,7 @@ const ProductDetail: React.FC = () => {
               </Link>
             </div>
             
-            <div className="bg-muted p-4 rounded-lg">
+            <div className="bg-muted p-4 rounded-lg border-l-4 border-primary">
               <p className="text-sm">
                 Need samples or have questions? Our flooring experts are here to help.
               </p>

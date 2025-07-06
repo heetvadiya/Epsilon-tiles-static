@@ -259,15 +259,11 @@ const WhySPC: React.FC = () => {
           <div className="overflow-x-auto">
             <motion.table 
               className="w-full border-collapse min-w-[800px] bg-card rounded-lg overflow-hidden shadow-lg"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <motion.thead
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
+              <thead>
                 <tr className="bg-primary text-white">
                   <th className="p-4 text-left">Feature</th>
                   <th className="p-4 text-center">FLORA SPC</th>
@@ -275,29 +271,19 @@ const WhySPC: React.FC = () => {
                   <th className="p-4 text-center">Hardwood</th>
                   <th className="p-4 text-center">Ceramic Tile</th>
                 </tr>
-              </motion.thead>
+              </thead>
               <tbody>
                 {comparisonData.map((row, index) => (
                   <motion.tr 
                     key={row.feature}
-                    className={`${index % 2 === 0 ? 'bg-card' : 'bg-background'} border-b border-border`}
-                    initial={{ opacity: 0, x: -50 }}
+                    className={`${index % 2 === 0 ? 'bg-card' : 'bg-background'} border-b border-border hover:bg-muted/50 transition-colors`}
+                    initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                    whileHover={{ 
-                      backgroundColor: 'rgba(212, 175, 55, 0.1)',
-                      scale: 1.01,
-                      transition: { duration: 0.2 }
-                    }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
                   >
                     <td className="p-4 font-medium">{row.feature}</td>
-                    <motion.td 
-                      className="p-4 text-center font-semibold text-primary"
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      {row.spc}
-                    </motion.td>
+                    <td className="p-4 text-center font-semibold text-primary">{row.spc}</td>
                     <td className="p-4 text-center">{row.laminate}</td>
                     <td className="p-4 text-center">{row.hardwood}</td>
                     <td className="p-4 text-center">{row.ceramic}</td>

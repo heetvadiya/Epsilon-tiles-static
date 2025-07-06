@@ -57,7 +57,7 @@ const Home: React.FC = () => {
         <motion.div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(https://images.pexels.com/photos/4450335/pexels-photo-4450335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' 
+            backgroundImage: 'url(https://360.epsiloninc.in/uploads/preview/6937_MAPLE_BEIGE.jpg)' 
           }}
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
