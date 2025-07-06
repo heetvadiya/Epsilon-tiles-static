@@ -3,28 +3,33 @@ import { motion } from 'framer-motion';
 import { CheckCircle, Target, Eye, Award, Users, Leaf } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
+import BenefitFlipCard from '../components/BenefitFlipCard';
 
 const About: React.FC = () => {
   const commitments = [
     {
       icon: Award,
       title: 'Durability',
-      description: 'Our SPC flooring is engineered to withstand high foot traffic, resist scratches, and maintain its appearance for years.'
+      description: 'Our SPC flooring is engineered to withstand high foot traffic, resist scratches, and maintain its appearance for years.',
+      backgroundImage: 'https://images.pexels.com/photos/4050318/pexels-photo-4050318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     },
     {
       icon: CheckCircle,
       title: 'Water Resistance',
-      description: 'Ideal for areas prone to moisture, our flooring is 100% waterproof, making it perfect for kitchens, bathrooms, and basements.'
+      description: 'Ideal for areas prone to moisture, our flooring is 100% waterproof, making it perfect for kitchens, bathrooms, and basements.',
+      backgroundImage: 'https://images.pexels.com/photos/6585590/pexels-photo-6585590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     },
     {
       icon: Leaf,
       title: 'Eco-Friendly Materials',
-      description: 'We prioritize sustainability by using non-toxic, recyclable materials in our products.'
+      description: 'We prioritize sustainability by using non-toxic, recyclable materials in our products.',
+      backgroundImage: 'https://images.pexels.com/photos/6048018/pexels-photo-6048018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     },
     {
       icon: Users,
       title: 'Easy Installation',
-      description: 'With click-lock technology, our flooring can be installed quickly and efficiently, saving you time and labor costs.'
+      description: 'With click-lock technology, our flooring can be installed quickly and efficiently, saving you time and labor costs.',
+      backgroundImage: 'https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     }
   ];
 
@@ -75,7 +80,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Our Commitment Section */}
+      {/* Our Commitment Section with Flip Cards */}
       <section className="section bg-muted py-20">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16" direction="scale">
@@ -86,7 +91,7 @@ const About: React.FC = () => {
           </AnimatedSection>
           
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -102,46 +107,12 @@ const About: React.FC = () => {
             }}
           >
             {commitments.map((commitment, index) => (
-              <motion.div
+              <BenefitFlipCard
                 key={commitment.title}
-                className="card p-6 text-center"
-                variants={{
-                  hidden: { 
-                    opacity: 0, 
-                    y: 60,
-                    rotateX: -15,
-                    scale: 0.8
-                  },
-                  visible: { 
-                    opacity: 1, 
-                    y: 0,
-                    rotateX: 0,
-                    scale: 1,
-                    transition: {
-                      duration: 0.6,
-                      ease: [0.25, 0.46, 0.45, 0.94]
-                    }
-                  }
-                }}
-                whileHover={{ 
-                  y: -10,
-                  rotateX: 5,
-                  scale: 1.02,
-                  transition: { duration: 0.3 }
-                }}
-                style={{ perspective: 1000 }}
-              >
-                <motion.div 
-                  className="feature-icon mx-auto"
-                  initial={{ scale: 0, rotate: -180 }}
-                  whileInView={{ scale: 1, rotate: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                >
-                  <commitment.icon size={24} />
-                </motion.div>
-                <h3 className="text-xl font-semibold mb-2">{commitment.title}</h3>
-                <p className="text-muted-foreground">{commitment.description}</p>
-              </motion.div>
+                feature={commitment}
+                index={index}
+                backgroundImage={commitment.backgroundImage}
+              />
             ))}
           </motion.div>
         </div>
