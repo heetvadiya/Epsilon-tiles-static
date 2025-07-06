@@ -33,11 +33,18 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Visit Us</h3>
+                  <p className="text-muted-foreground mb-4">
+                    <strong>Corporate Office:</strong><br />
+                    410, Golden Market,<br />
+                    Ravvapor road, Morbi-363641<br />
+                    (GUJ.) INDIA
+                  </p>
                   <p className="text-muted-foreground">
-                    123 Design Avenue<br />
-                    Luxury District<br />
-                    New York, NY 10001<br />
-                    United States
+                    <strong>Factory:</strong><br />
+                    Sr. No. 847/1 & 847/1/1,<br />
+                    At Ghuntu, Lakhadipur road,<br />
+                    8-A National Highway,<br />
+                    Morbi-363642 (GUJ.) INDIA
                   </p>
                 </div>
               </div>
@@ -51,6 +58,9 @@ const Contact: React.FC = () => {
                   <p className="text-muted-foreground">
                     <a href="mailto:info@epsilontile.com" className="hover:text-primary transition-colors">
                       info@epsilontile.com
+                    </a><br />
+                    <a href="mailto:export@epsilontile.com" className="hover:text-primary transition-colors">
+                      export@epsilontile.com
                     </a>
                   </p>
                 </div>
@@ -63,8 +73,16 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-medium mb-1">Call Us</h3>
                   <p className="text-muted-foreground">
+                    <strong>Phone:</strong><br />
                     <a href="tel:+919712712701" className="hover:text-primary transition-colors">
                       +91 9712712701
+                    </a> / 
+                    <a href="tel:+919712712702" className="hover:text-primary transition-colors">
+                      02
+                    </a><br />
+                    <strong>Customer Care:</strong><br />
+                    <a href="tel:+912822356097" className="hover:text-primary transition-colors">
+                      +91 2822356097
                     </a><br />
                     <span className="text-sm">Monday - Friday: 9am - 6pm IST</span>
                   </p>

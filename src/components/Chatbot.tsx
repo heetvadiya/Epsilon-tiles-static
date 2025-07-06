@@ -104,8 +104,8 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
       "For best results, maintain room temperature between 60°-85°F and humidity between 40%-70%. Use furniture pads to protect against scratches and clean spills promptly."
     ],
     contact: [
-      "You can reach us at info@florabyepsilon.com or call +1 (234) 567-890. Our team is available Monday-Friday, 9am-6pm EST. We're also located at 123 Design Avenue, New York, NY 10001.",
-      "For quotes and consultations, feel free to contact our specialists. We offer personalized recommendations based on your specific needs and space requirements."
+      "You can reach us at info@epsilontile.com or export@epsilontile.com. You can call us at +91 9712712701/02 or our customer care at +91 2822356097.",
+      "Our corporate office is located at 410, Golden Market, Ravvapor road, Morbi-363641 (GUJ.) INDIA. Our factory is at Sr. No. 847/1 & 847/1/1, At Ghuntu, Lakhadipur road, 8-A National Highway, Morbi-363642 (GUJ.) INDIA."
     ],
     default: [
       "That's a great question! For detailed information about our SPC flooring, I'd recommend browsing our collection or contacting our specialists directly. Is there anything specific about FLORA flooring I can help you with?",
