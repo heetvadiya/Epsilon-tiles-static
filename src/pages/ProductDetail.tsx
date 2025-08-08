@@ -96,9 +96,9 @@ const ProductDetail: React.FC = () => {
             </motion.div>
 
             {/* Tile Gallery - 4 Horizontal Rectangular Tiles */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Individual Tile Preview</h3>
-              <div className="grid grid-cols-2 gap-4">
+            <div className="flex flex-col items-center">
+              <h3 className="font-semibold text-lg mb-4 text-center">Individual Tile Preview</h3>
+              <div className="flex gap-4 justify-center flex-nowrap overflow-x-auto px-1">
                 {tileImages.map((image, index) => (
                   <motion.div
                     key={index}
@@ -122,7 +122,7 @@ const ProductDetail: React.FC = () => {
                         initial={{ scale: 0 }}
                         whileHover={{ scale: 1.1 }}
                       >
-                        <Maximize2 size={20} className="text-white drop-shadow-lg" />
+                        <Maximize2 size={12} className="text-white drop-shadow-lg" />
                       </motion.div>
                     </div>
                   </motion.div>
