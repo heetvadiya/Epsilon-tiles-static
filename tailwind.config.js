@@ -3,6 +3,24 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
+    // Unified container system – keeps layouts consistently centered on every page
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem', // 16px on mobile
+        sm: '1.5rem',   // 24px on ≥640px
+        lg: '2rem',     // 32px on ≥1024px
+        xl: '2.5rem',   // 40px on ≥1280px
+        '2xl': '3rem', // 48px on ≥1536px
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1360px', // Slightly narrower than full-HD for comfortable reading width
+      },
+    },
     extend: {
       colors: {
         // Primary palette (Indigo)
@@ -240,5 +258,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animate'),
+  ],
 };

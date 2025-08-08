@@ -27,7 +27,7 @@ export const products360: Product360[] = [
     name: 'Lily Oak Beige',
     category: 'Wood Collection',
     description: 'Experience the warm, natural beauty of Lily Oak Beige with our immersive 360° view. This premium SPC flooring captures the authentic grain patterns and subtle color variations of natural oak.',
-    image: 'https://images.pexels.com/photos/6048018/pexels-photo-6048018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg',
     viewUrl: 'https://360.epsiloninc.in/34/lily-oak-beige',
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {

@@ -25,18 +25,50 @@ export interface Product {
 
 export const products = [
   {
+    id: "african-wenge",
+    name: "AFRICAN WENGE",
+    category: "Wood Collection",
+    description:
+      "AFRICAN WENGE brings timeless design with modern durability. Its distinctive dark tones and natural woodgrain finish offer a premium look suited for sophisticated interior styles. The rich textures and authentic patterns create an elegant atmosphere perfect for upscale residential and commercial spaces.",
+    image:
+      "https://360.epsiloninc.in/uploads/preview/9452_PINE_CHARCOAL.jpg",
+    images: [
+      "https://360.epsiloninc.in/uploads/tilesdesign/5231_PINE_CHARCOAL_R5.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8451_PINE_CHARCOAL_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8957_PINE_CHARCOAL_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1553_PINE_CHARCOAL_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6116_PINE_CHARCOAL_R4.jpg",
+    ],
+    sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
+    thickness: {
+      core: "4.0 / 5.0 / 6.0 mm",
+      options: ["4.0 mm", "5.0 mm", "6.0 mm"],
+    },
+    underpad: { type: "IXPE", thickness: "1.0 & 1.5 mm" },
+    wearLayer: { thickness: "12 & 20 mil", options: ["12 mil", "20 mil"] },
+    features: [
+      "Water Resistant",
+      "Highly Durable",
+      "Scratch Resistant",
+      "Easy to Install",
+    ],
+    viewUrl: "https://webapplication.tilesdisplay.in/share/african-wenge",
+    related: ["ebony-oak", "canyon-oak", "denali-oak-gris"],
+  },
+  {
     id: "aurora-craft",
     name: "AURORA CRAFT",
     category: "Wood Collection",
     description:
       "AURORA CRAFT brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles. The rich textures and authentic wood patterns create a warm, inviting atmosphere perfect for both residential and commercial spaces.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6508_EMORY_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6048018/pexels-photo-6048018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7061066/pexels-photo-7061066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4992478/pexels-photo-4992478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9842_EMORY_OAK__R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4431_EMORY_OAK__R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9545_EMORY_OAK__R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4844_EMORY_OAK__R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -61,12 +93,13 @@ export const products = [
     description:
       "CAMPUS GREY brings timeless design with modern durability. Its sophisticated grey tones and natural woodgrain finish offer a contemporary look that complements modern interior design. Perfect for creating elegant, professional spaces.",
     image:
-      "https://images.pexels.com/photos/4992478/pexels-photo-4992478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/1124_BOSTON_GREY.jpg",
     images: [
-      "https://images.pexels.com/photos/4992478/pexels-photo-4992478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7061071/pexels-photo-7061071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969950/pexels-photo-6969950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/5998530/pexels-photo-5998530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6351_BOSTON_GRAY_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8790_BOSTON_GRAY_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9650_BOSTON_GRAY_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1876_BOSTON_GRAY_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2770_BOSTON_GRAY_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -91,12 +124,12 @@ export const products = [
     description:
       "CANYON OAK brings timeless design with modern durability. Its warm, earthy tones and natural woodgrain finish capture the essence of rustic oak, creating spaces that feel both sophisticated and welcoming.",
     image:
-      "https://images.pexels.com/photos/6048018/pexels-photo-6048018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/6048018/pexels-photo-6048018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7061066/pexels-photo-7061066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6510297/pexels-photo-6510297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969924/pexels-photo-6969924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -116,17 +149,17 @@ export const products = [
   },
   {
     id: "creek-oak--brown",
-    name: "CREEK OAK  BROWN",
+    name: "CREEK OAK BROWN",
     category: "Wood Collection",
     description:
       "CREEK OAK BROWN brings timeless design with modern durability. Its rich brown tones and natural woodgrain finish offer a classic, sophisticated look that adds warmth and character to any space.",
     image:
-      "https://images.pexels.com/photos/7061066/pexels-photo-7061066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/7061066/pexels-photo-7061066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6510297/pexels-photo-6510297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969924/pexels-photo-6969924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -151,12 +184,12 @@ export const products = [
     description:
       "DENALI OAK GRIS brings timeless design with modern durability. Its distinctive gris tones and stone-inspired finish offer a premium look suited for contemporary interior styles.",
     image:
-      "https://images.pexels.com/photos/7061071/pexels-photo-7061071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
     images: [
-      "https://images.pexels.com/photos/7061071/pexels-photo-7061071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7061056/pexels-photo-7061056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969946/pexels-photo-6969946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7061054/pexels-photo-7061054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -181,11 +214,11 @@ export const products = [
     description:
       "EBONY OAK brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/5998530/pexels-photo-5998530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/1767_SESSILE_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/5998530/pexels-photo-5998530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/5998530/pexels-photo-5998530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/5998530/pexels-photo-5998530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/1767_SESSILE_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/1767_SESSILE_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/1767_SESSILE_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -210,11 +243,11 @@ export const products = [
     description:
       "ENIGMA WOODCRAFT brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/6969950/pexels-photo-6969950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/5072_DARK_PADAUK.jpg",
     images: [
-      "https://images.pexels.com/photos/6969950/pexels-photo-6969950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969950/pexels-photo-6969950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969950/pexels-photo-6969950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/5072_DARK_PADAUK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/5072_DARK_PADAUK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/5072_DARK_PADAUK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -234,16 +267,16 @@ export const products = [
   },
   {
     id: "etherial--horizon",
-    name: "ETHERIAL  HORIZON",
+    name: "ETHERIAL HORIZON",
     category: "Stone Collection",
     description:
-      "ETHERIAL  HORIZON brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
+      "ETHERIAL HORIZON brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/7061056/pexels-photo-7061056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/1147_FANCY_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/7061056/pexels-photo-7061056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7061056/pexels-photo-7061056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7061056/pexels-photo-7061056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/1147_FANCY_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/1147_FANCY_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/1147_FANCY_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -268,11 +301,11 @@ export const products = [
     description:
       "FOSTER HONEY brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/6510297/pexels-photo-6510297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/7878_CHARNWOOD_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/6510297/pexels-photo-6510297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6510297/pexels-photo-6510297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6510297/pexels-photo-6510297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/7878_CHARNWOOD_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/7878_CHARNWOOD_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/7878_CHARNWOOD_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -297,11 +330,11 @@ export const products = [
     description:
       "FUMED OAK brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/6969924/pexels-photo-6969924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/7455_BEACHWOOD_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/6969924/pexels-photo-6969924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969924/pexels-photo-6969924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969924/pexels-photo-6969924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/7455_BEACHWOOD_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/7455_BEACHWOOD_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/7455_BEACHWOOD_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -326,11 +359,11 @@ export const products = [
     description:
       "GLOBAL OAK WHITE brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/7061054/pexels-photo-7061054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8272_ASPEN_WHITE.jpg",
     images: [
-      "https://images.pexels.com/photos/7061054/pexels-photo-7061054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7061054/pexels-photo-7061054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/7061054/pexels-photo-7061054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8272_ASPEN_WHITE.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8272_ASPEN_WHITE.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8272_ASPEN_WHITE.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -355,11 +388,11 @@ export const products = [
     description:
       "GOLDEN HARVEST OAK brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/6969946/pexels-photo-6969946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/6969946/pexels-photo-6969946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969946/pexels-photo-6969946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6969946/pexels-photo-6969946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -384,11 +417,11 @@ export const products = [
     description:
       "HERITAGE OAK brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6370_EUCALYPTUS.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6370_EUCALYPTUS.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6370_EUCALYPTUS.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6370_EUCALYPTUS.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -413,11 +446,11 @@ export const products = [
     description:
       "HIGHLAND MIX brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -442,11 +475,11 @@ export const products = [
     description:
       "ITALIAN WALNUT BROWN brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/2730_ACACIA_BROWN.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/2730_ACACIA_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/2730_ACACIA_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/2730_ACACIA_BROWN.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -466,16 +499,16 @@ export const products = [
   },
   {
     id: "italian-walnut--dark",
-    name: "ITALIAN WALNUT  DARK",
+    name: "ITALIAN WALNUT DARK",
     category: "Wood Collection",
     description:
-      "ITALIAN WALNUT  DARK brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
+      "ITALIAN WALNUT DARK brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -500,11 +533,11 @@ export const products = [
     description:
       "KATI OAK GREY brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -529,11 +562,11 @@ export const products = [
     description:
       "LARCH WOOD brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/7017_PROTO_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/7017_PROTO_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/7017_PROTO_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/7017_PROTO_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -553,16 +586,16 @@ export const products = [
   },
   {
     id: "lily-oak--beige",
-    name: "LILY OAK  BEIGE",
+    name: "LILY OAK BEIGE",
     category: "Wood Collection",
     description:
-      "LILY OAK  BEIGE brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
+      "LILY OAK BEIGE brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -587,11 +620,11 @@ export const products = [
     description:
       "LILY OAK BROWN brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -616,11 +649,11 @@ export const products = [
     description:
       "LIME WOOD brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -645,11 +678,11 @@ export const products = [
     description:
       "MARINE SLATE brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -674,11 +707,11 @@ export const products = [
     description:
       "MERANTI OAK brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/9649_SANDY_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/9649_SANDY_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/9649_SANDY_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/9649_SANDY_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -703,11 +736,11 @@ export const products = [
     description:
       "MILANO WALNUT brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6330_NATURAL_WALNUT.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6330_NATURAL_WALNUT.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6330_NATURAL_WALNUT.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6330_NATURAL_WALNUT.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -732,11 +765,11 @@ export const products = [
     description:
       "MORIS WOOD brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6497_VINTAGE_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/6497_VINTAGE_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6497_VINTAGE_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/6497_VINTAGE_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -761,11 +794,11 @@ export const products = [
     description:
       "NATURAL HICKORY brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/4855_WARM_OAK.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/4855_WARM_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/4855_WARM_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/preview/4855_WARM_OAK.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -790,11 +823,11 @@ export const products = [
     description:
       "PEDY OAK BEIGE brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/3070_COLUMBIA_BEIGE.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/3070_COLUMBIA_BEIGE.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3070_COLUMBIA_BEIGE.jpg",
+      "https://360.epsiloninc.in/uploads/preview/3070_COLUMBIA_BEIGE.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -819,11 +852,11 @@ export const products = [
     description:
       "TEAK WOOD brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8463_DALLA_BROWN.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8463_DALLA_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8463_DALLA_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8463_DALLA_BROWN.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -848,11 +881,11 @@ export const products = [
     description:
       "TUDOR OAK NATURAL brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
+      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
+      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -877,11 +910,11 @@ export const products = [
     description:
       "VALLEY GROVE OAK brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8752_RUSTY_BROWN.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/8752_RUSTY_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8752_RUSTY_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/preview/8752_RUSTY_BROWN.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -906,11 +939,11 @@ export const products = [
     description:
       "VERTICAL OAK BLOND brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/5328_OAK_ELEGANT.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/5328_OAK_ELEGANT.jpg",
+      "https://360.epsiloninc.in/uploads/preview/5328_OAK_ELEGANT.jpg",
+      "https://360.epsiloninc.in/uploads/preview/5328_OAK_ELEGANT.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -935,11 +968,11 @@ export const products = [
     description:
       "WALDEN OAK brings timeless design with modern durability. Its distinctive tones and natural woodgrain finish offer a premium look suited for a variety of interior styles.",
     image:
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
     images: [
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
+      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
+      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {

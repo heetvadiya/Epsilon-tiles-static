@@ -35,10 +35,11 @@ const ProductDetail: React.FC = () => {
 
   // Generate tile images for visualization (4 rectangular tiles)
   const tileImages = product ? [
-    product.image,
+    product.images[0] || product.image,
     product.images[1] || product.image,
     product.images[2] || product.image,
-    product.image // Repeat main image for 4th tile
+    product.images[3] || product.image,
+    product.images[4] || product.image // Repeat main image for 4th tile
   ] : [];
 
   if (!product) {
@@ -101,8 +102,12 @@ const ProductDetail: React.FC = () => {
                 {tileImages.map((image, index) => (
                   <motion.div
                     key={index}
-                    className="relative group cursor-zoom-in bg-muted rounded-lg overflow-hidden"
-                    style={{ aspectRatio: '4/1' }} // Rectangle shape - very wide
+                    className="relative group cursor-zoom-in bg-background-secondary rounded-lg overflow-hidden border border-border snap-start"
+                    style={{ 
+                      aspectRatio: '1/4',
+                      height: '360px',
+                      width: '100px'
+                    }}
                     whileHover={{ scale: 1.02 }}
                     onClick={() => setZoomedImage(image)}
                   >
