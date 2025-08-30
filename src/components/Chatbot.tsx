@@ -269,9 +269,9 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
       {/* Floating Button */}
       <motion.button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-br from-primary to-primary-hover hover:from-primary-hover hover:to-primary-700 text-primary-foreground rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 group"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1 }}
@@ -285,7 +285,7 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <X size={24} />
+              <X size={20} />
             </motion.div>
           ) : (
             <motion.div
@@ -294,14 +294,8 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="relative"
             >
-              <MessageCircle size={24} />
-              <motion.div
-                className="absolute -top-1 -right-1 w-3 h-3 bg-accent-primary rounded-full"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
+              <MessageCircle size={20} />
             </motion.div>
           )}
         </AnimatePresence>
@@ -311,34 +305,29 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 z-40 w-[22rem] h-[32rem] bg-card/95 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden"
+            className="fixed bottom-20 right-6 z-40 w-[24rem] h-[32rem] max-h-[calc(100vh-6rem)] bg-white/95 backdrop-blur-xl rounded-xl shadow-xl border border-gray-200/50 overflow-hidden flex flex-col"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-4 flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <Sparkles size={16} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-base">FLORA Assistant</h3>
-                  <p className="text-xs text-white/80">Powered by AI</p>
-                </div>
+            <div className="bg-white/80 backdrop-blur-sm border-b border-gray-100 px-6 py-4 flex items-center justify-between">
+              <div>
+                <h3 className="font-medium text-gray-900 text-lg tracking-tight">FLORA</h3>
+                <p className="text-sm text-gray-500 mt-0.5">How can I help you today?</p>
               </div>
               <motion.button
                 onClick={toggleChat}
-                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
+                className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-50 transition-colors text-gray-400 hover:text-gray-600"
                 whileTap={{ scale: 0.95 }}
               >
-                <X size={16} />
+                <X size={14} />
               </motion.button>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 p-4 overflow-y-auto h-[22rem] bg-gradient-to-b from-background/50 to-background-secondary/50 scrollbar-none">
+            <div className="flex-1 p-4 overflow-y-auto bg-gray-50/50 scrollbar-none">
               <div className="space-y-4">
                 {messages.map((message) => (
                   <motion.div
@@ -349,14 +338,14 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
                     transition={{ duration: 0.3 }}
                   >
                     <div className={`max-w-[85%]`}>
-                      <div className={`px-4 py-3 rounded-2xl shadow-sm ${
+                      <div className={`px-4 py-3 rounded-lg ${
                         message.isUser 
-                          ? 'bg-gradient-to-br from-primary to-primary-hover text-primary-foreground rounded-br-md' 
-                          : 'bg-card/80 text-card-foreground rounded-bl-md'
+                          ? 'bg-gray-900 rounded-br-sm' 
+                          : 'bg-white text-gray-900 border border-gray-200 rounded-bl-sm'
                       }`}>
-                        <p className="text-sm leading-relaxed">{message.text}</p>
+                        <p className={`text-sm leading-relaxed ${message.isUser ? 'text-white' : 'text-gray-900'}`}>{message.text}</p>
                         <p className={`text-xs mt-1 ${
-                          message.isUser ? 'text-primary-foreground/70' : 'text-muted-foreground'
+                          message.isUser ? 'text-gray-300' : 'text-gray-500'
                         }`}>
                           {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                         </p>
@@ -372,11 +361,11 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
                     animate={{ opacity: 1 }}
                   >
                     <div className="max-w-[85%]">
-                      <div className="bg-card/80 px-4 py-3 rounded-2xl rounded-bl-md">
+                      <div className="bg-white border border-gray-200 px-4 py-3 rounded-lg rounded-bl-sm">
                         <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-accent-primary rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-accent-primary rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-accent-primary rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                         </div>
                       </div>
                     </div>
@@ -387,7 +376,7 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
             </div>
 
             {/* Input */}
-            <div className="p-4 bg-card/80 backdrop-blur-sm">
+            <div className="p-4 bg-white border-t border-gray-200/50">
               <form onSubmit={handleSubmit} className="flex space-x-3">
                 <div className="flex-1 relative">
                   <input
@@ -396,16 +385,15 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Ask about FLORA flooring..."
-                    className="w-full px-4 py-3 text-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/30 bg-background/80 backdrop-blur-sm transition-all duration-200"
+                    className="w-full px-4 py-3 text-sm rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent bg-white transition-all duration-200"
                     disabled={isTyping}
                   />
                 </div>
                 <motion.button
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
-                  className="px-4 py-3 bg-gradient-to-r from-primary to-primary-hover text-primary-foreground rounded-xl hover:from-primary-hover hover:to-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
+                  className="px-4 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                   whileTap={{ scale: 0.95 }}
-                  whileHover={{ scale: 1.05 }}
                 >
                   <Send size={16} />
                 </motion.button>
