@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Eye, ArrowRight, Info } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+
 
 interface ProductCardProps {
   product: {
@@ -40,7 +40,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   layout = 'grid'
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const { theme } = useTheme();
+
 
   const handleCardClick = () => {
     if (!isFlipped) {
@@ -92,9 +92,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         whileHover={{ y: -5, scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
-        <div className={`w-full h-full rounded-2xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-500 ${
-          theme === 'dark' ? 'bg-gray-800' : 'bg-white'
-        }`}>
+        <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-500 bg-white">
           {/* Image */}
           <div className="relative h-4/5 overflow-hidden">
             <img 
@@ -141,9 +139,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
           {/* Product Name */}
           <div className="h-1/5 flex items-center justify-center p-4">
-            <h3 className={`text-lg font-bold text-center ${
-              theme === 'dark' ? 'text-white' : 'text-gray-900'
-            }`}>
+            <h3 className="text-lg font-bold text-center text-gray-900">
               {product.name}
             </h3>
           </div>
@@ -161,24 +157,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
       transition={{ duration: 0.6 }}
       style={{ perspective: 1000 }}
     >
-      <div className={`w-full h-full rounded-2xl overflow-hidden shadow-lg ${
-        theme === 'dark' ? 'bg-gray-800' : 'bg-white'
-      }`}>
+      <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg bg-white">
         <div className="p-6 h-full flex flex-col justify-between">
           {/* Header */}
           <div className="flex items-center justify-between mb-4">
-            <h3 className={`text-lg font-bold ${
-              theme === 'dark' ? 'text-white' : 'text-gray-900'
-            }`}>
+            <h3 className="text-lg font-bold text-gray-900">
               {product.name}
             </h3>
             <button
               onClick={handleFlipToggle}
-              className={`p-2 rounded-full transition-colors ${
-                theme === 'dark' 
-                  ? 'bg-gray-700 text-white hover:bg-gray-600' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+              className="p-2 rounded-full transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200"
             >
               <ArrowRight size={16} className="rotate-180" />
             </button>
@@ -190,11 +178,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               {product.features.slice(0, 3).map((feature, idx) => (
                 <span 
                   key={idx}
-                  className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    theme === 'dark' 
-                      ? 'bg-gray-700 text-gray-300' 
-                      : 'bg-gray-100 text-gray-700'
-                  }`}
+                  className="px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700"
                 >
                   {feature}
                 </span>
@@ -212,16 +196,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 <div
                   key={spec.label}
                   className={`p-3 rounded-lg ${
-                    theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'
+                    'bg-gray-50'
                   }`}
                 >
                   <div className={`font-medium mb-1 ${
-                    theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    'text-gray-900'
                   }`}>
                     {spec.label}
                   </div>
                   <div className={`text-xs ${
-                    theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                    'text-gray-600'
                   }`}>
                     {spec.value}
                   </div>
@@ -244,11 +228,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               href={product.viewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center ${
-                theme === 'dark' 
-                  ? 'bg-gray-700 text-white hover:bg-gray-600' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+              className="w-full py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center bg-gray-100 text-gray-700 hover:bg-gray-200"
             >
               <ArrowRight size={16} className="mr-2" />
               View 360°

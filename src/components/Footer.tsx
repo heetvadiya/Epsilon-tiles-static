@@ -11,16 +11,12 @@ import {
   ChevronRight,
   Download
 } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+
 import PDFDownloadButton from './PDFDownloadButton';
 
 const Footer: React.FC = () => {
-  const { theme } = useTheme();
-
-  // Choose logo based on theme
-  const logoSrc = theme === 'dark' 
-    ? "/light-logo.png" 
-    : "/dark-logo.png";
+  // Use dark logo for light mode
+  const logoSrc = "/dark-logo.png";
 
   return (
     <footer className="bg-muted text-muted-foreground pt-16 pb-8 border-t border-border">

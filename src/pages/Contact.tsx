@@ -14,160 +14,205 @@ const Contact: React.FC = () => {
       />
       
       <section className="section container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Contact Information */}
+        {/* Header Section */}
+        <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-card p-8 rounded-lg shadow-sm border border-border h-full">
-              <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
-              <p className="text-muted-foreground mb-8">
-                Have questions about our SPC flooring products or need personalized recommendations? Our team of experts is here to help you find the perfect flooring solution for your space.
-              </p>
-              
-              <div className="space-y-8">
-                {/* Offices - Side by Side */}
-                <div>
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                      <MapPin className="text-primary" size={24} />
-                    </div>
-                    <h3 className="text-lg font-medium">Visit Us</h3>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ml-16">
-                    <div>
-                      <p className="text-sm font-medium text-primary mb-2">Corporate Office</p>
-                      <p className="text-muted-foreground text-sm">
-                        410, Golden Market,<br />
-                        Ravvapor road, Morbi-363641<br />
-                        (GUJ.) INDIA
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-primary mb-2">Factory</p>
-                      <p className="text-muted-foreground text-sm">
-                        Sr. No. 847/1 & 847/1/1,<br />
-                        At Ghuntu, Lakhadipur road,<br />
-                        8-A National Highway,<br />
-                        Morbi-363642 (GUJ.) INDIA
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Email and Phone - Side by Side */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                      <Mail className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-medium mb-2">Email Us</h3>
-                      <div className="space-y-1">
-                        <p className="text-muted-foreground text-sm">
-                          <a href="mailto:info@epsilontile.com" className="hover:text-primary transition-colors">
-                            info@epsilontile.com
-                          </a>
-                        </p>
-                        <p className="text-muted-foreground text-sm">
-                          <a href="mailto:export@epsilontile.com" className="hover:text-primary transition-colors">
-                            export@epsilontile.com
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                      <Phone className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-medium mb-2">Call Us</h3>
-                      <div className="space-y-2">
-                        <div>
-                          <p className="text-sm font-medium text-primary mb-1">Phone:</p>
-                          <p className="text-muted-foreground text-sm">
-                            <a href="tel:+919712712701" className="hover:text-primary transition-colors">
-                              +91 9712712701
-                            </a> / 
-                            <a href="tel:+919712712702" className="hover:text-primary transition-colors">
-                              02
-                            </a>
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium text-primary mb-1">Customer Care:</p>
-                          <p className="text-muted-foreground text-sm">
-                            <a href="tel:+912822356097" className="hover:text-primary transition-colors">
-                              +91 2822356097
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Have questions about our SPC flooring products or need personalized recommendations? Our team of experts is here to help you find the perfect flooring solution for your space.
+            </p>
+          </motion.div>
+        </div>
 
-                {/* Business Hours */}
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Clock className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-2">Business Hours</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Monday - Friday: 9am - 6pm IST<br />
-                      Saturday: 9am - 1pm IST<br />
-                      Sunday: Closed
-                    </p>
-                  </div>
-                </div>
+        {/* Contact Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {/* Visit Us Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-card p-6 rounded-xl shadow-sm border border-border text-center hover:shadow-md transition-all duration-300"
+          >
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <MapPin className="text-primary" size={28} />
+            </div>
+            <h3 className="text-lg font-semibold mb-3">Visit Us</h3>
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm font-medium text-primary mb-1">Corporate Office</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  410, Golden Market,<br />
+                  Ravvapor road, Morbi-363641<br />
+                  (GUJ.) INDIA
+                </p>
+              </div>
+              <div className="pt-2 border-t border-border/50">
+                <p className="text-sm font-medium text-primary mb-1">Factory</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Sr. No. 847/1 & 847/1/1,<br />
+                  At Ghuntu, Lakhadipur road,<br />
+                  8-A National Highway,<br />
+                  Morbi-363642 (GUJ.) INDIA
+                </p>
               </div>
             </div>
           </motion.div>
-          
-          {/* Contact Form */}
+
+          {/* Email Us Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-card p-6 rounded-xl shadow-sm border border-border text-center hover:shadow-md transition-all duration-300"
           >
-            <div className="bg-card p-8 rounded-lg shadow-sm border border-border h-full">
-              <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
-              
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium mb-1">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      className="input w-full"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium mb-1">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      className="input w-full"
-                      required
-                    />
-                  </div>
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Mail className="text-primary" size={28} />
+            </div>
+            <h3 className="text-lg font-semibold mb-4">Email Us</h3>
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm font-medium text-primary mb-2">General Inquiries</p>
+                <a 
+                  href="mailto:info@epsilontile.com" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors block"
+                >
+                  info@epsilontile.com
+                </a>
+              </div>
+              <div className="pt-2 border-t border-border/50">
+                <p className="text-sm font-medium text-primary mb-2">Export Inquiries</p>
+                <a 
+                  href="mailto:export@epsilontile.com" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors block"
+                >
+                  export@epsilontile.com
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Call Us Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-card p-6 rounded-xl shadow-sm border border-border text-center hover:shadow-md transition-all duration-300"
+          >
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Phone className="text-primary" size={28} />
+            </div>
+            <h3 className="text-lg font-semibold mb-4">Call Us</h3>
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm font-medium text-primary mb-2">Phone</p>
+                <div className="space-y-1">
+                  <a 
+                    href="tel:+919712712701" 
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors block"
+                  >
+                    +91 9712712701
+                  </a>
+                  <a 
+                    href="tel:+919712712702" 
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors block"
+                  >
+                    +91 9712712702
+                  </a>
+                </div>
+              </div>
+              <div className="pt-2 border-t border-border/50">
+                <p className="text-sm font-medium text-primary mb-2">Customer Care</p>
+                <a 
+                  href="tel:+912822356097" 
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors block"
+                >
+                  +91 2822356097
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Business Hours Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-card p-6 rounded-xl shadow-sm border border-border text-center hover:shadow-md transition-all duration-300"
+          >
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Clock className="text-primary" size={28} />
+            </div>
+            <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Mon - Fri</span>
+                <span className="font-medium">9am - 6pm</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Saturday</span>
+                <span className="font-medium">9am - 1pm</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-muted-foreground">Sunday</span>
+                <span className="font-medium text-red-500">Closed</span>
+              </div>
+              <p className="text-xs text-muted-foreground mt-2 pt-2 border-t border-border/50">
+                All times in IST
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Contact Form Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="bg-card p-8 rounded-xl shadow-sm border border-border">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold mb-3">Send Us a Message</h3>
+              <p className="text-muted-foreground">
+                Ready to transform your space? Let's discuss your flooring needs.
+              </p>
+            </div>
+            
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium mb-2">
+                    First Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    className="input w-full"
+                    required
+                  />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">
-                    Email Address
+                  <label htmlFor="lastName" className="block text-sm font-medium mb-2">
+                    Last Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    className="input w-full"
+                    required
+                  />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email Address *
                   </label>
                   <input
                     type="email"
@@ -178,7 +223,7 @@ const Contact: React.FC = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                  <label htmlFor="phone" className="block text-sm font-medium mb-2">
                     Phone Number
                   </label>
                   <input
@@ -187,77 +232,86 @@ const Contact: React.FC = () => {
                     className="input w-full"
                   />
                 </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-1">
-                    Subject
-                  </label>
-                  <select
-                    id="subject"
-                    className="input w-full"
-                    required
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="product-inquiry">Product Inquiry</option>
-                    <option value="quotation">Request Quotation</option>
-                    <option value="installation">Installation Support</option>
-                    <option value="warranty">Warranty Claim</option>
-                    <option value="partnership">Partnership Opportunity</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={6}
-                    className="input w-full"
-                    placeholder="Tell us about your flooring needs, room size, or any specific requirements..."
-                    required
-                  ></textarea>
-                </div>
-                
-                <div className="flex items-center space-x-2">
-                  <input
-                    type="checkbox"
-                    id="newsletter"
-                    className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2"
-                  />
-                  <label htmlFor="newsletter" className="text-sm text-muted-foreground">
-                    Subscribe to our newsletter for updates and special offers
-                  </label>
-                </div>
-                
-                <Button type="submit" variant="primary" className="w-full px-8 py-3">
+              </div>
+              
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                  Subject *
+                </label>
+                <select
+                  id="subject"
+                  className="input w-full"
+                  required
+                >
+                  <option value="">Select a subject</option>
+                  <option value="product-inquiry">Product Inquiry</option>
+                  <option value="quotation">Request Quotation</option>
+                  <option value="installation">Installation Support</option>
+                  <option value="warranty">Warranty Claim</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  rows={6}
+                  className="input w-full"
+                  placeholder="Tell us about your flooring needs, room size, or any specific requirements..."
+                  required
+                ></textarea>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2 mt-1"
+                />
+                <label htmlFor="newsletter" className="text-sm text-muted-foreground leading-relaxed">
+                  Subscribe to our newsletter for updates, new product launches, and special offers
+                </label>
+              </div>
+              
+              <div className="flex justify-center pt-4">
+                <Button type="submit" variant="primary" className="px-12 py-3 text-lg">
                   Send Message
                 </Button>
-              </form>
+              </div>
+            </form>
 
-              {/* Additional Info - Moved from left side */}
-              <div className="mt-8 pt-6 border-t border-border">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <Users className="text-primary" size={20} />
-                    </div>
-                    <p className="text-sm font-medium">Expert Team</p>
-                    <p className="text-xs text-muted-foreground">Professional Support</p>
+            {/* Trust Indicators */}
+            <div className="mt-12 pt-8 border-t border-border">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Users className="text-primary" size={24} />
                   </div>
-                  <div className="text-center">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <Award className="text-primary" size={20} />
-                    </div>
-                    <p className="text-sm font-medium">Quality Assured</p>
-                    <p className="text-xs text-muted-foreground">Premium Products</p>
+                  <p className="font-semibold mb-1">Expert Team</p>
+                  <p className="text-sm text-muted-foreground">Professional flooring consultants</p>
+                </div>
+                <div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Award className="text-primary" size={24} />
                   </div>
+                  <p className="font-semibold mb-1">Quality Assured</p>
+                  <p className="text-sm text-muted-foreground">Premium SPC flooring products</p>
+                </div>
+                <div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Clock className="text-primary" size={24} />
+                  </div>
+                  <p className="font-semibold mb-1">Quick Response</p>
+                  <p className="text-sm text-muted-foreground">24-hour response guarantee</p>
                 </div>
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </section>
       
       {/* Map Section */}

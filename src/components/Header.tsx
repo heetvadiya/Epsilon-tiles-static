@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const location = useLocation();
-  const { theme } = useTheme();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -46,15 +44,15 @@ const Header: React.FC = () => {
 
   const headerVariants = {
     transparent: {
-      backgroundColor: 'rgba(0, 0, 0, 0)',
-      backdropFilter: 'blur(0px)',
-      boxShadow: '0 0 0 rgba(0, 0, 0, 0)',
+      backgroundColor: 'rgba(255, 255, 255, 0.85)',
+      backdropFilter: 'blur(8px)',
+      boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
       transition: { duration: 0.3 }
     },
     scrolled: {
-      backgroundColor: theme === 'dark' ? 'rgba(25, 25, 25, 0.9)' : 'rgba(245, 245, 240, 0.9)',
+      backgroundColor: 'rgba(255, 255, 255, 0.95)',
       backdropFilter: 'blur(12px)',
-      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+      boxShadow: '0 2px 8px -2px rgba(0, 0, 0, 0.08), 0 1px 3px -1px rgba(0, 0, 0, 0.04)',
       transition: { duration: 0.3 }
     }
   };
@@ -107,10 +105,8 @@ const Header: React.FC = () => {
     }
   };
 
-  // Choose logo based on theme
-  const logoSrc = theme === 'dark' 
-    ? "/light-logo.png" 
-    : "/dark-logo.png";
+  // Use dark logo for light mode
+  const logoSrc = "/dark-logo.png";
 
   return (
     <motion.header
@@ -208,7 +204,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Toggle */}
         <motion.button
-          className="md:hidden flex items-center text-foreground z-50"
+          className="md:hidden flex items-center text-gray-700 z-50"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           whileTap={{ scale: 0.95 }}
@@ -238,7 +234,7 @@ const Header: React.FC = () => {
                   <NavLink
                     to={link.path}
                     className={({ isActive }) => 
-                      `block py-2 ${isActive ? 'text-primary font-medium' : 'text-foreground'}`
+                      `block py-2 ${isActive ? 'text-gray-900 font-medium' : 'text-gray-700'}`
                     }
                   >
                     {link.name}
@@ -248,13 +244,13 @@ const Header: React.FC = () => {
               
               {/* Mobile Resources */}
               <motion.div variants={mobileNavItemVariants}>
-                <div className="py-2 text-foreground font-medium">Resources</div>
+                <div className="py-2 text-gray-900 font-medium">Resources</div>
                 <div className="ml-4 space-y-2">
                   {resourcesLinks.map((link) => (
                     <Link
                       key={link.path}
                       to={link.path}
-                      className="block py-1 text-muted-foreground hover:text-primary transition-colors"
+                      className="block py-1 text-gray-600 hover:text-gray-900 transition-colors"
                     >
                       {link.name}
                     </Link>

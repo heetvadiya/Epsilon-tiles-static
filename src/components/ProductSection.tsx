@@ -4,7 +4,7 @@ import { Search, Eye, ChevronDown, Plus } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import { products, categories, Product } from '../data/products';
-import { useTheme } from '../context/ThemeContext';
+
 
 interface ProductSectionProps {
   title?: string;
@@ -34,7 +34,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const [displayedCount, setDisplayedCount] = useState<number>(initialProductCount);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
-  const { theme } = useTheme();
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -173,7 +173,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
 
   return (
     <motion.section
-      className={`py-20 ${className} ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}
+      className={`py-20 ${className} ${'bg-white'}`}
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
@@ -186,12 +186,12 @@ const ProductSection: React.FC<ProductSectionProps> = ({
           variants={headerVariants}
         >
           <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${
-            theme === 'dark' ? 'text-white' : 'text-gray-900'
+            'text-gray-900'
           }`}>
             {title}
           </h2>
           <p className={`text-lg mb-8 ${
-            theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+            'text-gray-600'
           }`}>
             {subtitle}
           </p>
@@ -200,29 +200,21 @@ const ProductSection: React.FC<ProductSectionProps> = ({
         {/* Filters and Controls */}
         {showFilters && (
           <motion.div
-            className={`rounded-2xl shadow-lg p-6 mb-8 border ${
-              theme === 'dark' 
-                ? 'bg-gray-800 border-gray-700' 
-                : 'bg-white border-gray-100'
-            }`}
+            className="rounded-2xl shadow-lg p-6 mb-8 border bg-white border-gray-100"
             variants={filterVariants}
           >
             <div className="flex flex-col lg:flex-row gap-6">
               {/* Search */}
               <div className="flex-1 relative">
                 <Search className={`absolute left-3 top-1/2 -translate-y-1/2 ${
-                  theme === 'dark' ? 'text-gray-400' : 'text-gray-400'
+                  'text-gray-400'
                 }`} size={20} />
                 <input
                   type="text"
                   placeholder="Search products..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg transition-colors ${
-                    theme === 'dark'
-                      ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/20 focus:border-primary'
-                      : 'bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-primary/20 focus:border-primary'
-                  }`}
+                  className="w-full pl-10 pr-4 py-3 border rounded-lg transition-colors bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 />
               </div>
 
@@ -231,11 +223,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className={`appearance-none border rounded-lg px-4 py-3 pr-8 transition-colors cursor-pointer ${
-                    theme === 'dark'
-                      ? 'bg-gray-700 border-gray-600 text-white focus:ring-2 focus:ring-primary/20 focus:border-primary'
-                      : 'bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-primary/20 focus:border-primary'
-                  }`}
+                  className="appearance-none border rounded-lg px-4 py-3 pr-8 transition-colors cursor-pointer bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>
@@ -244,7 +232,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
                   ))}
                 </select>
                 <ChevronDown className={`absolute right-3 top-1/2 -translate-y-1/2 ${
-                  theme === 'dark' ? 'text-gray-400' : 'text-gray-400'
+                  'text-gray-400'
                 }`} size={16} />
               </div>
 
@@ -253,25 +241,21 @@ const ProductSection: React.FC<ProductSectionProps> = ({
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className={`appearance-none border rounded-lg px-4 py-3 pr-8 transition-colors cursor-pointer ${
-                    theme === 'dark'
-                      ? 'bg-gray-700 border-gray-600 text-white focus:ring-2 focus:ring-primary/20 focus:border-primary'
-                      : 'bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-primary/20 focus:border-primary'
-                  }`}
+                  className="appearance-none border rounded-lg px-4 py-3 pr-8 transition-colors cursor-pointer bg-white border-gray-200 text-gray-900 focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 >
                   <option value="name">Sort by Name</option>
                   <option value="category">Sort by Category</option>
                   <option value="features">Sort by Features</option>
                 </select>
                 <ChevronDown className={`absolute right-3 top-1/2 -translate-y-1/2 ${
-                  theme === 'dark' ? 'text-gray-400' : 'text-gray-400'
+                  'text-gray-400'
                 }`} size={16} />
               </div>
             </div>
 
             {/* Filter Summary */}
             <div className="mt-4 flex flex-wrap items-center gap-4 text-sm">
-              <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}>
+              <span className={'text-gray-600'}>
                 Showing {getDisplayedProducts().length} of {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
               </span>
               {selectedCategory !== 'All' && (
@@ -280,11 +264,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
                 </span>
               )}
               {searchTerm && (
-                <span className={`px-3 py-1 rounded-full ${
-                  theme === 'dark' 
-                    ? 'bg-gray-700 text-gray-300' 
-                    : 'bg-gray-100 text-gray-700'
-                }`}>
+                <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-700">
                   "{searchTerm}"
                 </span>
               )}
@@ -307,7 +287,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
                 <motion.div
                   key={index}
                   className={`aspect-[4/3] rounded-2xl ${
-                    theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'
+                    'bg-gray-100'
                   } animate-pulse`}
                   variants={{
                     hidden: { opacity: 0, scale: 0.8 },
@@ -357,17 +337,17 @@ const ProductSection: React.FC<ProductSectionProps> = ({
             transition={{ duration: 0.6 }}
           >
             <div className={`text-6xl mb-4 ${
-              theme === 'dark' ? 'text-gray-600' : 'text-gray-300'
+              'text-gray-300'
             }`}>
               🔍
             </div>
             <h3 className={`text-2xl font-semibold mb-2 ${
-              theme === 'dark' ? 'text-white' : 'text-gray-900'
+              'text-gray-900'
             }`}>
               No products found
             </h3>
             <p className={`mb-6 ${
-              theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+              'text-gray-600'
             }`}>
               Try adjusting your search terms or filters
             </p>
@@ -395,11 +375,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
             <motion.button
               onClick={handleLoadMore}
               disabled={isLoadingMore}
-              className={`relative overflow-hidden px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
-                theme === 'dark'
-                  ? 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-700'
-                  : 'bg-white text-gray-900 hover:bg-gray-50 border border-gray-200'
-              } ${isLoadingMore ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-lg'}`}
+              className={`relative overflow-hidden px-8 py-4 rounded-xl font-semibold transition-all duration-300 bg-white text-gray-900 hover:bg-gray-50 border border-gray-200 ${isLoadingMore ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-lg'}`}
               whileHover={{ scale: isLoadingMore ? 1 : 1.05 }}
               whileTap={{ scale: isLoadingMore ? 1 : 0.95 }}
             >

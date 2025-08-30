@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,76 +13,76 @@
     New refined color system with WCAG AA/AAA compliance
     */
 
-    /* Primary palette (Indigo) */
-    --color-primary-light: 79 70 229; /* #4F46E5 - Indigo 600 */
-    --color-primary-dark: 99 102 241; /* #6366F1 - Indigo 500 */
-    --color-primary-50: 238 242 255; /* #EEF2FF */
-    --color-primary-100: 224 231 255; /* #E0E7FF */
-    --color-primary-200: 196 207 255; /* #C4CFFF */
-    --color-primary-300: 165 180 252; /* #A5B4FC */
-    --color-primary-400: 129 140 248; /* #818CF8 */
-    --color-primary-500: 99 102 241; /* #6366F1 */
-    --color-primary-600: 79 70 229; /* #4F46E5 */
-    --color-primary-700: 67 56 202; /* #4338CA */
-    --color-primary-800: 55 48 163; /* #3730A3 */
-    --color-primary-900: 49 46 129; /* #312E81 */
+    /* Primary palette (Sophisticated Charcoal) - Premium, minimal like Linear/Notion */
+    --color-primary-light: 24 24 27; /* #18181B - Zinc 900 */
+    --color-primary-dark: 63 63 70; /* #3F3F46 - Zinc 600 */
+    --color-primary-50: 250 250 250; /* #FAFAFA */
+    --color-primary-100: 244 244 245; /* #F4F4F5 */
+    --color-primary-200: 228 228 231; /* #E4E4E7 */
+    --color-primary-300: 212 212 216; /* #D4D4D8 */
+    --color-primary-400: 161 161 170; /* #A1A1AA */
+    --color-primary-500: 113 113 122; /* #71717A */
+    --color-primary-600: 82 82 91; /* #52525B */
+    --color-primary-700: 63 63 70; /* #3F3F46 */
+    --color-primary-800: 39 39 42; /* #27272A */
+    --color-primary-900: 24 24 27; /* #18181B */
 
-    /* Accent palette (Amber) */
-    --color-accent: 245 158 11; /* #F59E0B - Amber 500 */
-    --color-accent-muted: 253 230 138; /* #FDE68A - Amber 200 */
-    --color-accent-50: 255 251 235; /* #FFFBEB */
-    --color-accent-100: 254 243 199; /* #FEF3C7 */
-    --color-accent-200: 253 230 138; /* #FDE68A */
-    --color-accent-300: 252 211 77; /* #FCD34D */
-    --color-accent-400: 251 191 36; /* #FBBF24 */
-    --color-accent-500: 245 158 11; /* #F59E0B */
-    --color-accent-600: 217 119 6; /* #D97706 */
-    --color-accent-700: 180 83 9; /* #B45309 */
-    --color-accent-800: 146 64 14; /* #92400E */
-    --color-accent-900: 120 53 15; /* #78350F */
+    /* Accent palette (Warm Wood/Earth) - Sophisticated wood tones for flooring brand */
+    --color-accent: 120 113 108; /* #78716C - Stone 500 */
+    --color-accent-muted: 168 162 158; /* #A8A29E - Stone 400 */
+    --color-accent-50: 250 250 249; /* #FAFAF9 */
+    --color-accent-100: 245 245 244; /* #F5F5F4 */
+    --color-accent-200: 231 229 228; /* #E7E5E4 */
+    --color-accent-300: 214 211 209; /* #D6D3D1 */
+    --color-accent-400: 168 162 158; /* #A8A29E */
+    --color-accent-500: 120 113 108; /* #78716C */
+    --color-accent-600: 87 83 78; /* #57534E */
+    --color-accent-700: 68 64 60; /* #44403C */
+    --color-accent-800: 41 37 36; /* #292524 */
+    --color-accent-900: 28 25 23; /* #1C1917 */
 
-    /* Neutral palette for backgrounds and text */
-    --color-neutral-50: 249 250 251; /* #F9FAFB */
-    --color-neutral-100: 243 244 246; /* #F3F4F6 */
-    --color-neutral-200: 229 231 235; /* #E5E7EB */
-    --color-neutral-300: 209 213 219; /* #D1D5DB */
-    --color-neutral-400: 156 163 175; /* #9CA3AF */
-    --color-neutral-500: 107 114 128; /* #6B7280 */
-    --color-neutral-600: 75 85 99; /* #4B5563 */
-    --color-neutral-700: 55 65 81; /* #374151 */
-    --color-neutral-800: 31 41 55; /* #1F2937 */
-    --color-neutral-900: 17 24 39; /* #111827 */
+    /* Neutral palette for backgrounds and text - Premium grays */
+    --color-neutral-50: 250 250 250; /* #FAFAFA */
+    --color-neutral-100: 245 245 245; /* #F5F5F5 */
+    --color-neutral-200: 229 229 229; /* #E5E5E5 */
+    --color-neutral-300: 212 212 212; /* #D4D4D4 */
+    --color-neutral-400: 163 163 163; /* #A3A3A3 */
+    --color-neutral-500: 115 115 115; /* #737373 */
+    --color-neutral-600: 82 82 82; /* #525252 */
+    --color-neutral-700: 64 64 64; /* #404040 */
+    --color-neutral-800: 38 38 38; /* #262626 */
+    --color-neutral-900: 23 23 23; /* #171717 */
 
-    /* Background colors */
-    --color-bg-light: 255 255 255; /* #FFFFFF */
-    --color-bg-dark: 17 24 39; /* #111827 */
-    --color-bg-secondary-light: 249 250 251; /* #F9FAFB */
-    --color-bg-secondary-dark: 31 41 55; /* #1F2937 */
+    /* Background colors - Clean, minimal like Apple/Notion */
+    --color-bg-light: 255 255 255; /* #FFFFFF - Pure white */
+    --color-bg-dark: 9 9 11; /* #09090B - Rich black */
+    --color-bg-secondary-light: 250 250 250; /* #FAFAFA - Subtle off-white */
+    --color-bg-secondary-dark: 24 24 27; /* #18181B - Warm dark */
 
-    /* Text colors */
-    --color-text-light: 17 24 39; /* #111827 */
-    --color-text-dark: 249 250 251; /* #F9FAFB */
-    --color-text-secondary-light: 75 85 99; /* #4B5563 */
-    --color-text-secondary-dark: 156 163 175; /* #9CA3AF */
+    /* Text colors - High contrast, readable */
+    --color-text-light: 9 9 11; /* #09090B - Almost black */
+    --color-text-dark: 250 250 250; /* #FAFAFA - Almost white */
+    --color-text-secondary-light: 82 82 91; /* #52525B - Muted dark */
+    --color-text-secondary-dark: 161 161 170; /* #A1A1AA - Muted light */
 
-    /* Border and elevation */
-    --color-border-light: 229 231 235; /* #E5E7EB */
-    --color-border-dark: 55 65 81; /* #374151 */
-    --color-card-light: 255 255 255; /* #FFFFFF */
-    --color-card-dark: 31 41 55; /* #1F2937 */
+    /* Border and elevation - Subtle, refined */
+    --color-border-light: 228 228 231; /* #E4E4E7 - Subtle border */
+    --color-border-dark: 39 39 42; /* #27272A - Dark border */
+    --color-card-light: 255 255 255; /* #FFFFFF - Pure white cards */
+    --color-card-dark: 24 24 27; /* #18181B - Dark cards */
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    /* Shadows - Subtle, premium like Apple/Linear */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 2px 8px -2px rgba(0, 0, 0, 0.08), 0 1px 3px -1px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 8px 24px -4px rgba(0, 0, 0, 0.08), 0 2px 6px -2px rgba(0, 0, 0, 0.03);
+    --shadow-xl: 0 16px 32px -8px rgba(0, 0, 0, 0.1), 0 4px 12px -4px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 24px 48px -12px rgba(0, 0, 0, 0.12), 0 8px 16px -8px rgba(0, 0, 0, 0.04);
 
-    /* Rounded corners */
-    --radius-sm: 0.375rem; /* 6px */
-    --radius-md: 0.5rem; /* 8px */
-    --radius-lg: 0.75rem; /* 12px */
-    --radius-xl: 1rem; /* 16px */
+    /* Rounded corners - Modern, refined like Linear/Notion */
+    --radius-sm: 0.5rem; /* 8px */
+    --radius-md: 0.75rem; /* 12px */
+    --radius-lg: 1rem; /* 16px */
+    --radius-xl: 1.25rem; /* 20px */
     --radius-2xl: 1.5rem; /* 24px */
 
     /*
@@ -120,60 +120,23 @@
     --color-input-foreground: var(--color-text-light);
     --color-input-placeholder: var(--color-neutral-500);
     
-    /* Status colors */
-    --color-success: 34 197 94; /* #22C55E */
+    /* Status colors - Sophisticated, muted */
+    --color-success: 34 197 94; /* #22C55E - Keep green for success */
     --color-success-foreground: 255 255 255;
-    --color-warning: 251 191 36; /* #FBBF24 */
-    --color-warning-foreground: 17 24 39;
-    --color-error: 239 68 68; /* #EF4444 */
+    --color-warning: 245 158 11; /* #F59E0B - More muted orange */
+    --color-warning-foreground: 255 255 255;
+    --color-error: 220 38 38; /* #DC2626 - More refined red */
     --color-error-foreground: 255 255 255;
   }
 
-  /* Dark mode theme variables */
-  .dark {
-    /* Primary colors */
-    --color-primary: var(--color-primary-dark);
-    --color-primary-hover: var(--color-primary-400);
-    --color-primary-foreground: 17 24 39;
-    
-    /* Accent colors */
-    --color-accent-primary: var(--color-accent-300);
-    --color-accent-secondary: var(--color-accent-600);
-    --color-accent-foreground: 17 24 39;
-    
-    /* Background colors */
-    --color-background: var(--color-bg-dark);
-    --color-background-secondary: var(--color-bg-secondary-dark);
-    --color-foreground: var(--color-text-dark);
-    --color-foreground-secondary: var(--color-text-secondary-dark);
-    
-    /* UI elements */
-    --color-card: var(--color-card-dark);
-    --color-card-foreground: var(--color-text-dark);
-    --color-border: var(--color-border-dark);
-    --color-muted: var(--color-neutral-800);
-    --color-muted-foreground: var(--color-neutral-400);
-    
-    /* Input elements */
-    --color-input-background: var(--color-card-dark);
-    --color-input-border: var(--color-border-dark);
-    --color-input-foreground: var(--color-text-dark);
-    --color-input-placeholder: var(--color-neutral-500);
-    
-    /* Status colors */
-    --color-success: 34 197 94; /* #22C55E */
-    --color-success-foreground: 17 24 39;
-    --color-warning: 251 191 36; /* #FBBF24 */
-    --color-warning-foreground: 17 24 39;
-    --color-error: 239 68 68; /* #EF4444 */
-    --color-error-foreground: 255 255 255;
-  }
+
   
   /* Smooth transitions for theme switching */
   * {
-    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                border-color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   
   html {
@@ -184,59 +147,69 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
     min-height: 100vh;
+    font-weight: 400;
+    letter-spacing: -0.011em;
   }
   
-  /* Enhanced Typography Scale */
+  /* Enhanced Typography Scale - Premium, refined like Apple/Linear */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight text-foreground;
+    @apply text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
     line-height: 1.1;
     font-weight: 700;
+    letter-spacing: -0.04em;
   }
 
   h2 {
     @apply text-3xl sm:text-4xl md:text-5xl;
-    line-height: 1.2;
+    line-height: 1.15;
     font-weight: 600;
+    letter-spacing: -0.03em;
   }
 
   h3 {
     @apply text-2xl sm:text-3xl md:text-4xl;
-    line-height: 1.25;
+    line-height: 1.2;
     font-weight: 600;
+    letter-spacing: -0.025em;
   }
 
   h4 {
     @apply text-xl sm:text-2xl md:text-3xl;
-    line-height: 1.3;
+    line-height: 1.25;
     font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   h5 {
     @apply text-lg sm:text-xl md:text-2xl;
-    line-height: 1.35;
+    line-height: 1.3;
     font-weight: 500;
+    letter-spacing: -0.015em;
   }
 
   h6 {
     @apply text-base sm:text-lg md:text-xl;
-    line-height: 1.4;
+    line-height: 1.35;
     font-weight: 500;
+    letter-spacing: -0.01em;
   }
   
   p {
-    @apply text-base md:text-lg leading-relaxed text-foreground-secondary;
+    @apply text-base leading-relaxed text-foreground-secondary;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.005em;
   }
 
   /* Enhanced link styles */
@@ -322,67 +295,73 @@
 }
 
 @layer components {
-  /* Enhanced Button System */
+  /* Enhanced Button System - Premium, consistent like Linear/Notion */
   .btn {
-    @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 ease-in-out;
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 ease-out;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
     @apply disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed;
     border: none;
     cursor: pointer;
     text-decoration: none;
     min-height: 44px; /* Accessibility - minimum touch target */
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
 
   .btn-primary {
-    @apply btn bg-primary text-primary-foreground shadow-md;
-    @apply hover:bg-primary-hover hover:shadow-lg hover:-translate-y-0.5;
-    @apply focus-visible:ring-primary/50;
-    @apply active:translate-y-0 active:shadow-md;
+    @apply btn bg-primary text-primary-foreground shadow-sm;
+    @apply hover:bg-primary-hover hover:shadow-md hover:scale-[1.02];
+    @apply focus-visible:ring-primary/30;
+    @apply active:scale-[0.98] active:shadow-sm;
   }
 
   .btn-secondary {
-    @apply btn bg-muted text-muted-foreground border border-border;
-    @apply hover:bg-muted-foreground hover:text-background hover:border-muted-foreground;
-    @apply focus-visible:ring-muted-foreground/50;
+    @apply btn bg-background text-foreground border border-border shadow-sm;
+    @apply hover:bg-muted hover:border-border/80 hover:shadow-md hover:scale-[1.02];
+    @apply focus-visible:ring-border/50;
+    @apply active:scale-[0.98];
   }
 
   .btn-outline {
-    @apply btn border-2 border-primary text-primary bg-transparent;
-    @apply hover:bg-primary hover:text-primary-foreground hover:shadow-md;
-    @apply focus-visible:ring-primary/50;
+    @apply btn border border-primary/20 text-primary bg-transparent;
+    @apply hover:bg-primary/5 hover:border-primary/40 hover:shadow-sm hover:scale-[1.02];
+    @apply focus-visible:ring-primary/30;
+    @apply active:scale-[0.98];
   }
 
   .btn-ghost {
-    @apply btn text-foreground bg-transparent;
-    @apply hover:bg-muted hover:text-foreground;
+    @apply btn text-foreground-secondary bg-transparent;
+    @apply hover:bg-muted hover:text-foreground hover:scale-[1.02];
     @apply focus-visible:ring-muted/50;
+    @apply active:scale-[0.98];
   }
 
   .btn-accent {
-    @apply btn bg-accent-primary text-accent-foreground shadow-md;
-    @apply hover:bg-accent-secondary hover:shadow-lg hover:-translate-y-0.5;
-    @apply focus-visible:ring-accent-primary/50;
+    @apply btn bg-accent-primary text-accent-foreground shadow-sm;
+    @apply hover:bg-accent-600 hover:shadow-md hover:scale-[1.02];
+    @apply focus-visible:ring-accent-primary/30;
+    @apply active:scale-[0.98];
   }
 
-  /* Button sizes */
+  /* Button sizes - Consistent, premium proportions */
   .btn-xs {
-    @apply px-3 py-1.5 text-xs min-h-[32px];
+    @apply px-3 py-1.5 text-xs min-h-[32px] gap-1.5;
   }
 
   .btn-sm {
-    @apply px-4 py-2 text-sm min-h-[36px];
+    @apply px-4 py-2 text-sm min-h-[36px] gap-2;
   }
 
   .btn-md {
-    @apply px-6 py-3 text-base min-h-[44px];
+    @apply px-6 py-2.5 text-sm min-h-[40px] gap-2;
   }
 
   .btn-lg {
-    @apply px-8 py-4 text-lg min-h-[52px];
+    @apply px-8 py-3 text-base min-h-[48px] gap-2.5;
   }
 
   .btn-xl {
-    @apply px-10 py-5 text-xl min-h-[60px];
+    @apply px-10 py-4 text-lg min-h-[56px] gap-3;
   }
 
   /* Enhanced Link Styles */
@@ -398,24 +377,24 @@
     @apply hover:text-foreground hover:decoration-foreground/60;
   }
 
-  /* Enhanced Card System */
+  /* Enhanced Card System - Premium, minimal like Apple/Notion */
   .card {
-    @apply bg-card text-card-foreground rounded-xl border border-border overflow-hidden;
-    @apply shadow-sm transition-all duration-300 ease-in-out;
+    @apply bg-card text-card-foreground rounded-xl border border-border/60 overflow-hidden;
+    @apply shadow-sm transition-all duration-300 ease-out;
   }
 
   .card-hover {
-    @apply hover:shadow-xl hover:-translate-y-1 hover:border-border/80;
+    @apply hover:shadow-lg hover:scale-[1.02] hover:border-border/80;
   }
 
   .card-interactive {
     @apply cursor-pointer;
-    @apply hover:shadow-lg hover:-translate-y-0.5;
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50;
+    @apply hover:shadow-md hover:scale-[1.01] hover:border-border/80;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2;
   }
 
   .card-gradient {
-    @apply bg-gradient-to-br from-background to-background-secondary;
+    @apply bg-gradient-to-br from-background via-background to-background-secondary/50;
   }
 
   /* Enhanced Input System */
@@ -468,8 +447,8 @@
 
   /* Enhanced Navigation */
   .nav-link {
-    @apply relative px-4 py-2 text-foreground-secondary font-medium;
-    @apply hover:text-foreground transition-all duration-200;
+    @apply relative px-4 py-2 text-gray-700 font-medium;
+    @apply hover:text-gray-900 transition-all duration-200;
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:rounded-md;
   }
 
@@ -483,7 +462,7 @@
   }
 
   .nav-link.active {
-    @apply text-primary font-semibold;
+    @apply text-gray-900 font-semibold;
   }
 
   .nav-link.active::after {
@@ -662,18 +641,50 @@
   }
 }
 
-/* Enhanced Responsive Design */
-@media (max-width: 640px) {
+/* Enhanced Responsive Design - Mobile First */
+/* Extra Small Devices (phones, 320px and up) */
+@media (max-width: 479px) {
+  .container {
+    @apply px-3;
+  }
+  
+  .btn {
+    @apply text-sm px-3 py-2 min-h-[36px];
+  }
+  
+  .section {
+    @apply py-8;
+  }
+  
+  h1 {
+    @apply text-2xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-lg leading-tight;
+  }
+  
+  .card {
+    @apply rounded-lg;
+  }
+}
+
+/* Small Devices (phones, 480px to 640px) */
+@media (min-width: 480px) and (max-width: 640px) {
   .container {
     @apply px-4;
   }
   
   .btn {
-    @apply text-sm px-4 py-2;
+    @apply text-sm px-4 py-2 min-h-[40px];
   }
   
   .section {
-    @apply py-12;
+    @apply py-10;
   }
   
   h1 {
@@ -689,31 +700,49 @@
   }
 }
 
+/* Medium Devices (tablets, 641px to 768px) */
 @media (min-width: 641px) and (max-width: 768px) {
   .container {
     @apply px-6;
   }
+  
+  .section {
+    @apply py-12;
+  }
 }
 
+/* Large Devices (small laptops, 769px to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .container {
     @apply px-8;
   }
+  
+  .section {
+    @apply py-16;
+  }
 }
 
+/* Extra Large Devices (desktops, 1025px and up) */
 @media (min-width: 1025px) {
   .container {
     @apply px-8;
   }
+  
+  .section {
+    @apply py-20;
+  }
 }
 
-/* Enhanced Dark/Light Mode Consistency */
-.light {
+/* Ultra Wide Screens (1440px and up) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Light Mode Only */
+:root {
   color-scheme: light;
-}
-
-.dark {
-  color-scheme: dark;
 }
 
 /* Enhanced Accessibility */
@@ -762,12 +791,50 @@
   scrollbar-width: none;
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-accent-primary)));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Responsive Utilities */
+.responsive-grid {
+  @apply grid gap-6;
+  @apply grid-cols-1;
+  @apply sm:grid-cols-2;
+  @apply md:grid-cols-3;
+  @apply lg:grid-cols-4;
+  @apply xl:grid-cols-5;
 }
+
+.responsive-grid-auto {
+  @apply grid gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.responsive-padding {
+  @apply px-4 sm:px-6 lg:px-8 xl:px-12;
+}
+
+.responsive-margin {
+  @apply mx-4 sm:mx-6 lg:mx-8 xl:mx-12;
+}
+
+.responsive-text {
+  @apply text-sm sm:text-base lg:text-lg;
+}
+
+.responsive-heading {
+  @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+}
+
+  .text-gradient {
+    background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-accent-primary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-premium {
+    background: linear-gradient(135deg, #18181B, #78716C, #A8A29E);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
 .glass {
   background: rgba(255, 255, 255, 0.1);

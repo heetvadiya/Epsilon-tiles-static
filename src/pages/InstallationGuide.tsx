@@ -7,14 +7,14 @@ import PDFDownloadButton from '../components/PDFDownloadButton';
 
 const InstallationGuide: React.FC = () => {
   const tools = [
-    'Carpenter square',
-    'Utility knife',
-    'Tape measure',
-    'Long straight edge',
-    'Chalk line',
-    'Safety glasses',
-    'Tapping block',
-    'Pull bar'
+    'Carpenter Square',
+    'Utility Knife',
+    'Tape Measure',
+    'Long Straight Edge',
+    'Chalk Line',
+    'Safety Glasses',
+    'Tapping Block',
+    'Pull Bar'
   ];
 
   const requirements = [
@@ -115,11 +115,7 @@ const InstallationGuide: React.FC = () => {
               {tools.map((tool, index) => (
                 <motion.div 
                   key={index}
-                  className={`bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden shadow-md border border-border/30
-                  ${1 == 1
-                    ? 'hover:from-primary/10 hover:to-primary/5' 
-                    : 'hover:from-secondary/10 hover:to-secondary/5'
-                  }`}
+                  className="bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg overflow-hidden shadow-md border border-border/30 hover:from-primary/10 hover:to-primary/5"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
@@ -129,10 +125,10 @@ const InstallationGuide: React.FC = () => {
                     transition: { duration: 0.2 }
                   }}
                 >
-                  <div className="p-5 flex relative">
+                  <div className="p-5 flex items-center justify-center min-h-[100px] relative">
                     <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary/40 rounded-r-full"></div>
-                    <div className="pl-3">
-                      <h4 className="font-semibold text-foreground">{tool}</h4>
+                    <div className="pl-3 text-center">
+                      <h4 className="font-semibold text-foreground text-base leading-snug">{tool}</h4>
                     </div>
                   </div>
                 </motion.div>
@@ -176,55 +172,211 @@ const InstallationGuide: React.FC = () => {
 
         {/* Subfloor Information */}
         <AnimatedSection direction="up" className="mb-12">
-          <div className="card p-6">
-            <h3 className="text-xl font-semibold mb-4">Subfloor Requirements</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-medium mb-2">Concrete Subfloors:</h4>
-                <p className="text-sm text-muted-foreground">
-                  Make sure moisture vapor emissions does not exceed 5 lbs./24 hour per 1,000 sq. when tested with the Anhydrous Calcium Chloride Test in accordance with ASTM F 1869 or 85% RH in accordance with ASTM F 2170. Level uneven areas greater than 3/16" in a 10 feet. Newly poured concrete floors must cure for a minimum of 90 days.
-                </p>
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-3">Subfloor Requirements</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Proper subfloor preparation is crucial for a successful installation. Follow these guidelines for different subfloor types.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Concrete Subfloors */}
+            <motion.div 
+              className="card p-6 hover:shadow-lg transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-semibold">Concrete Subfloors</h4>
               </div>
-              <div>
-                <h4 className="font-medium mb-2">Wood Subfloors:</h4>
-                <p className="text-sm text-muted-foreground">
-                  Must be solid and flat. Sand down high spots and fill low spots with leveling compound. Firmly fasten all loose boards and fill all gaps before installation.
-                </p>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Moisture vapor emissions ≤ 5 lbs./24 hour per 1,000 sq. ft.</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Test with ASTM F 1869 or 85% RH per ASTM F 2170</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Level uneven areas greater than 3/16" in 10 feet</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Newly poured concrete must cure minimum 90 days</span>
+                </div>
               </div>
-              <div>
-                <h4 className="font-medium mb-2">Radiant Heat Subfloors:</h4>
-                <p className="text-sm text-muted-foreground">
-                  Rigid Core Planks can be installed over in-floor radiant heating systems provided the subfloor surface does not exceed 85°F (29.44°C) at any point. The initial floor temperature should not exceed 70°F (21.11°C) for 48 hours prior, during, and after installation.
-                </p>
+            </motion.div>
+
+            {/* Wood Subfloors */}
+            <motion.div 
+              className="card p-6 hover:shadow-lg transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-semibold">Wood Subfloors</h4>
               </div>
-            </div>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Must be solid and flat</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Sand down high spots</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Fill low spots with leveling compound</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Firmly fasten all loose boards and fill gaps</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Radiant Heat Subfloors */}
+            <motion.div 
+              className="card p-6 hover:shadow-lg transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-semibold">Radiant Heat Subfloors</h4>
+              </div>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Subfloor surface ≤ 85°F (29.44°C) maximum</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Initial floor temperature ≤ 70°F (21.11°C)</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                  <span>Maintain temperature 48 hours before, during, and after installation</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </AnimatedSection>
 
         {/* After Care */}
         <AnimatedSection direction="up" className="mb-12">
-          <div className="card p-6">
-            <h3 className="text-xl font-semibold mb-4">After Care</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div>
-                <h4 className="font-medium mb-2">Maintenance:</h4>
-                <ul className="space-y-1 text-muted-foreground">
-                  <li>• Maintain room temperature between 60° - 85° F</li>
-                  <li>• Keep relative humidity between 40% and 70%</li>
-                  <li>• Sweep and/or dust mop the floor daily</li>
-                  <li>• Use diluted Simple Green for regular cleaning</li>
-                </ul>
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-3">After Care</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Proper maintenance and protection will ensure your FLORA flooring looks beautiful for years to come.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Maintenance Card */}
+            <motion.div 
+              className="card p-8 hover:shadow-lg transition-all duration-300"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Wrench className="text-muted-foreground" size={32} />
+                </div>
+                <h4 className="text-2xl font-semibold mb-2">Maintenance</h4>
+                <p className="text-muted-foreground">Daily and regular care guidelines</p>
               </div>
-              <div>
-                <h4 className="font-medium mb-2">Protection:</h4>
-                <ul className="space-y-1 text-muted-foreground">
-                  <li>• Protect against direct sunlight</li>
-                  <li>• Use felt pads under furniture legs</li>
-                  <li>• Avoid harsh abrasive cleaners</li>
-                  <li>• Use suitable floor mats at entrances</li>
-                </ul>
+              
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3 p-3 bg-muted/30 rounded-lg">
+                  <CheckCircle className="text-muted-foreground mt-0.5 flex-shrink-0" size={18} />
+                  <div>
+                    <p className="font-medium">Temperature Control</p>
+                    <p className="text-sm text-muted-foreground">Maintain room temperature between 60° - 85° F</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 p-3 bg-muted/30 rounded-lg">
+                  <CheckCircle className="text-muted-foreground mt-0.5 flex-shrink-0" size={18} />
+                  <div>
+                    <p className="font-medium">Humidity Control</p>
+                    <p className="text-sm text-muted-foreground">Keep relative humidity between 40% and 70%</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 p-3 bg-muted/30 rounded-lg">
+                  <CheckCircle className="text-muted-foreground mt-0.5 flex-shrink-0" size={18} />
+                  <div>
+                    <p className="font-medium">Daily Cleaning</p>
+                    <p className="text-sm text-muted-foreground">Sweep and/or dust mop the floor daily</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 p-3 bg-muted/30 rounded-lg">
+                  <CheckCircle className="text-muted-foreground mt-0.5 flex-shrink-0" size={18} />
+                  <div>
+                    <p className="font-medium">Deep Cleaning</p>
+                    <p className="text-sm text-muted-foreground">Use diluted Simple Green for regular cleaning</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </motion.div>
+
+            {/* Protection Card */}
+            <motion.div 
+              className="card p-8 hover:shadow-lg transition-all duration-300"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="text-muted-foreground" size={32} />
+                </div>
+                <h4 className="text-2xl font-semibold mb-2">Protection</h4>
+                <p className="text-muted-foreground">Preventive measures and care tips</p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3 p-3 bg-muted/30 rounded-lg">
+                  <CheckCircle className="text-muted-foreground mt-0.5 flex-shrink-0" size={18} />
+                  <div>
+                    <p className="font-medium">UV Protection</p>
+                    <p className="text-sm text-muted-foreground">Protect against direct sunlight</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 p-3 bg-muted/30 rounded-lg">
+                  <CheckCircle className="text-muted-foreground mt-0.5 flex-shrink-0" size={18} />
+                  <div>
+                    <p className="font-medium">Furniture Protection</p>
+                    <p className="text-sm text-muted-foreground">Use felt pads under furniture legs</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 p-3 bg-muted/30 rounded-lg">
+                  <CheckCircle className="text-muted-foreground mt-0.5 flex-shrink-0" size={18} />
+                  <div>
+                    <p className="font-medium">Cleaning Products</p>
+                    <p className="text-sm text-muted-foreground">Avoid harsh abrasive cleaners</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 p-3 bg-muted/30 rounded-lg">
+                  <CheckCircle className="text-muted-foreground mt-0.5 flex-shrink-0" size={18} />
+                  <div>
+                    <p className="font-medium">Entry Protection</p>
+                    <p className="text-sm text-muted-foreground">Use suitable floor mats at entrances</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </AnimatedSection>
 

@@ -318,9 +318,15 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
             transition={{ duration: 0.3 }}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-primary to-primary-hover text-primary-foreground p-4 flex items-center justify-between">
-              <div className="flex items-center">
-                <h3 className="font-semibold text-base">FLORA Assistant</h3>
+            <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-4 flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <Sparkles size={16} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-base">FLORA Assistant</h3>
+                  <p className="text-xs text-white/80">Powered by AI</p>
+                </div>
               </div>
               <motion.button
                 onClick={toggleChat}

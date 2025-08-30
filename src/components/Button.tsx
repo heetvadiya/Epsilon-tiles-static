@@ -32,7 +32,8 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <motion.button
       className={buttonClasses}
-      whileTap={{ scale: 0.98 }}
+      whileTap={{ scale: 0.96 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
       disabled={isLoading || disabled}
       {...props}
     >

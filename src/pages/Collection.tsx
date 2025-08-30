@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import PageHeader from '../components/PageHeader';
 import ProductSection from '../components/ProductSection';
-import { useTheme } from '../context/ThemeContext';
+
 
 const Collection: React.FC = () => {
-  const { theme } = useTheme();
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -35,7 +35,7 @@ const Collection: React.FC = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className={theme === 'dark' ? 'bg-gray-900' : 'bg-white'}
+      className="bg-white"
     >
       <PageHeader 
         title="Premium Flooring Collections" 
