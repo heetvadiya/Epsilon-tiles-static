@@ -74,16 +74,16 @@ const BenefitFlipCard: React.FC<BenefitFlipCardProps> = ({ feature, index, backg
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         {/* Front Side */}
-        <div className="absolute inset-0 w-full h-full backface-hidden rounded-xl overflow-hidden shadow-lg">
+        <div className="absolute inset-0 w-full h-full backface-hidden rounded-xl overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${bgImage})` }}
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/70" />
           
           <div className="relative z-10 flex flex-col items-center justify-center h-full p-6 text-white">
             <motion.div
-              className="mb-4 p-3 rounded-full bg-white/20 backdrop-blur-sm"
+              className="mb-4 p-3 rounded-full bg-white/30 backdrop-blur-sm"
               initial={{ scale: 0, rotate: -180 }}
               whileInView={{ scale: 1, rotate: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
@@ -93,25 +93,21 @@ const BenefitFlipCard: React.FC<BenefitFlipCardProps> = ({ feature, index, backg
                 transition: { duration: 0.2 }
               }}
             >
-              <feature.icon size={32} className="text-white drop-shadow-lg" />
+              <feature.icon size={32} className="text-white" />
             </motion.div>
             
             <motion.h3 
-              className="text-xl font-bold text-center leading-tight"
+              className="text-xl font-bold text-center leading-tight text-white"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
-              style={{ 
-                textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
-                filter: 'brightness(1.1)'
-              }}
             >
               {feature.title}
             </motion.h3>
             
             {/* Subtle hint for interaction */}
             <motion.div
-              className="mt-4 text-xs text-white/80 text-center"
+              className="mt-4 text-xs text-white/90 text-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 + 0.6 }}
@@ -123,7 +119,7 @@ const BenefitFlipCard: React.FC<BenefitFlipCardProps> = ({ feature, index, backg
 
         {/* Back Side */}
         <div 
-          className="absolute inset-0 w-full h-full backface-hidden rounded-xl overflow-hidden shadow-lg"
+          className="absolute inset-0 w-full h-full backface-hidden rounded-xl overflow-hidden"
           style={{ transform: 'rotateY(180deg)' }}
         >
           <div className="h-full bg-gradient-to-br from-card to-card/90 dark:from-card dark:to-muted border border-border">
