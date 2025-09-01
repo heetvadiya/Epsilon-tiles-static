@@ -115,7 +115,7 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
 
   const getResponseCategory = (message: string): keyof typeof predefinedResponses => {
     const lowerMessage = message.toLowerCase();
-    
+
     if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
       return 'greeting';
     }
@@ -134,7 +134,7 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
     if (lowerMessage.includes('contact') || lowerMessage.includes('phone') || lowerMessage.includes('email') || lowerMessage.includes('reach')) {
       return 'contact';
     }
-    
+
     return 'default';
   };
 
@@ -167,7 +167,7 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
       if (apiKey && apiKey !== 'your_gemini_api_key_here') {
         try {
           console.log('Attempting to call Gemini API...');
-          
+
           const response = await fetch(
             `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
             {
@@ -184,21 +184,21 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
           );
 
           console.log('API Response status:', response.status);
-          
+
           if (response.ok) {
             const data = await response.json();
             console.log('API Response data:', data);
-            
+
             botResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
-            
+
             // Clean up the response
             botResponse = botResponse.trim();
-            
+
             // If response is too long, truncate it
             if (botResponse.length > 300) {
               botResponse = botResponse.substring(0, 297) + '...';
             }
-            
+
             console.log('Bot response:', botResponse);
           } else {
             console.error('API request failed:', response.status, response.statusText);
@@ -230,11 +230,11 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
       console.error('Error in sendMessage:', error);
-      
+
       // Fallback response
       const category = getResponseCategory(message);
       const fallbackResponse = getRandomResponse(category);
-      
+
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: fallbackResponse,
@@ -269,7 +269,7 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
       {/* Floating Button */}
       <motion.button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300"
+        className="fixed bottom-5 right-6 z-50 w-14 h-14 bg-gradient-to-br from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 100 }}
@@ -312,23 +312,23 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
             transition={{ duration: 0.3 }}
           >
             {/* Header */}
-            <div className="bg-white/80 backdrop-blur-sm border-b border-gray-100 px-6 py-4 flex items-center justify-between">
+            <div className="bg-black backdrop-blur-sm border-b border-gray-100 px-6 py-4 flex items-center justify-between">
               <div>
-                <h3 className="font-medium text-gray-900 text-lg tracking-tight">FLORA</h3>
-                <p className="text-sm text-gray-500 mt-0.5">How can I help you today?</p>
+                <h3 className="font-medium text-white text-lg tracking-tight">FLORA CHATBOT</h3>
+                <p className="text-sm text-gray-200 mt-0.5">How can I help you today?</p>
               </div>
               <motion.button
                 onClick={toggleChat}
-                className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-50 transition-colors text-gray-400 hover:text-gray-600"
+                className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-gray-50 transition-colors text-gray-200 hover:text-gray-600"
                 whileTap={{ scale: 0.95 }}
               >
-                <X size={14} />
+                <X size={18} />
               </motion.button>
             </div>
 
             {/* Messages */}
             <div className="flex-1 p-4 overflow-y-auto bg-gray-50/50 scrollbar-none">
-              <div className="space-y-4">
+              <div className="space-y-2">
                 {messages.map((message) => (
                   <motion.div
                     key={message.id}
@@ -338,22 +338,20 @@ Always answer as a knowledgeable FLORA assistant. If unsure, recommend contactin
                     transition={{ duration: 0.3 }}
                   >
                     <div className={`max-w-[85%]`}>
-                      <div className={`px-4 py-3 rounded-lg ${
-                        message.isUser 
-                          ? 'bg-gray-900 rounded-br-sm' 
+                      <div className={`px-4 py-1.5 rounded-lg ${message.isUser
+                          ? 'bg-gray-900 rounded-br-sm'
                           : 'bg-white text-gray-900 border border-gray-200 rounded-bl-sm'
-                      }`}>
-                        <p className={`text-sm leading-relaxed ${message.isUser ? 'text-white' : 'text-gray-900'}`}>{message.text}</p>
-                        <p className={`text-xs mt-1 ${
-                          message.isUser ? 'text-gray-300' : 'text-gray-500'
                         }`}>
+                        <p className={`text-sm leading-relaxed ${message.isUser ? 'text-white' : 'text-gray-900'}`}>{message.text}</p>
+                        <p className={`text-xs ${message.isUser ? 'text-gray-300' : 'text-gray-500'
+                          }`}>
                           {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                         </p>
                       </div>
                     </div>
                   </motion.div>
                 ))}
-                
+
                 {isTyping && (
                   <motion.div
                     className="flex justify-start"
