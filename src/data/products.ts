@@ -33,11 +33,11 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/9452_PINE_CHARCOAL.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/tilesdesign/5231_PINE_CHARCOAL_R5.jpg",
       "https://360.epsiloninc.in/uploads/tilesdesign/8451_PINE_CHARCOAL_R1.jpg",
       "https://360.epsiloninc.in/uploads/tilesdesign/8957_PINE_CHARCOAL_R2.jpg",
       "https://360.epsiloninc.in/uploads/tilesdesign/1553_PINE_CHARCOAL_R3.jpg",
       "https://360.epsiloninc.in/uploads/tilesdesign/6116_PINE_CHARCOAL_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5231_PINE_CHARCOAL_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -52,7 +52,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://webapplication.tilesdisplay.in/share/african-wenge",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/40e20c26",
     related: ["ebony-oak", "canyon-oak", "denali-oak-gris"],
   },
   {
@@ -83,7 +83,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://webapplication.tilesdisplay.in/share/9a110848",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/8dfe21b2",
     related: ["campus-grey", "canyon-oak", "creek-oak--brown"],
   },
   {
@@ -114,7 +114,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://webapplication.tilesdisplay.in/share/campus-grey",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/9c6f6d9e",
     related: ["aurora-craft", "denali-oak-gris", "ebony-oak"],
   },
   {
@@ -126,10 +126,11 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3885_BLACKJACK_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2152_BLACKJACK_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5818_BLACKJACK_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9906_BLACKJACK_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1787_BLACKJACK_OAK_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6255_BLACKJACK_OAK_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -144,7 +145,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://webapplication.tilesdisplay.in/share/canyon-oak",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/c24185e9",
     related: ["aurora-craft", "foster-honey", "heritage-oak"],
   },
   {
@@ -156,10 +157,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2221_CLASSIC_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7718_CLASSIC_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2937_CLASSIC_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7772_CLASSIC_OAK_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -174,7 +175,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://webapplication.tilesdisplay.in/share/creek-oak-brown",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/e3463a7b",
     related: ["aurora-craft", "canyon-oak", "foster-honey"],
   },
   {
@@ -186,10 +187,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7013_CHICAGO_GRIS_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2189_CHICAGO_GRIS_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3842_CHICAGO_GRIS_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6524_CHICAGO_GRIS_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -204,7 +205,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://webapplication.tilesdisplay.in/share/denali-oak-gris",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/6047c881",
     related: ["campus-grey", "etherial--horizon", "golden-harvest-oak"],
   },
   {
@@ -216,9 +217,11 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/1767_SESSILE_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/1767_SESSILE_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/1767_SESSILE_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/1767_SESSILE_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1593_SESSILE_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2962_SESSILE_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8672_SESSILE_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3110_SESSILE_OAK_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9196_SESSILE_OAK_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -233,7 +236,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/ebony-oak",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/7adbbb6a",
     related: [],
   },
   {
@@ -245,9 +248,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/5072_DARK_PADAUK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/5072_DARK_PADAUK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/5072_DARK_PADAUK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/5072_DARK_PADAUK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5285_DARK_PADAUK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7993_DARK_PADAUK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9460_DARK_PADAUK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7364_DARK_PADAUK_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -262,7 +266,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/enigma-woodcraft",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/87101b2f",
     related: [],
   },
   {
@@ -274,9 +278,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/1147_FANCY_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/1147_FANCY_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/1147_FANCY_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/1147_FANCY_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2350_FANCY_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4442_FANCY_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6629_FANCY_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7818_FANCY_OAK_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -291,7 +296,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/etherial--horizon",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/ca2aefc6",
     related: [],
   },
   {
@@ -303,9 +308,11 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/7878_CHARNWOOD_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/7878_CHARNWOOD_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/7878_CHARNWOOD_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/7878_CHARNWOOD_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8907_CHARNWOOD_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8188_CHARNWOOD_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7721_CHARNWOOD_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9896_CHARNWOOD_OAK_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1688_CHARNWOOD_OAK_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -320,7 +327,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/foster-honey",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/778e713d",
     related: [],
   },
   {
@@ -332,9 +339,11 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/7455_BEACHWOOD_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/7455_BEACHWOOD_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/7455_BEACHWOOD_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/7455_BEACHWOOD_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1846_CHARNWOOD_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5840_CHARNWOOD_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4970_CHARNWOOD_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9686_CHARNWOOD_OAK_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9008_CHARNWOOD_OAK_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -349,7 +358,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/fumed-oak",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/db51d2c4",
     related: [],
   },
   {
@@ -361,9 +370,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/8272_ASPEN_WHITE.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/8272_ASPEN_WHITE.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8272_ASPEN_WHITE.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8272_ASPEN_WHITE.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1127_ASPEN_WHITE_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7017_ASPEN_WHITE_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2346_ASPEN_WHITE_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4069_ASPEN_WHITE_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -378,7 +388,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/global-oak-white",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/9a110848",
     related: [],
   },
   {
@@ -390,9 +400,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6280_GOLD_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2035_GOLD_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9242_GOLD_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2311_GOLD_OAK_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -407,7 +418,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/golden-harvest-oak",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/76dfe28f",
     related: [],
   },
   {
@@ -419,9 +430,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/6370_EUCALYPTUS.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/6370_EUCALYPTUS.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6370_EUCALYPTUS.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6370_EUCALYPTUS.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7145_EUCALYPTUS_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9182_EUCALYPTUS_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8633_EUCALYPTUS_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1725_EUCALYPTUS_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -436,7 +448,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/heritage-oak",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/08cf4557",
     related: [],
   },
   {
@@ -448,9 +460,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7253_ASH_MIX_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5127_ASH_MIX_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5111_ASH_MIX_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3371_ASH_MIX_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -465,7 +478,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/highland-mix",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/0477beb5",
     related: [],
   },
   {
@@ -477,9 +490,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/2730_ACACIA_BROWN.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/2730_ACACIA_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/2730_ACACIA_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/2730_ACACIA_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1696_ACACIA_BROWN_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8846_ACACIA_BROWN_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6035_ACACIA_BROWN_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9385_ACACIA_BROWN_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -494,7 +508,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/italian-walnut-brown",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/78900713",
     related: [],
   },
   {
@@ -506,9 +520,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2629_ACACIA_DARK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9438_ACACIA_DARK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1530_ACACIA_DARK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1326_ACACIA_DARK_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -523,7 +538,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/italian-walnut--dark",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/62a781c7",
     related: [],
   },
   {
@@ -535,9 +550,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9459_ALPHIN_GREY_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4044_ALPHIN_GREY_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8600_ALPHIN_GREY_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9326_ALPHIN_GREY_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -552,7 +568,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/kati-oak-grey",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/95e6f7b7",
     related: [],
   },
   {
@@ -564,9 +580,11 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/7017_PROTO_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/7017_PROTO_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/7017_PROTO_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/7017_PROTO_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6608_PROTO_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2970_PROTO_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5421_PROTO_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9353_PROTO_OAK_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7038_PROTO_OAK_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -581,7 +599,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/larch-wood",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/9f103b37",
     related: [],
   },
   {
@@ -593,9 +611,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3468_MAPLE_BEIGE_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6376_MAPLE_BEIGE_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7739_MAPLE_BEIGE_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6641_MAPLE_BEIGE_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -610,7 +629,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/lily-oak--beige",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/f914c34d",
     related: [],
   },
   {
@@ -622,9 +641,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8704_MAPLE_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2108_MAPLE_BROWN_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9254_MAPLE_BROWN_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8010_MAPLE_BROWN_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9518_MAPLE_BROWN_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -639,7 +659,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/lily-oak-brown",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/4e5bde2e",
     related: [],
   },
   {
@@ -651,9 +671,11 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7793_PARKHURST_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3863_PARKHURST_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4419_PARKHURST_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2471_PARKHURST_OAK_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4919_PARKHURST_OAK_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -668,7 +690,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/lime-wood",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/ee9206a3",
     related: [],
   },
   {
@@ -680,9 +702,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/2182_PARKHURST_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7793_GREY_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6475_GREY_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9355_GREY_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5731_GREY_OAK_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -697,7 +720,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/marine-slate",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/507ff23a",
     related: [],
   },
   {
@@ -709,9 +732,11 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/9649_SANDY_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/9649_SANDY_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/9649_SANDY_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/9649_SANDY_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6720_SANDY_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8213_SANDY_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1242_SANDY_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8399_SANDY_OAK_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8242_SANDY_OAK_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -726,7 +751,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/meranti-oak",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/45a680f0",
     related: [],
   },
   {
@@ -738,9 +763,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/6330_NATURAL_WALNUT.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/6330_NATURAL_WALNUT.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6330_NATURAL_WALNUT.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6330_NATURAL_WALNUT.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7952_NATURAL_WALNUT_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2156_NATURAL_WALNUT_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8460_NATURAL_WALNUT_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1269_NATURAL_WALNUT_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -755,7 +781,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/milano-walnut",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/42a7a3f6",
     related: [],
   },
   {
@@ -767,9 +793,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/6497_VINTAGE_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/6497_VINTAGE_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6497_VINTAGE_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/6497_VINTAGE_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8472_VINTAGE_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6735_VINTAGE_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7704_VINTAGE_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7326_VINTAGE_OAK_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -784,7 +811,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/moris-wood",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/048283ba",
     related: [],
   },
   {
@@ -796,9 +823,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/4855_WARM_OAK.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/4855_WARM_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/4855_WARM_OAK.jpg",
-      "https://360.epsiloninc.in/uploads/preview/4855_WARM_OAK.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2354_WARM_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3106_WARM_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5581_WARM_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8125_WARM_OAK_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -813,7 +841,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/natural-hickory",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/dec54a2b",
     related: [],
   },
   {
@@ -825,9 +853,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/3070_COLUMBIA_BEIGE.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/3070_COLUMBIA_BEIGE.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3070_COLUMBIA_BEIGE.jpg",
-      "https://360.epsiloninc.in/uploads/preview/3070_COLUMBIA_BEIGE.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1840_COLUMBIA_BEIGE_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7875_COLUMBIA_BEIGE_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1590_COLUMBIA_BEIGE_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8660_COLUMBIA_BEIGE_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -842,7 +871,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/pedy-oak-beige",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/774c404c",
     related: [],
   },
   {
@@ -854,9 +883,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/8463_DALLA_BROWN.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/8463_DALLA_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8463_DALLA_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8463_DALLA_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2286_DALLAS_BROWN_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6753_DALLAS_BROWN_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2215_DALLAS_BROWN_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3575_DALLAS_BROWN_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -871,7 +901,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/teak-wood",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/7af14566",
     related: [],
   },
   {
@@ -883,9 +913,12 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
-      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
-      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2852_BOSTON_NATURAL_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6519_BOSTON_NATURAL_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3359_BOSTON_NATURAL_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/9328_BOSTON_NATURAL_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1332_BOSTON_NATURAL_R5.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8832_BOSTON_NATURAL_R6.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -900,7 +933,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/tudor-oak-natural",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/eb7a0ad0",
     related: [],
   },
   {
@@ -912,9 +945,11 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/8752_RUSTY_BROWN.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/8752_RUSTY_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8752_RUSTY_BROWN.jpg",
-      "https://360.epsiloninc.in/uploads/preview/8752_RUSTY_BROWN.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/6232_RUSTY-BROWN_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8251_RUSTY-BROWN_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2530_RUSTY-BROWN_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/4115_RUSTY-BROWN_R4.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/5658_RUSTY-BROWN_R5.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -929,7 +964,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/valley-grove-oak",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/7760a986",
     related: [],
   },
   {
@@ -941,9 +976,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/5328_OAK_ELEGANT.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/5328_OAK_ELEGANT.jpg",
-      "https://360.epsiloninc.in/uploads/preview/5328_OAK_ELEGANT.jpg",
-      "https://360.epsiloninc.in/uploads/preview/5328_OAK_ELEGANT.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/1918_OAK_ELEGANT_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7603_OAK_ELEGANT_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/2607_OAK_ELEGANT_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7656_OAK_ELEGANT_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -958,7 +994,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/vertical-oak-blond",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/a8b3788e",
     related: [],
   },
   {
@@ -970,9 +1006,10 @@ export const products = [
     image:
       "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
     images: [
-      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
-      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
-      "https://360.epsiloninc.in/uploads/preview/9158_BOSTON_NATURAL.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/7911_NATURAL_OAK_R1.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/8954_NATURAL_OAK_R2.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3694_NATURAL_OAK_R3.jpg",
+      "https://360.epsiloninc.in/uploads/tilesdesign/3021_NATURAL_OAK_R4.jpg",
     ],
     sizes: ['7" x 48"', '9" x 48"', '9" x 60"'],
     thickness: {
@@ -987,7 +1024,7 @@ export const products = [
       "Scratch Resistant",
       "Easy to Install",
     ],
-    viewUrl: "https://example.com/360/walden-oak",
+    viewUrl: "https://webapplication.tilesdisplay.in/share/9965736b",
     related: [],
   }
 ];
