@@ -33,14 +33,10 @@ const ProductDetail: React.FC = () => {
     });
   };
 
-  // Generate tile images for visualization (4 rectangular tiles)
-  const tileImages = product ? [
-    product.images[0] || product.image,
-    product.images[1] || product.image,
-    product.images[2] || product.image,
-    product.images[3] || product.image,
-    product.images[4] || product.image // Repeat main image for 4th tile
-  ] : [];
+  // Generate tile images for visualization based on actual number of images
+  const tileImages = product ? (
+    product.images.length > 0 ? product.images : [product.image]
+  ) : [];
 
   if (!product) {
     return (
