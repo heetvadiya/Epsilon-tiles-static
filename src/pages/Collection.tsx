@@ -40,7 +40,7 @@ const Collection: React.FC = () => {
       <PageHeader 
         title="Premium Flooring Collections" 
         subtitle="Discover our complete range of luxury SPC flooring designed for exceptional quality, durability, and timeless elegance"
-        backgroundImage="https://images.pexels.com/photos/6508935/pexels-photo-6508935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        backgroundImage="https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg"
       />
       
       <motion.div 
@@ -66,7 +66,7 @@ const Collection: React.FC = () => {
         <motion.div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(https://images.pexels.com/photos/4846097/pexels-photo-4846097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' 
+            backgroundImage: 'url(https://360.epsiloninc.in/uploads/preview/7017_PROTO_OAK.jpg)' 
           }}
           initial={{ scale: 1.1 }}
           whileInView={{ scale: 1 }}

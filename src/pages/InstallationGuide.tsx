@@ -30,37 +30,37 @@ const InstallationGuide: React.FC = () => {
       number: 1,
       title: 'Start at Left Corner',
       description: 'Place the 1st plank with the tongue facing wall. Use spacers to set a 12mm (15/32") gap between wall and flooring.',
-      image: 'https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2'
+      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
     },
     {
       number: 2,
       title: 'Install Second Plank',
       description: 'Install the 2nd plank by clicking the tongue into the groove; hold the plank from 30° angle and lower. Make sure both planks are perfectly aligned.',
-      image: 'https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2'
+      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
     },
     {
       number: 3,
       title: 'Complete First Row',
       description: 'At the end of the 1st row, measure the last plank to leave 15/32" space to the wall.',
-      image: 'https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2'
+      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
     },
     {
       number: 4,
       title: 'Begin Second Row',
       description: 'Begin the 2nd row with the leftover piece from the 1st row. The cut piece must be at least 30cm (12") long.',
-      image: 'https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2'
+      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
     },
     {
       number: 5,
       title: 'Lock the Joints',
       description: 'Click the short side and place it tight to the short end of the left plank. Angle the long side (about 30°) and tap it firmly into the 1st row.',
-      image: 'https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2'
+      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
     },
     {
       number: 6,
       title: 'Finish Installation',
       description: 'Remove spacers and sweep the floor with soft brush. Cover the expansion gaps by driving baseboards into the wall (NOT into the floor).',
-      image: 'https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2'
+      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
     }
   ];
 
@@ -69,7 +69,7 @@ const InstallationGuide: React.FC = () => {
       <PageHeader 
         title="Installation Guide" 
         subtitle="Complete step-by-step instructions for installing FLORA SPC flooring"
-        backgroundImage="https://images.pexels.com/photos/8945931/pexels-photo-8945931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        backgroundImage="https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg"
       />
       
       <section className="section container">

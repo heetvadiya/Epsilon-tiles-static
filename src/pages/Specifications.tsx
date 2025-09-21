@@ -61,7 +61,7 @@ const Specifications: React.FC = () => {
       <PageHeader 
         title="Technical Specifications" 
         subtitle="Comprehensive testing results and performance data for FLORA SPC flooring"
-        backgroundImage="https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        backgroundImage="https://360.epsiloninc.in/uploads/preview/1767_SESSILE_OAK.jpg"
       />
       
       <section className="section container">

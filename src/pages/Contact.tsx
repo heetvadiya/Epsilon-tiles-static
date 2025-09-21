@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
       <PageHeader 
         title="Contact Us" 
         subtitle="Get in touch with our team for inquiries, quotes, or consultation"
-        backgroundImage="https://360.epsiloninc.in/uploads/preview/3239_ASH_MIX.jpg"
+        backgroundImage="https://360.epsiloninc.in/uploads/preview/2730_ACACIA_BROWN.jpg"
       />
       
       <section className="section container">

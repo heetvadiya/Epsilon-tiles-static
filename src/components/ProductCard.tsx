@@ -101,7 +101,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               onError={(e) => {
                 // Fallback image if the original fails to load
-                e.currentTarget.src = 'https://images.pexels.com/photos/4173194/pexels-photo-4173194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+                e.currentTarget.src = 'https://360.epsiloninc.in/uploads/preview/1147_FANCY_OAK.jpg';
               }}
             />
             

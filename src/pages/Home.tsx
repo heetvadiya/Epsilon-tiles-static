@@ -176,7 +176,7 @@ const Home: React.FC = () => {
               style={{ perspective: 1000 }}
             >
               <img 
-                src="https://images.pexels.com/photos/7061066/pexels-photo-7061066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg" 
                 alt="FLORA SPC Flooring Installation" 
                 className="w-full h-auto"
               />
@@ -278,7 +278,7 @@ const Home: React.FC = () => {
         <motion.div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(https://images.pexels.com/photos/4846097/pexels-photo-4846097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' 
+            backgroundImage: 'url(https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg)' 
           }}
           initial={{ scale: 1.1 }}
           whileInView={{ scale: 1 }}

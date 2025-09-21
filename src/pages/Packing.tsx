@@ -184,7 +184,7 @@ const Packing: React.FC = () => {
       <PageHeader 
         title="Packing Details" 
         subtitle="Comprehensive packaging information for efficient logistics and planning"
-        backgroundImage="https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        backgroundImage="https://360.epsiloninc.in/uploads/preview/8272_ASPEN_WHITE.jpg"
       />
       
       <section className="section container">

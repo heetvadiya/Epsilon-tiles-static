@@ -32,7 +32,7 @@ const WhySPC: React.FC = () => {
       <PageHeader 
         title="Why Choose SPC Flooring?" 
         subtitle="Discover the revolutionary benefits of Stone Polymer Composite flooring technology"
-        backgroundImage="https://images.pexels.com/photos/4050318/pexels-photo-4050318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        backgroundImage="https://360.epsiloninc.in/uploads/preview/7878_CHARNWOOD_OAK.jpg"
       />
       
       <section className="section container">
@@ -76,7 +76,7 @@ const WhySPC: React.FC = () => {
               style={{ perspective: 1000 }}
             >
               <img 
-                src="https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg"
                 alt="SPC Flooring Close-up" 
                 className="w-full h-auto"
               />

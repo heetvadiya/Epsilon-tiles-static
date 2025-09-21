@@ -11,25 +11,25 @@ const About: React.FC = () => {
       icon: Award,
       title: 'Durability',
       description: 'Our SPC flooring is engineered to withstand high foot traffic, resist scratches, and maintain its appearance for years.',
-      backgroundImage: 'https://images.pexels.com/photos/4050318/pexels-photo-4050318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      backgroundImage: 'https://360.epsiloninc.in/uploads/preview/7455_BEACHWOOD_OAK.jpg'
     },
     {
       icon: CheckCircle,
       title: 'Water Resistance',
       description: 'Ideal for areas prone to moisture, our flooring is 100% waterproof, making it perfect for kitchens, bathrooms, and basements.',
-      backgroundImage: 'https://images.pexels.com/photos/6585590/pexels-photo-6585590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      backgroundImage: 'https://360.epsiloninc.in/uploads/preview/3872_CHICAGO_GRIS-DARK_GREY.jpg'
     },
     {
       icon: Leaf,
       title: 'Eco-Friendly Materials',
       description: 'We prioritize sustainability by using non-toxic, recyclable materials in our products.',
-      backgroundImage: 'https://images.pexels.com/photos/6048018/pexels-photo-6048018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      backgroundImage: 'https://360.epsiloninc.in/uploads/preview/1756_CLASSIC_OAK.jpg'
     },
     {
       icon: Users,
       title: 'Easy Installation',
       description: 'With click-lock technology, our flooring can be installed quickly and efficiently, saving you time and labor costs.',
-      backgroundImage: 'https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      backgroundImage: 'https://360.epsiloninc.in/uploads/preview/6988_ALPHIN_GREY.jpg'
     }
   ];
 
@@ -43,7 +43,7 @@ const About: React.FC = () => {
       <PageHeader 
         title="About FLORA BY EPSILON" 
         subtitle="Elevating Spaces with Premium SPC Flooring"
-        backgroundImage="https://images.pexels.com/photos/6508935/pexels-photo-6508935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        backgroundImage="https://360.epsiloninc.in/uploads/preview/6508_EMORY_OAK.jpg"
       />
       
       {/* Introduction Section */}
@@ -71,7 +71,7 @@ const About: React.FC = () => {
               style={{ perspective: 1000 }}
             >
               <img 
-                src="https://images.pexels.com/photos/7061066/pexels-photo-7061066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="https://360.epsiloninc.in/uploads/preview/6217_GOLD_OAK.jpg" 
                 alt="FLORA SPC Flooring Installation" 
                 className="w-full h-auto"
               />
@@ -133,7 +133,7 @@ const About: React.FC = () => {
               style={{ perspective: 1000 }}
             >
               <img 
-                src="https://images.pexels.com/photos/6048018/pexels-photo-6048018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="https://360.epsiloninc.in/uploads/preview/1740_ACACIA_DARK.jpg" 
                 alt="FLORA SPC Flooring Designs" 
                 className="w-full h-auto"
               />
