@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import Specifications from './pages/Specifications';
 import Packing from './pages/Packing';
 import InstallationGuide from './pages/InstallationGuide';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
             <Route path="/specifications" element={<Specifications />} />
             <Route path="/packing" element={<Packing />} />
             <Route path="/installation-guide" element={<InstallationGuide />} />
-            <Route path="*" element={<div className="container py-20 text-center"><h1>Page Not Found</h1></div>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
