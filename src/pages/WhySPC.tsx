@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layers, Shield, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Shield, Layers, Palette, Settings, Volume2, Zap } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import AnimatedSection from '../components/AnimatedSection';
 import BenefitFlipCard from '../components/BenefitFlipCard';
@@ -9,14 +9,6 @@ import { features } from '../data/features';
 import PDFDownloadButton from '../components/PDFDownloadButton';
 
 const WhySPC: React.FC = () => {
-  const layerData = [
-    { name: 'UV Coating Layer', desc: 'Protects from fading and staining', color: 'bg-gradient-to-r from-primary/20 to-primary/30', icon: Shield },
-    { name: 'Wear Layer', desc: 'Provides scratch and dent resistance', color: 'bg-gradient-to-r from-primary/30 to-primary/50', icon: Shield },
-    { name: 'Decor Film Layer', desc: 'Delivers realistic wood or stone aesthetics', color: 'bg-gradient-to-r from-primary/50 to-primary/70', icon: Layers },
-    { name: 'SPC Core', desc: 'Dense, stable, and waterproof foundation', color: 'bg-gradient-to-r from-primary/70 to-primary/90', icon: Shield },
-    { name: 'Underlayment', desc: 'Enhances comfort and sound absorption', color: 'bg-gradient-to-r from-primary/90 to-primary', icon: Droplets }
-  ];
-
   const comparisonData = [
     { feature: 'Water Resistance', spc: 'Excellent', laminate: 'Poor', hardwood: 'Poor' },
     { feature: 'Durability', spc: 'Excellent', laminate: 'Good', hardwood: 'Good' },
@@ -85,92 +77,118 @@ const WhySPC: React.FC = () => {
         </div>
       </section>
       
-      {/* Layer Construction with Advanced Animations */}
+      {/* SPC Layer Construction with Visual Diagram */}
       <section className="section bg-muted py-20">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16" direction="scale">
-            <h2 className="mb-4">SPC Layer Construction</h2>
+            <h2 className="mb-4">Advanced Multi-Layer Construction</h2>
             <p className="text-muted-foreground">
-              SPC flooring's exceptional performance stems from its advanced multi-layer construction, with each layer contributing specific benefits.
+              Discover how each precisely engineered layer of FLORA SPC flooring works together to deliver unmatched performance, durability, and beauty.
             </p>
           </AnimatedSection>
-          
-          <div className="relative max-w-4xl mx-auto">
-            <motion.div 
-              className="space-y-6"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={{
-                hidden: { opacity: 0 },
-                visible: {
-                  opacity: 1,
-                  transition: {
-                    staggerChildren: 0.2,
-                    delayChildren: 0.3
+
+          <div className="max-w-4xl mx-auto">
+            {/* SPC Layers Diagram - Top */}
+            <AnimatedSection direction="scale" duration={0.8}>
+              <motion.div 
+                className="relative bg-card rounded-2xl p-6 shadow-xl mb-12 max-w-2xl mx-auto"
+                whileHover={{ 
+                  scale: 1.01,
+                  y: -5
+                }}
+                transition={{ duration: 0.4 }}
+              >
+                <motion.img 
+                  src="/why-spc-layers.png"
+                  alt="SPC Flooring Layer Structure"
+                  className="w-full h-auto"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                />
+              </motion.div>
+            </AnimatedSection>
+
+            {/* Layer Explanations - Vertical Layout */}
+            <AnimatedSection direction="up" duration={0.8}> 
+              <div className="space-y-6 max-w-3xl mx-auto">
+                {[
+                  {
+                    name: "UV Coating",
+                    description: "Protects from fading and staining",
+                    icon: Shield,
+                    gradient: "bg-gradient-to-r from-primary/20 to-primary/30"
+                  },
+                  {
+                    name: "Wear Layer",
+                    description: "Provides scratch and dent resistance",
+                    icon: Zap,
+                    gradient: "bg-gradient-to-r from-primary/30 to-primary/50"
+                  },
+                  {
+                    name: "Decor Film",
+                    description: "Delivers realistic wood or stone aesthetics",
+                    icon: Palette,
+                    gradient: "bg-gradient-to-r from-primary/50 to-primary/70"
+                  },
+                  {
+                    name: "SPC Core Sheet",
+                    description: "Dense, stable, and waterproof foundation",
+                    icon: Layers,
+                    gradient: "bg-gradient-to-r from-primary/70 to-primary/90"
+                  },
+                  {
+                    name: "Underlayment",
+                    description: "Enhances comfort and sound absorption",
+                    icon: Volume2,
+                    gradient: "bg-gradient-to-r from-primary/90 to-primary"
                   }
-                }
-              }}
-            >
-              {layerData.map((layer, index) => (
-                <motion.div
-                  key={layer.name}
-                  className={`${layer.color} p-6 rounded-lg shadow-sm relative overflow-hidden`}
-                  variants={{
-                    hidden: { 
-                      opacity: 0, 
-                      x: index % 2 === 0 ? -100 : 100,
-                      rotateY: index % 2 === 0 ? -15 : 15
-                    },
-                    visible: { 
-                      opacity: 1, 
-                      x: 0,
-                      rotateY: 0,
-                      transition: {
-                        duration: 0.8,
-                        ease: [0.25, 0.46, 0.45, 0.94]
-                      }
-                    }
-                  }}
-                  whileHover={{ 
-                    scale: 1.02,
-                    x: index % 2 === 0 ? 10 : -10,
-                    transition: { duration: 0.3 }
-                  }}
-                  style={{ perspective: 1000 }}
-                >
-                  {/* Animated background pattern */}
+                ].map((layer, index) => (
                   <motion.div
-                    className="absolute inset-0 opacity-10"
-                    initial={{ scale: 0, rotate: -180 }}
-                    whileInView={{ scale: 1, rotate: 0 }}
-                    transition={{ duration: 1, delay: index * 0.1 }}
+                    key={layer.name}
+                    className={`${layer.gradient} p-6 rounded-lg shadow-sm relative overflow-hidden`}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileHover={{ 
+                      scale: 1.02,
+                      y: -3,
+                      transition: { duration: 0.2 }
+                    }}
                   >
-                    <layer.icon size={120} className="absolute top-4 right-4" />
+                    {/* Animated background pattern */}
+                    <motion.div
+                      className={`absolute inset-0 ${index < 2 ? 'opacity-10' : 'opacity-20'}`}
+                      initial={{ scale: 0, rotate: -180 }}
+                      whileInView={{ scale: 1, rotate: 0 }}
+                      transition={{ duration: 1, delay: index * 0.1 }}
+                    >
+                      <layer.icon size={120} className={`absolute top-4 right-4 ${index < 2 ? '' : 'text-white/50'}`} />
+                    </motion.div>
+                    
+                    <div className="relative z-10">
+                      <motion.h3 
+                        className="text-xl font-bold mb-1 flex items-center text-white"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                      >
+                        <layer.icon size={24} className="mr-3 text-white" />
+                        {layer.name}
+                      </motion.h3>
+                      <motion.p 
+                        className="text-white/90"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
+                      >
+                        {layer.description}
+                      </motion.p>
+                    </div>
                   </motion.div>
-                  
-                  <div className="relative z-10">
-                    <motion.h3 
-                      className="text-xl font-bold mb-1 flex items-center"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                    >
-                      <layer.icon size={24} className="mr-3" />
-                      {layer.name}
-                    </motion.h3>
-                    <motion.p 
-                      className="text-card-foreground/80"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
-                    >
-                      {layer.desc}
-                    </motion.p>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+                ))}
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

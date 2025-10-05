@@ -14,7 +14,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
 }) => {
   return (
     <div 
-      className="relative h-[40vh] min-h-[300px] flex items-center justify-center text-white overflow-hidden"
+      className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-white overflow-hidden pt-20"
     >
       {/* Background Image */}
       <div 
@@ -27,14 +27,14 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       </div>
       
       {/* Content */}
-      <div className="container relative z-10 text-center">
+      <div className="container relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <motion.h1 
-          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight"
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           style={{ 
-            textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)',
+            textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.6)',
             filter: 'brightness(1.1)'
           }}
         >
@@ -43,12 +43,12 @@ const PageHeader: React.FC<PageHeaderProps> = ({
         
         {subtitle && (
           <motion.p 
-            className="text-lg md:text-xl max-w-3xl mx-auto text-gray-100"
-            initial={{ opacity: 0, y: 20 }}
+            className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto text-gray-100 leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             style={{ 
-              textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5)',
+              textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.6)',
               filter: 'brightness(1.05)'
             }}
           >
