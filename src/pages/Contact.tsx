@@ -1,10 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Users, Award } from 'lucide-react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import PageHeader from '../components/PageHeader';
 import Button from '../components/Button';
 
 const Contact: React.FC = () => {
+  const [captchaValue, setCaptchaValue] = React.useState<string | null>(null);
+  const recaptchaRef = React.useRef<ReCAPTCHA>(null);
+
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaValue(value);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!captchaValue) {
+      alert('Please complete the reCAPTCHA verification.');
+      return;
+    }
+    
+    // Handle form submission here
+    console.log('Form submitted with captcha:', captchaValue);
+    alert('Message sent successfully!');
+    
+    // Reset reCAPTCHA
+    recaptchaRef.current?.reset();
+    setCaptchaValue(null);
+  };
   return (
     <div>
       <PageHeader 
@@ -182,7 +206,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium mb-2">
@@ -266,15 +290,14 @@ const Contact: React.FC = () => {
                 ></textarea>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <input
-                  type="checkbox"
-                  id="newsletter"
-                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-2 mt-1"
+              {/* reCAPTCHA v2 */}
+              <div className="flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="6Ldled8rAAAAAK71QcgL9910YQ9cI9u3CBybtIwn"
+                  onChange={handleCaptchaChange}
+                  theme="light"
                 />
-                <label htmlFor="newsletter" className="text-sm text-muted-foreground leading-relaxed">
-                  Subscribe to our newsletter for updates, new product launches, and special offers
-                </label>
               </div>
               
               <div className="flex justify-center pt-4">
