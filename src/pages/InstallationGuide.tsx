@@ -28,39 +28,33 @@ const InstallationGuide: React.FC = () => {
   const steps = [
     {
       number: 1,
-      title: 'Start at Left Corner',
-      description: 'Place the 1st plank with the tongue facing wall. Use spacers to set a 12mm (15/32") gap between wall and flooring.',
-      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
+      title: 'Plan Your Layout',
+      description: 'Install parallel to the longest wall or light source. Stagger joints by at least 30 cm (12") between rows. Calculate the width of the last row. If too narrow (<5 cm), trim the first row.',
+      image: '/step-1-ig.png'
     },
     {
       number: 2,
-      title: 'Install Second Plank',
-      description: 'Install the 2nd plank by clicking the tongue into the groove; hold the plank from 30° angle and lower. Make sure both planks are perfectly aligned.',
-      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
+      title: 'Install the First Row',
+      description: 'Use spacers to maintain a 6-10 mm expansion gap along all walls. Join short ends by angling the second plank at about 15-20°, then press down to click. Ensure the row is straight.',
+      image: '/step-2-ig.png'
     },
     {
       number: 3,
-      title: 'Complete First Row',
-      description: 'At the end of the 1st row, measure the last plank to leave 15/32" space to the wall.',
-      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
+      title: 'Install Remaining Rows',
+      description: 'You can use either of the Uniclic methods: A. Angle-Angle (Standard Method) - Insert long side at an angle into the previous row, lower plank while pushing forward, tap short ends gently to click. B. Horizontal Insertion (for tight spaces) - Slide short edge horizontally into adjoining plank until it clicks, use tapping block if necessary.',
+      image: '/step-3-ig.png'
     },
     {
       number: 4,
-      title: 'Begin Second Row',
-      description: 'Begin the 2nd row with the leftover piece from the 1st row. The cut piece must be at least 30cm (12") long.',
-      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
+      title: 'Trimming & Final Row',
+      description: 'Cut planks with utility knife (score & snap) or saw for precision. Use pull bar to lock the final row. Maintain expansion gap on all sides.',
+      image: '/step-4-ig.png'
     },
     {
       number: 5,
-      title: 'Lock the Joints',
-      description: 'Click the short side and place it tight to the short end of the left plank. Angle the long side (about 30°) and tap it firmly into the 1st row.',
-      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
-    },
-    {
-      number: 6,
-      title: 'Finish Installation',
-      description: 'Remove spacers and sweep the floor with soft brush. Cover the expansion gaps by driving baseboards into the wall (NOT into the floor).',
-      image: 'https://360.epsiloninc.in/uploads/tilesdesign/4145_EMORY_OAK__R1.jpg'
+      title: 'Finishing',
+      description: 'Remove all spacers. Install baseboards or quarter-rounds-nail to the wall, not the floor. If fitting under door jambs, trim the jambs and slide planks underneath using horizontal method.',
+      image: '/step-5-ig.png'
     }
   ];
 
@@ -140,11 +134,19 @@ const InstallationGuide: React.FC = () => {
         {/* Installation Steps */}
         <AnimatedSection direction="up" className="mb-12">
           <h3 className="text-2xl font-bold text-center mb-8">Installation Steps</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {steps.map((step, index) => (
               <motion.div 
                 key={step.number}
-                className="card overflow-hidden"
+                className={`card overflow-hidden ${
+                  // First 3 items: span 2 columns each (takes up full width)
+                  index < 3 
+                    ? 'lg:col-span-2'
+                    // Last 2 items: center them by using col-start positions
+                    : index === 3 
+                      ? 'lg:col-start-2 lg:col-span-2' // Step 4: start from column 2, span 2
+                      : 'lg:col-start-4 lg:col-span-2' // Step 5: start from column 4, span 2
+                }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
