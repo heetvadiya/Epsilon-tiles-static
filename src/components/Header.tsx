@@ -110,11 +110,11 @@ const Header: React.FC = () => {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-40 py-4"
+      className="fixed top-0 left-0 right-0 z-40 py-2 sm:py-3 md:py-4"
       variants={headerVariants}
       animate={isScrolled ? 'scrolled' : 'transparent'}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container px-4 sm:px-6 flex items-center justify-between">
         {/* Logo */}
         <motion.div
           variants={logoVariants}
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
             <img 
               src={logoSrc}
               alt="FLORA by Epsilon" 
-              className="h-8 md:h-10 w-auto"
+              className="h-7 sm:h-8 md:h-10 w-auto"
             />
           </Link>
         </motion.div>

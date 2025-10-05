@@ -109,16 +109,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
             <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent" />
             
             {/* Category Badge */}
-            <div className="absolute top-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm">
+            <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-primary text-white px-2 sm:px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm">
               {product.category}
             </div>
 
             {/* Flip Button */}
             <button
               onClick={handleFlipToggle}
-              className="absolute top-3 right-3 bg-gray-900/70 backdrop-blur-sm text-white p-2 rounded-full hover:bg-gray-900/90 transition-colors"
+              className="absolute top-2 sm:top-3 right-2 sm:right-3 bg-gray-900/70 backdrop-blur-sm text-white p-1.5 sm:p-2 rounded-full hover:bg-gray-900/90 transition-colors"
             >
-              <Info size={16} />
+              <Info size={14} className="sm:size-4" />
             </button>
 
             {/* View Product Button - shown on hover */}
@@ -138,8 +138,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </div>
 
           {/* Product Name */}
-          <div className="h-1/5 flex items-center justify-center p-4">
-            <h3 className="text-lg font-bold text-center text-gray-900">
+          <div className="h-1/5 flex items-center justify-center p-3 sm:p-4">
+            <h3 className="text-base sm:text-lg font-bold text-center text-gray-900">
               {product.name}
             </h3>
           </div>
@@ -158,17 +158,17 @@ const ProductCard: React.FC<ProductCardProps> = ({
       style={{ perspective: 1000 }}
     >
       <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg bg-white">
-        <div className="p-6 h-full flex flex-col justify-between">
+        <div className="p-4 sm:p-6 h-full flex flex-col justify-between">
           {/* Header */}
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-bold text-gray-900">
+          <div className="flex items-center justify-between mb-3 sm:mb-4">
+            <h3 className="text-base sm:text-lg font-bold text-gray-900">
               {product.name}
             </h3>
             <button
               onClick={handleFlipToggle}
-              className="p-2 rounded-full transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200"
+              className="p-1.5 sm:p-2 rounded-full transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200"
             >
-              <ArrowRight size={16} className="rotate-180" />
+              <ArrowRight size={14} className="sm:size-4 rotate-180" />
             </button>
           </div>
 
@@ -186,7 +186,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </div>
 
             {/* Specifications */}
-            <div className="grid grid-cols-2 gap-3 text-sm">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 text-sm">
               {[
                 { label: 'Size', value: product.sizes[0] },
                 { label: 'Core', value: product.thickness.core },
@@ -195,11 +195,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
               ].map((spec, idx) => (
                 <div
                   key={spec.label}
-                  className={`p-3 rounded-lg ${
+                  className={`p-2 sm:p-3 rounded-lg ${
                     'bg-gray-50'
                   }`}
                 >
-                  <div className={`font-medium mb-1 ${
+                  <div className={`font-medium mb-1 text-xs sm:text-sm ${
                     'text-gray-900'
                   }`}>
                     {spec.label}

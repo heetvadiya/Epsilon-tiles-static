@@ -14,7 +14,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
 }) => {
   return (
     <div 
-      className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-white overflow-hidden pt-20"
+      className="relative h-[60vh] sm:h-[70vh] min-h-[400px] sm:min-h-[500px] flex items-center justify-center text-white overflow-hidden pt-16 sm:pt-20"
     >
       {/* Background Image */}
       <div 
@@ -29,7 +29,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       {/* Content */}
       <div className="container relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <motion.h1 
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white leading-tight"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -43,7 +43,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
         
         {subtitle && (
           <motion.p 
-            className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto text-gray-100 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto text-gray-100 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}

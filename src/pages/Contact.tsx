@@ -174,10 +174,10 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-card p-8 rounded-xl shadow-sm border border-border">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-3">Send Us a Message</h3>
-              <p className="text-muted-foreground">
+          <div className="bg-card p-4 sm:p-6 md:p-8 rounded-xl shadow-sm border border-border">
+            <div className="text-center mb-6 sm:mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3">Send Us a Message</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Ready to transform your space? Let's discuss your flooring needs.
               </p>
             </div>
@@ -261,7 +261,7 @@ const Contact: React.FC = () => {
                   id="message"
                   rows={6}
                   className="input w-full"
-                  placeholder="Tell us about your flooring needs, room size, or any specific requirements..."
+                  placeholder="Tell us about your flooring needs..."
                   required
                 ></textarea>
               </div>
