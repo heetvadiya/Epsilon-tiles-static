@@ -8,6 +8,9 @@ import Button from '../components/Button';
 const Contact: React.FC = () => {
   const [captchaValue, setCaptchaValue] = React.useState<string | null>(null);
   const recaptchaRef = React.useRef<ReCAPTCHA>(null);
+  
+  // Get reCAPTCHA site key from environment variables
+  const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6Ldled8rAAAAAK71QcgL9910YQ9cI9u3CBybtIwn';
 
   const handleCaptchaChange = (value: string | null) => {
     setCaptchaValue(value);
@@ -294,7 +297,7 @@ const Contact: React.FC = () => {
               <div className="flex justify-center">
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey="6Ldled8rAAAAAK71QcgL9910YQ9cI9u3CBybtIwn"
+                  sitekey={recaptchaSiteKey}
                   onChange={handleCaptchaChange}
                   theme="light"
                 />
